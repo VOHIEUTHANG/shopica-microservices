@@ -1,0 +1,128 @@
+.search {
+  height: 100%;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-form {
+  padding: 40px 60px;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+}
+
+.product-name {
+  padding: 0px 11px;
+  color: rgb(66 64 64 / 85%);
+  font-size: 23px;
+  line-height: 47px;
+  border: 1px solid #d9d9d9 !important;
+  box-shadow: none !important;
+}
+
+.product-name input {
+  font-size: 16px;
+}
+
+.search-header {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+  box-shadow: 0 3px 10px 0 rgb(129 129 129 / 20%);
+  text-align: center;
+  font-weight: 600;
+}
+
+.search-content {
+  padding: 30px 20px;
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+}
+
+.item {
+  padding: 0 12px;
+}
+
+.product-info {
+  margin-top: 10px;
+}
+
+.image-search {
+  padding: 20px 0;
+}
+
+.image-search img {
+  height: 120px;
+}
+
+.image-search a {
+  position: relative;
+}
+
+.image-search i {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  z-index: 20;
+  border-radius: 50%;
+  padding: 1px;
+  color: white;
+  background: #788480;
+}
+
+.product-info_name {
+  text-align: center;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+:host ::ng-deep .avatar-uploader > .ant-upload {
+  width: 128px;
+  height: 128px;
+}
+
+.product-info_price {
+  text-align: center;
+  font-size: 15px;
+  color: #878787;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 18px;
+}
+
+.background-image {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding-top: 127.571%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 1200px) {
+  .search-form {
+    padding: 40px 60px;
+  }
+
+  .product-name {
+    font-size: 20px;
+    line-height: 42px;
+  }
+
+  .product-name input {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+}

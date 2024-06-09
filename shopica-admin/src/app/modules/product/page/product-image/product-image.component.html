@@ -1,0 +1,21 @@
+<div class="product-image section">
+  <h4>Product Images:</h4>
+  <nz-form-item>
+    <div class="clearfix">
+      <nz-upload [nzMultiple]="true" nzName="files" nzListType="picture-card" [(nzFileList)]="listImage"
+        [nzRemove]="remove" [nzShowButton]="listImage.length < 8" [nzFileType]="contentTypeAccept"
+        [nzBeforeUpload]="beforeUpload" [nzPreview]="handlePreview">
+        <div>
+          <i nz-icon nzType="plus"></i>
+          <div style="margin-top: 8px">Upload</div>
+        </div>
+      </nz-upload>
+      <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" [nzClosable]="false"
+        (nzOnCancel)="previewVisible = false">
+        <ng-template #modalContent>
+          <img nz-image *ngIf="previewVisible" [nzSrc]="previewImage" [ngStyle]="{ width: '100%', height:'100%' }" />
+        </ng-template>
+      </nz-modal>
+    </div>
+  </nz-form-item>
+</div>

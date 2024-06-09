@@ -1,0 +1,154 @@
+.footer-top {
+  padding-top: 80px;
+  background-color: #111111;
+  color: #ffffff;
+  padding-bottom: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-column {
+  margin: 5px 0;
+}
+
+.footer-top .title {
+  margin-bottom: 30px;
+  font-size: 19px;
+}
+
+.footer-top .content ul {
+  width: 79%;
+}
+
+.footer-top .content ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+
+.footer-top .content li i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+/* footer-end */
+
+.footer-bot {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer-bot .social-btns ul li {
+  margin-right: 5px;
+}
+
+.footer-bot .social-btns ul li i {
+  font-size: 20px;
+  margin: 0 5px;
+  transition: 0.4s;
+}
+
+.footer-bot .social-btns ul li i:hover {
+  cursor: pointer;
+  transform: translateY(-4px) scale(1.1);
+}
+
+.footer-bot .copyright_text {
+  margin-bottom: 0;
+}
+
+.content.has-animation ul li::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #56cfe1;
+  transition: all 0.5s ease;
+}
+
+.content.has-animation ul li:hover::before {
+  width: 20px;
+}
+
+.content.has-animation ul li {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.content.has-animation ul li:hover {
+  padding-left: 25px;
+  color: #56cfe1;
+  cursor: pointer;
+}
+
+.letter .content input,
+.letter .content button {
+  height: 40px;
+}
+
+.letter .content button {
+  padding: 4px 5px;
+  background-color: #c39d62;
+  border: none;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.letter .content input {
+  border: 1px solid #878787;
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+.payment li {
+  height: 30px;
+  padding: 2.5px;
+}
+
+.payment {
+  margin-top: 1rem;
+}
+
+.footer-menu li {
+  padding: 5px 15px;
+  outline: none;
+}
+
+.linkedin {
+  background: white;
+  border-radius: 12px;
+}
+
+.facebook {
+  background: white;
+  border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-bot .section {
+    padding: 7px 0;
+  }
+
+  .footer-menu,
+  .social-btns {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+}

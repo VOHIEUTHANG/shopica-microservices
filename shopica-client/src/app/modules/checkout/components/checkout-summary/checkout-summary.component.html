@@ -1,0 +1,20 @@
+<div class="cart-total-prices__inner">
+  <div class="cart-price">
+    <div class="cart-price-sub-price flex jc-space-between al-center">
+      <span class="price_text">Subtotal</span>
+      <span class="price_value">{{subtotal | currency}}</span>
+    </div>
+    <div *ngIf="shippingPrice" class="cart-price-sub-price flex jc-space-between al-center">
+      <span class="price_text">Shipping</span>
+      <span class="price_value">{{shippingPrice | currency}}</span>
+    </div>
+    <div *ngIf="discount" class="cart-price-sub-price flex jc-space-between al-center">
+      <span class="price_text">Discount</span>
+      <span class="price_value">-{{discount | currency}}</span>
+    </div>
+    <div class="cart-price-total-price flex jc-space-between al-center">
+      <span class="price_text">Total</span>
+      <span class="price_value">{{subtotal + shippingPrice - discount | currency}}</span>
+    </div>
+  </div>
+</div>

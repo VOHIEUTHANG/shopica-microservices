@@ -1,0 +1,56 @@
+<div class="contact-page mt-70">
+  <app-header-page [image]="'assets/images/contact.jpg'" [pageName]="'Contact Us'"></app-header-page>
+  <div class="container">
+    <div class="content" [nzGutter]="24" nz-row>
+      <div class="contact-form" nz-col [nzMd]="12" [nzXs]="24">
+        <h3 class="title">CONTACT FORM</h3>
+        <form [nzLayout]="'vertical'" nz-form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <!-- name -->
+          <nz-form-item>
+            <nz-form-label nzSpan="10" nzRequired nzFor="name">Your Name:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid Name!">
+              <input nz-input formControlName="name" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <!-- email -->
+          <nz-form-item>
+            <nz-form-label nzSpan="10" nzRequired nzFor="email" email>Your Email:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid E-mail!">
+              <input nz-input formControlName="email" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <!-- phone -->
+          <nz-form-item>
+            <nz-form-label nzSpan="10" nzFor="phone" phone>Your Phone:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid Phone!">
+              <input nz-input formControlName="phone" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <!-- message -->
+          <nz-form-item>
+            <nz-form-label nzSpan="10" nzRequired nzFor="message">Your Message:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid Message!">
+              <textarea rows="8" nz-input formControlName="message"></textarea>
+            </nz-form-control>
+          </nz-form-item>
+          <!-- submit button -->
+          <button nzShape="round" [nzLoading]="isLoading" nzSize="large" nz-button class="submit-contact"
+            [nzType]="'primary'">Send
+          </button>
+        </form>
+      </div>
+      <div class="contact-content" nz-col [nzMd]="12" [nzXs]="24">
+        <h3 class="title">CONTACT INFORMATION</h3>
+        <p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with
+          us. Your comments and suggestions will be appreciated. Please complete the form below.</p>
+        <p><i nz-icon nzType="home" nzTheme="outline"></i>HCMC National University Dormitory Zone B</p>
+        <p> <i nz-icon nzType="phone" nzTheme="outline"></i>1800-123-222 / 1900-1570-230</p>
+        <p><i nz-icon nzType="mail" nzTheme="outline"></i>admin&#64;gmail.com</p>
+        <p><i nz-icon nzType="clock-circle" nzTheme="outline"></i>Everyday 9:00-17:00</p>
+      </div>
+    </div>
+  </div>
+</div>

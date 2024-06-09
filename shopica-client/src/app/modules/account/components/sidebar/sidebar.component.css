@@ -1,0 +1,23 @@
+.account-sidebar ul {
+  border: 1px solid rgba(136, 136, 136, 0.12);
+}
+
+.account-sidebar ul li {
+  padding: 14px 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgba(71, 71, 71, 0.8);
+  border-bottom: 1px solid rgba(136, 136, 136, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+}
+
+.account-sidebar ul li:hover {
+  background-color: rgba(136, 136, 136, 0.05);
+}
+
+.account-sidebar ul li.active {
+  background-color: rgba(136, 136, 136, 0.12);
+}

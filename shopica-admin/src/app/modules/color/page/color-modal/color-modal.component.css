@@ -1,0 +1,15 @@
+.select-color-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-color-item p {
+  margin-bottom: 0;
+}
+
+.select-color-item span {
+  height: 20px;
+  width: 25px;
+  border: 1px solid rgb(171 163 163);
+}

@@ -1,0 +1,15 @@
+.select-category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-category-item p {
+  margin-bottom: 0;
+}
+
+.select-category-item span {
+  height: 20px;
+  width: 25px;
+  border: 1px solid rgb(171 163 163);
+}

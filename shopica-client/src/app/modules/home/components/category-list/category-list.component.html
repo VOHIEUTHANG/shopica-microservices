@@ -1,0 +1,21 @@
+<div nz-row class="category-list">
+  <div nz-col class="category-item column" [nzMd]="12" [nzXs]="24">
+    <app-category-card [routerLink]="['/product/collection/women']" [category]="categoryList[0]"></app-category-card>
+  </div>
+  <div nz-col class="column" [nzMd]="6" [nzXs]="12">
+    <div nz-row class="items-2">
+      <div nz-col class="category-item" nzSpan="24">
+        <app-category-card [routerLink]="['/product/collection/bag']" [category]="categoryList[1]">
+        </app-category-card>
+      </div>
+      <div nz-col class="category-item" nzSpan="24">
+        <app-category-card [routerLink]="['/product/collection/shoes']" [category]="categoryList[2]">
+        </app-category-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="column category-item" nz-col [nzMd]="6" [nzXs]="12">
+    <app-category-card [routerLink]="['/product/collection/watch']" [category]="categoryList[3]"></app-category-card>
+  </div>
+</div>

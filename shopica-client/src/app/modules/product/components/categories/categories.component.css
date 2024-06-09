@@ -1,0 +1,12 @@
+.category-sections {
+  width: 100%;
+}
+
+.item {
+  text-align: center;
+  padding: 15px;
+}
+
+.item.active {
+  color: #56cfe1;
+}

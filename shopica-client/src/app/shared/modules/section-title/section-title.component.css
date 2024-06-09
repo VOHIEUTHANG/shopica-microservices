@@ -1,0 +1,50 @@
+.title {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 2px;
+  background: #222;
+}
+
+.text {
+  margin: 0 30px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+  color: #878787;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 18px;
+  }
+
+  .text {
+    margin: 0 15px;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    width: 40px;
+  }
+}

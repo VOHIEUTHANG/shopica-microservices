@@ -1,0 +1,34 @@
+<div class="slide-show">
+  <nz-carousel nzAutoPlay [nzAutoPlaySpeed]="3000" [nzDotRender]="dotBtn">
+    <!-- banner-1 -->
+    <div class="content banner-1" nz-carousel-content>
+      <div class="background"></div>
+      <div class="section">
+        <h4 class="time">SUMMER 2020</h4>
+        <h3 class="title">New Arrival Collection</h3>
+        <button class="btn-detail">Explore Now</button>
+      </div>
+    </div>
+    <!-- banner-2 -->
+    <div class="content right banner-2" nz-carousel-content>
+      <div class="background"></div>
+      <div class="section">
+        <h4 class="time">NEW SEASON</h4>
+        <h3 class="title">LookBook Collection</h3>
+        <button class="btn-detail">Explore Now</button>
+      </div>
+    </div>
+    <!-- banner-3 -->
+    <div class="content banner-3" nz-carousel-content>
+      <div class="background"></div>
+      <div class="section">
+        <h4 class="time">SUMMER SALE</h4>
+        <h3 class="title">Save up to 70%</h3>
+        <button class="btn-detail">Explore Now</button>
+      </div>
+    </div>
+  </nz-carousel>
+  <ng-template #dotBtn>
+    <button style="background: black;"></button>
+  </ng-template>
+</div>

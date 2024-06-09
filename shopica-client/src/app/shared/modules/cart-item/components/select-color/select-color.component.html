@@ -1,0 +1,7 @@
+<p *ngIf="showTitle" class="title">COLOR: {{colorSelected.colorName}}</p>
+<div class="list-color flex" [class.large]="size === 'large'">
+  <span (click)="selectColor(color)" [class.selected]="color.id === colorSelected.id" *ngFor="let color of listColor"
+    class="color" nz-tooltip [nzTooltipTitle]="color.colorName">
+    <span [ngStyle]="{'background-color':color.colorCode}"></span>
+  </span>
+</div>

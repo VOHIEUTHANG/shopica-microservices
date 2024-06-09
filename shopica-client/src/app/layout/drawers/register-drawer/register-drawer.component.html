@@ -1,0 +1,50 @@
+<nz-drawer [nzWidth]="340" [nzClosable]="true" [nzVisible]="isOpenRegisterDrawer" nzPlacement="right" nzTitle="REGISTER"
+  (nzOnClose)="closeMenu()" [nzWrapClassName]="''">
+  <ng-container *nzDrawerContent>
+    <div class="drawer-form">
+      <form [nzLayout]="'vertical'" nz-form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+        <!-- fullName -->
+        <nz-form-item>
+          <nz-form-label nzSpan="10" nzRequired nzFor="fullName">FullName:</nz-form-label>
+          <nz-form-control nzSpan="24" nzErrorTip="The input is not valid FullName!">
+            <input nz-input formControlName="fullName" />
+          </nz-form-control>
+        </nz-form-item>
+        <!-- email -->
+        <nz-form-item>
+          <nz-form-label nzSpan="10" nzRequired nzFor="username">Username:</nz-form-label>
+          <nz-form-control nzValidatingTip="Validating..." nzHasFeedback nzSpan="24" [nzErrorTip]="userErrorTpl">
+            <input nz-input formControlName="username" />
+            <ng-template #userErrorTpl let-control>
+              <ng-container *ngIf="control.hasError('required')">
+                Please input your username!
+              </ng-container>
+              <ng-container *ngIf="control.hasError('duplicated')">
+                The username is already in use!
+              </ng-container>
+            </ng-template>
+          </nz-form-control>
+        </nz-form-item>
+        <!-- password -->
+        <nz-form-item>
+          <nz-form-label nzSpan="10" nzFor="password" nzRequired>Password</nz-form-label>
+          <nz-form-control nzSpan="24" nzErrorTip="Please input your password!">
+            <input nz-input type="password" formControlName="password" />
+          </nz-form-control>
+        </nz-form-item>
+        <!-- form error -->
+
+        <div class="form-error" *ngIf="registerForm.errors">
+          <p>{{registerForm.errors.error}}</p>
+        </div>
+        <!-- submit button -->
+        <button [disabled]="registerForm.invalid" nzShape="round" [nzLoading]="isLoading" nz-button
+          class="drawer-form-button" [nzType]="'primary'">REGISTER</button>
+      </form>
+      <div class="options">
+        <p>Already have an account? <a (click)="openLoginDrawer()">Login here</a></p>
+      </div>
+
+    </div>
+  </ng-container>
+</nz-drawer>

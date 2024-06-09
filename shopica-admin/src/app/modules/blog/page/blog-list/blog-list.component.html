@@ -1,0 +1,58 @@
+<div class="table-operations">
+  <button (click)="addBlog()" class="add-btn" nzType="primary" nz-button>
+    Add<i nz-icon nzType="plus" nzTheme="outline"></i>
+  </button>
+</div>
+<nz-table #sortTable [nzFrontPagination]="false" [nzTotal]="total" [nzPageSize]="baseParam.pageSize"
+  [nzPageIndex]="baseParam.pageIndex" nzBordered [nzLoading]="isLoading" (nzQueryParams)="onQueryParamsChange($event)"
+  [nzData]="listData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzAlign="center" nzWidth="6%" nzColumnKey="id" [nzSortFn]="true">Id</th>
+      <th nzAlign="center" nzCustomFilter>
+        Title
+        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+          <i nz-icon nzType="search"></i>
+        </nz-filter-trigger>
+      </th>
+      <th nzAlign="center">Author</th>
+      <th nzWidth="12%" nzAlign="center">Created At</th>
+      <th nzAlign="center">Image</th>
+      <th nzWidth="20%" nzAlign="center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="
+        let data of sortTable.data;
+        let odd = odd;
+        let even = even;
+        let index = index
+      " [ngClass]="{ odd: odd, even: even }">
+      <td nzAlign="center">{{ data.id }}</td>
+      <td nzAlign="center">{{ data.title }}</td>
+      <td nzAlign="center">{{ data.authorName }}</td>
+      <td nzAlign="center">{{ data.createdAt | date: "mediumDate" }}</td>
+      <td nzAlign="center"><img class="category-img" height="50" nz-image [nzSrc]="data.backgroundUrl" nz-image></td>
+
+      <td nzAlign="center" class="btn-action">
+        <button nz-button nzType="primary" nzPopconfirmOverlayClassName="delete-confirm-card" nz-popconfirm
+          nzPopconfirmTitle="Are you sure delete this blog?" (nzOnConfirm)="deleteBlog(data.id)"
+          nzPopconfirmPlacement="left" nzDanger>Delete<i nz-icon nzType="delete" nzTheme="outline"></i></button>
+
+        <button nz-button (click)="editBlog(data.id)" nzType="primary">Edit<i nz-icon nzType="edit"
+            nzTheme="outline"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">
+        Search
+      </button>
+    </div>
+  </div>
+</nz-dropdown-menu>

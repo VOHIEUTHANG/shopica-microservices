@@ -1,0 +1,28 @@
+<div class="wish-list-page mt-70">
+  <app-header-page [pageName]="'WISHLIST'" [image]="'assets/images/blogs/background-2.jpg'"></app-header-page>
+  <div class="container">
+    <div *ngIf="listProduct.length === 0" class="cart-empty al-center flex fd-column">
+      <i nz-icon>
+        <svg height="1em" width="1.3em">
+          <path
+            d="M591.592727 108.776727a315.904 315.904 0 0 1 445.021091 0 311.482182 311.482182 0 0 1 1.768727 440.459637l-1.768727 1.768727-445.114182 441.623273-12.427636-12.334546-6.935273 6.842182L127.069091 545.512727a311.482182 311.482182 0 0 1-1.768727-440.506182l1.768727-1.722181a315.904 315.904 0 0 1 444.974545 0l12.567273 12.474181 7.074909-6.981818z m5.12 804.398546l-17.594182 17.780363-12.241454-12.288 17.687273-17.547636 12.194909 12.101818z m390.749091-411.741091l1.349818-1.396364a241.664 241.664 0 0 0-1.396363-341.736727 246.085818 246.085818 0 0 0-346.624 0L584.610909 214.109091l-61.719273-61.253818a246.085818 246.085818 0 0 0-346.670545 0l-1.349818 1.349818a241.664 241.664 0 0 0 1.396363 341.736727l395.915637 392.843637 6.935272-6.842182 12.427637 12.334545 395.962182-392.843636z"
+            p-id="12228"></path>
+        </svg>
+      </i>
+      <h1>YOUR WISHLIST IS EMPTY.</h1>
+      <p>Before proceed to checkout you must add some products to your shopping cart.
+        <br>
+        You will find a lot of interesting products on our "Shop" page.
+      </p>
+      <button [routerLink]="['/product/collection/all']" class="checkout-btn" nz-button nzType="primary">RETURN TO
+        SHOP</button>
+    </div>
+    <app-loader [id]="'wishlist'"></app-loader>
+    <div nz-row class="product-list">
+      <div nz-col *ngFor="let product of listProduct" class="product-item column" [nzLg]="6" [nzMd]="8" [nzXs]="12">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+  </div>
+
+</div>

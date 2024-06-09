@@ -1,0 +1,30 @@
+<form nz-form [formGroup]="paymentMethodForm">
+  <div class="tittle flex jc-space-between al-center">
+    <h3>Payment</h3>
+  </div>
+  <nz-radio-group formControlName="method">
+    <!-- <label *ngFor="let data of listData" class="payment-method" nz-radio [nzValue]="data.id">
+      <img [src]="data.imageUrl" class="image">
+      {{data.name}}
+    </label> -->
+    <label class="payment-method" nz-radio nzValue="CASH">
+      <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-cod.svg">
+      Pay by cash
+    </label>
+    <label class="payment-method" nz-radio nzValue="PAYPAL">
+      <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/checkout/icon-payment-method-credit.svg"
+        alt="">
+      Pay with paypal
+    </label>
+  </nz-radio-group>
+  <nz-collapse [nzGhost]="true">
+    <nz-collapse-panel [nzShowArrow]="false" [nzActive]="showPaypal">
+      <div class="paypal-component" #paypal></div>
+    </nz-collapse-panel>
+  </nz-collapse>
+</form>
+<div class="footer ">
+  <button (click)="payByCash()" class="next-step" nz-button nzType="primary">Pay
+    now</button>
+  <a [routerLink]="['/cart']" class="prev-step">Return to cart</a>
+</div>

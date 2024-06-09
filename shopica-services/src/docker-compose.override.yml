@@ -1,0 +1,273 @@
+version: '3.4'
+
+services:
+  sqldata:
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@w0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - eshop-sqldata:/var/opt/mssql
+  messagedata:
+    environment:
+     - MONGO_INITDB_ROOT_USERNAME=hieuvt19
+     - MONGO_INITDB_ROOT_PASSWORD=0968540305Ah
+    ports:
+     - "27017:27017"
+    volumes:
+     - eshop-notification-data:/data/db
+  basketdata:
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - eshop-basketdata:/data
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+  storage.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - AWS__AccessKey=YOUR_ACCESS_KEY
+      - AWS__SecretKey=YOUR_SECRET_KEY
+      - AWS__S3__BucketName=shopica-storage
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+    ports:
+      - "5260:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+  catalog.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__CatalogConnectionString=Server=sqldata;Database=ShopicaOnContainer.Catalog;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5233:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  identity.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - Authentication__Jwt__Key=Yh2k7QSu4l8CZg5p6X3Pna9L0Miy4D3Bvt0JVr87UcOj69Kqw5R2Nmf4FWs03Hdx
+      - Authentication__Jwt__Issuer=JWTAuthenticationServer
+      - Authentication__Jwt__Audience=JWTServicePostmanClient
+      - Authentication__Jwt__Subject=JWTServiceAccessToken
+      - Authentication__Jwt__ExpireTime=6
+      - Authentication__Facebook__AppId=2481894401990919
+      - Authentication__Facebook__AppSecret=bc116c885ce841b5e86af314d4e9b83f
+      - Authentication__Google__ClientId=249319704438-lfro6nilauqvmvgs80s7otgpq23um1pq.apps.googleusercontent.com
+      - Authentication__Google__ClientSecret=
+      - ConnectionStrings__IdentityConnectionString=Server=sqldata;Database=ShopicaOnContainer.Identity;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5102:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  ordering.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__OrderingConnectionString=Server=sqldata;Database=ShopicaOnContainer.Ordering;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5069:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  payment.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__PaymentConnectionString=Server=sqldata;Database=ShopicaOnContainer.Payment;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5045:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  web.bff.ocelot:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - Authentication__Jwt__Key=Yh2k7QSu4l8CZg5p6X3Pna9L0Miy4D3Bvt0JVr87UcOj69Kqw5R2Nmf4FWs03Hdx
+      - Authentication__Jwt__Issuer=JWTAuthenticationServer
+      - Authentication__Jwt__Audience=JWTServicePostmanClient
+      - Authentication__Jwt__Subject=JWTServiceAccessToken
+      - Authentication__Jwt__ExpireTime=6
+    ports:
+      - "5074:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__RedisConString=basketdata:6379
+      - ConnectionStrings__BasketConnectionString=Server=sqldata;Database=ShopicaOnContainer.Basket;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5003:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  notification.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - MailSettings__AdminEmailAddress=hieuvo044@gmail.com
+      - MailSettings__Server=smtp.gmail.com
+      - MailSettings__Port=587
+      - MailSettings__SenderName=Shopica Service Center
+      - MailSettings__SenderEmail=shopicaservicecenter@gmail.com
+      - MailSettings__UserName=hieudeptrai12345zzz@gmail.com
+      - MailSettings__Password=dgbz fufr wfeo gktr
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__NotificationConnectionString=mongodb://hieuvt19:0968540305Ah@messagedata:27017/
+    ports:
+      - "5078:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  ratting.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__RattingConnectionString=Server=sqldata;Database=ShopicaOnContainer.Ratting;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5079:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  inventory.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_URLS=http://0.0.0.0:8080
+      - EventBus__Connection=rabbitmq
+      - EventBus__UserName=guest
+      - EventBus__Password=guest
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8081
+      - ConnectionStrings__InventoryConnectionString=Server=sqldata;Database=ShopicaOnContainer.Inventory;UID=sa;Pwd=Pass@w0rd;Trust Server Certificate=true;
+    ports:
+      - "5114:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+  elasticsearch01:
+    environment:
+      - node.name=elasticsearch01
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=$ELASTIC_PASSWORD
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.license.self_generated.type=trial 
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=true
+      - xpack.security.http.ssl.key=$CERTS_DIR/elasticsearch01/elasticsearch01.key
+      - xpack.security.http.ssl.certificate_authorities=$CERTS_DIR/ca/ca.crt
+      - xpack.security.http.ssl.certificate=$CERTS_DIR/elasticsearch01/elasticsearch01.crt
+      - xpack.security.transport.ssl.enabled=true
+      - xpack.security.transport.ssl.verification_mode=certificate 
+      - xpack.security.transport.ssl.certificate_authorities=$CERTS_DIR/ca/ca.crt
+      - xpack.security.transport.ssl.certificate=$CERTS_DIR/elasticsearch01/elasticsearch01.crt
+      - xpack.security.transport.ssl.key=$CERTS_DIR/elasticsearch01/elasticsearch01.key
+    volumes: ['eshop-elasticsearch01-data:/usr/share/elasticsearch/data', 'eshop-elasticstack-certs:$CERTS_DIR']
+    ports:
+      - 9200:9200
+
+    healthcheck:
+      test: curl --cacert $CERTS_DIR/ca/ca.crt -s https://localhost:9200 >/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  wait_until_ready:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.21
+    command: /usr/bin/true
+    depends_on: { "elasticsearch01": { "condition": "service_healthy" } }  
+
+ 
+  kibana:
+    environment:
+     - ELASTICSEARCH_HOSTS=https://elasticsearch01:9200
+     - ELASTICSEARCH_USERNAME=kibana_system
+     - xpack.security.enabled=true
+     - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+     - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=/usr/share/kibana/config/certs/ca/ca.crt
+    ports:
+      - 5601:5601
+    volumes:
+      - 'eshop-elasticstack-certs:/usr/share/kibana/config/certs'
+      - 'eshop-kibana-data:/usr/share/kibana/data'
+
+  logstash:
+    environment:
+     - ELASTIC_USER=elastic
+     - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+     - ELASTIC_HOSTS=https://elasticsearch01:9200
+     - xpack.monitoring.enabled=false
+
+    ports:
+      - 8081:8081
+    volumes:
+      - 'eshop-elasticstack-certs:/usr/share/logstash/certs'
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf:ro  # Mount your logstash.conf file
+
+volumes:
+  eshop-sqldata:
+    external: false
+  eshop-notification-data:
+    external: false
+  eshop-basketdata:
+    external: false
+  eshop-elasticsearch01-data:
+    driver: local
+  eshop-kibana-data:
+    driver: local
+  eshop-elasticstack-certs:
+   driver: local

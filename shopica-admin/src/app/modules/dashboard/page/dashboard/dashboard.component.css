@@ -1,0 +1,18 @@
+.chart-section {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.chart {
+  position: relative;
+  height: 350px;
+}
+
+.line-chart app-line-chart,
+.pie-chart app-pie-chart,
+.radar-chart app-radar-chart,
+.bar-chart app-bar-chart {
+  height: 100%;
+  position: relative;
+  display: block;
+}

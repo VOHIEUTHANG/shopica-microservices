@@ -1,0 +1,62 @@
+﻿[
+  {
+    "id": 1,
+    "categoryName": "Shoes",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-06T06:04:03.278Z/air-max-90-lv8-shoes-5KhTdP.png"
+  },
+  {
+    "id": 2,
+    "categoryName": "Short",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-10T09:00:01.218Z/jordan-brooklyn-fleece-shorts-DCdcGB.jfif"
+  },
+  {
+    "id": 3,
+    "categoryName": "T-shirt",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-10T09:00:55.211Z/jordan-flight-mvp-85-t-shirt-hdS3DZ (1).jfif"
+  },
+  {
+    "id": 4,
+    "categoryName": "Hoodies",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-10T09:01:47.216Z/acg-fleece-pullover-hoodie-z1r0QM.jfif"
+  },
+  {
+    "id": 5,
+    "categoryName": "Trousers",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-10T09:02:39.274Z/jordan-flight-mvp-fleece-trousers-Zn4jvk (2).jfif"
+  },
+  {
+    "id": 6,
+    "categoryName": "Hats",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-10T09:03:40.357Z/jordan-rise-cap-adjustable-hat-2fsSH0 (1).png"
+  },
+  {
+    "id": 7,
+    "categoryName": "Golf",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-11T15:07:30.620Z/dri-fit-victory-long-sleeve-golf-polo-5PWkdQ.png"
+  },
+  {
+    "id": 8,
+    "categoryName": "Bag ",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-11T15:14:01.613Z/convertible-changing-bag-q362kf.jfif"
+  },
+  {
+    "id": 9,
+    "categoryName": "Sandals",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-11T15:24:16.867Z/offcourt-slides-ZBxx9j.png"
+  },
+  {
+    "id": 10,
+    "categoryName": "Socks ",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-11T15:30:52.821Z/everyday-plus-cushioned-crew-socks-LVHkVW.png"
+  },
+  {
+    "id": 11,
+    "categoryName": "Football",
+    "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/category-images/2024-03-11T15:46:04.972Z/Predator_Accuracy.3_Low_Turf_Boots_Blue_GZ0002_42_detail (1).png"
+  },
+  {
+    "id": 12,
+    "categoryName": "Jean",
+    "imageUrl": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/426635921_779161017578275_7716298474423800506_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeE7hClDUEmrHeUTHqdbM9Wwv5iXH5IyWRa_mJcfkjJZFuvxcPlxMXS2Ipkn7fha0_2YH3PXZkYiCSKDGkbUPzR1&_nc_ohc=1ek3mt984C8AX_7xPk2&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfAMWqkma4TkQ8bgih79lJlBQibgTy3u1FdDRHPfC7aljQ&oe=65E18407"
+  }
+]

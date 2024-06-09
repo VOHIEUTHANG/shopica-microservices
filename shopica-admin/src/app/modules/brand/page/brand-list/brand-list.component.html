@@ -1,0 +1,49 @@
+<div class="table-operations">
+  <app-brand-modal [brand]="selectedData" [modalTitle]="modalTitle" [isVisible]="isShowModal" [isEditMode]="isEditMode"
+    (cancelEvent)="closeModal()" (insertSuccessEvent)="insertBrandSuccess($event)"
+    (updateSuccessEvent)="updateBrandSuccess($event)">
+  </app-brand-modal>
+  <button (click)="showModal()" class="add-btn" nzType="primary" nz-button>
+    Add<i nz-icon nzType="plus" nzTheme="outline"></i>
+  </button>
+</div>
+<nz-table #sortTable nzBordered [nzFrontPagination]="false" [nzTotal]="total" [nzPageSize]="baseParam.pageSize"
+  [nzPageIndex]="baseParam.pageIndex" nzBordered [nzLoading]="isLoading" (nzQueryParams)="onQueryParamsChange($event)"
+  [nzData]="listData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzAlign="center" nzColumnKey="id" [nzSortFn]="true">Id</th>
+      <th nzAlign="center" nzCustomFilter>Brand Name
+        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+          <i nz-icon nzType="search"></i>
+        </nz-filter-trigger>
+      </th>
+      <th nzAlign="center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of sortTable.data; let odd=odd; let even = even; let index  = index ;"
+      [ngClass]="{ odd: odd, even: even }">
+      <td nzAlign="center">{{ data.id }}</td>
+      <td nzAlign="center">{{ data.brandName }}</td>
+      <td nzAlign="center" class="btn-action">
+        <button nz-button nzType="primary" nzPopconfirmOverlayClassName="delete-confirm-card" nz-popconfirm
+          nzPopconfirmTitle="Are you sure delete this brand?" (nzOnConfirm)="deleteBrand(data.id)"
+          nzPopconfirmPlacement="left" nzDanger>Delete<i nz-icon nzType="delete" nzTheme="outline"></i></button>
+        <button nz-button (click)="editBrand(data)" nzType="primary">Edit<i nz-icon nzType="edit"
+            nzTheme="outline"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">
+        Search
+      </button>
+    </div>
+  </div>
+</nz-dropdown-menu>

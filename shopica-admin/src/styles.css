@@ -1,0 +1,287 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
+@import '../node_modules/quill/dist/quill.snow.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/*
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+} */
+
+.flex {
+  display: flex;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.al-center {
+  align-items: center;
+}
+
+.al-flex-start {
+  align-items: flex-start;
+}
+
+.al-flex-end {
+  align-items: flex-end;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+.jc-flex-start {
+  justify-content: flex-start;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.ant-layout-content {
+  position: relative;
+}
+
+.form-upload-image .ant-upload.ant-upload-select {
+  display: block;
+}
+
+.form-upload-image .ant-upload.ant-upload-select button {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 8px;
+}
+
+.add-item {
+  flex: 0 0 auto;
+  padding: 8px;
+  display: block;
+}
+
+/* notify-card */
+.notify-card {
+  min-height: 200px;
+  width: 270px;
+}
+
+.notify-card .ant-popover-buttons {
+  display: none;
+}
+
+.notify-card .ant-popover-inner-content {
+  padding: 0;
+}
+
+.notify-card .ant-popover-message {
+  padding: 0;
+}
+
+/* modal-css */
+.form-modal .ant-modal-mask {
+  background-color: rgba(41, 42, 51, 0.3);
+}
+
+.form-modal .ant-modal-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* table-css */
+.ant-table table {
+  border-spacing: 2px;
+}
+
+.ant-table.ant-table-bordered .ant-table-container {
+  border: 1px solid #dee2e6;
+}
+
+.ant-table-thead tr th {
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+  background: #fff;
+}
+
+.ant-table-tbody tr.even {
+  background-color: rgb(250 250 250);
+}
+
+.ant-table-tbody tr td {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.ant-table-content tr th,
+.ant-table-content tr td {
+  border: 1px solid #dee2e6 !important;
+  border-left-width: 0 !important;
+}
+
+.ant-table-content tr th:last-child,
+.ant-table-content tr td:last-child {
+  border-right-width: 0 !important;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 24px 0 0 0;
+}
+
+.ant-table-pagination .ant-pagination-prev button,
+.ant-table-pagination .ant-pagination-next button {
+  border: none;
+}
+
+.ant-table-pagination .ant-pagination-item {
+  border-radius: 50%;
+}
+
+/*btn-add-css */
+.table-operations {
+  margin-bottom: 24px;
+  float: right;
+}
+
+/* search-input-table */
+.search-box {
+  padding: 8px;
+}
+
+.search-box input {
+  width: 188px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.search-box button {
+  width: 90px;
+}
+
+.search-button {
+  margin-left: 8px;
+}
+/*
+.add-btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-btn:hover {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transform: translateY(-3px);
+} */
+
+/* action-btn */
+.btn-action .ant-btn {
+  margin-right: 6px;
+}
+
+.btn-action .ant-btn .anticon {
+  margin-left: 4px;
+}
+
+/* delete-confirm-card */
+.delete-confirm-card .ant-popover-message-title {
+  font-size: 13.5px;
+}
+
+.delete-confirm-card .ant-popover-buttons button {
+  font-size: 13px;
+}
+
+/* form section */
+.section {
+  border-bottom: 1px solid #e6e1e1;
+  padding: 10px 0 10px 0;
+}
+
+.section .content {
+  display: flex;
+}
+
+.section .column {
+  width: 50%;
+}
+
+.section h4 {
+  padding: 10px 0 13px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* loading class */
+.isLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  padding-top: 250px;
+  justify-content: center;
+  width: 100%;
+  background: #ffffff7a;
+}
+
+/* radio button */
+.radio-btn .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: center;
+}
+
+/* seller-info */
+.content.seller-image {
+  justify-content: center;
+}
+
+.content.seller-image .ant-upload-picture-card-wrapper {
+  width: inherit;
+}
+
+.content.seller-image
+  .ant-upload-picture-card-wrapper
+  .ant-upload.ant-upload-select-picture-card,
+.content.seller-image
+  .ant-upload-picture-card-wrapper
+  .ant-upload-list-picture-card-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: -10px 0 30px 0;
+  border: 1px solid #d9d9d9;
+}
+
+.content.seller-image .ant-upload-list-picture-card .ant-upload-list-item {
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+}
+
+.content.seller-image .ant-upload-list-picture-card .ant-upload-list-item-info {
+  border-radius: 50%;
+}
+
+.content.seller-image .ant-upload-list-item-progress .ng-star-inserted {
+  justify-content: center;
+  display: flex;
+}
+
+.content.seller-image .ant-progress-outer {
+  width: 60%;
+}
+
+.content-btn-form-item .ant-form-item-control-input-content {
+  display: flex;
+}

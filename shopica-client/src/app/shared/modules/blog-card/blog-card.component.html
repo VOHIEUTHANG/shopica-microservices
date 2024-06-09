@@ -1,0 +1,16 @@
+<div class="blog-card">
+  <div [routerLink]="['/blog/detail',blog.id]" class="blog-image">
+    <div class="background-image" [ngStyle]="getBackgroundStyle()"></div>
+  </div>
+  <div class="blog-info">
+    <p [routerLink]="['/blog/detail',blog.id]" class="title text-hover">{{
+      blog.title }}</p>
+    <p class="author">
+      By
+      <span class="author-name">{{ blog.authorName }}</span>
+      on
+      <span class="create-at">{{ blog.createdAt | date: "mediumDate" }}</span>
+    </p>
+    <p class="short-content">{{ blog.summary }}</p>
+  </div>
+</div>

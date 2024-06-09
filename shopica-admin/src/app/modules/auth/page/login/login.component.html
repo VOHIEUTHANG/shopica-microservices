@@ -1,0 +1,49 @@
+<div class="row" nz-row nzAlign="middle" nzJustify="center">
+  <div nz-col nzSm="16" nzMd="10" nzLg="8">
+    <div class="card">
+      <div class="card-header">
+        <img width="90" src="assets/images/logo.svg">
+        <p class="title">Log in</p>
+      </div>
+      <div class="card-body">
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <!-- userName -->
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+              <nz-input-group class="input-group" nzPrefixIcon="user">
+                <input nzSize="large" type="text" nz-input formControlName="username" placeholder="Username" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <!-- password -->
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your password">
+              <nz-input-group class="input-group" nzPrefixIcon="lock">
+                <input nzSize="large" type="password" nz-input formControlName="password" placeholder="Password" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <!-- form error -->
+          <div class="form-error" *ngIf="validateForm.errors?.['error']">
+            <p>{{validateForm.errors?.['error']}}</p>
+          </div>
+          <!-- remember me -->
+          <div nz-row class="login-form-margin">
+            <div nz-col [nzSpan]="12">
+              <label nz-checkbox formControlName="remember">
+                <span>Remember me</span>
+              </label>
+            </div>
+          </div>
+          <!-- submit button -->
+          <button nzShape="round" [nzLoading]="isLoading" nzSize="large" nz-button
+            class="login-form-button login-form-margin" [nzType]="'primary'">Log
+            in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div nz-col nzSm="0" nzMd="14" nzLg="16">
+    <img src="assets/images/signin.svg">
+  </div>
+</div>

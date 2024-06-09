@@ -1,0 +1,27 @@
+.container {
+  margin-top: 120px;
+}
+
+.product-detail-page {
+  min-height: 700px;
+}
+
+.product-detail-image {
+  position: relative;
+  width: 100%;
+}
+
+.recently-view {
+  margin: 60px 0;
+}
+
+.description {
+  margin-top: 60px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}

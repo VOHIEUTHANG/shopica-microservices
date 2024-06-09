@@ -1,0 +1,56 @@
+[
+	{
+		"username": "admin",
+		"fullName": "Shopica Admin",
+		"password": "admin",
+		"email": "shopica@gmail.com",
+		"isActive": true,
+		"imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/user-images/2024-03-01T10:24:58.171Z/HieuVO%20(2).png",
+		"phone": "string.Empty",
+		"provider": "SHOPICA",
+		"providerKey": "SHOPICA",
+		"role": {
+			"roleName": "SUPER",
+			"roleDescription": "SUPER Role"
+		},
+		"addresses": [
+			{
+				"provinceId": 202,
+				"provinceName": "Ho Chi Minh City",
+				"districtId": 1451,
+				"districtName": "District 9",
+				"wardCode": "20908",
+				"wardName": "Ward Phuoc Long A",
+				"street": "45 Street 7",
+				"fullAddress": "45 Street 7 - Ward Phuoc Long A - District 9 - Ho Chi Minh City"
+			}
+		]
+	},
+	{
+		"username": "kevinDb",
+		"fullName": "Kevin De Bruyne",
+		"password": "kevin@123",
+		"email": "kevinDb@gmail.com",
+		"isActive": true,
+		"imageUrl": "https://www.mancity.com/meta/media/z00hnhu0/kevin-de-bruyne.png",
+		"phone": "string.Empty",
+		"provider": "SHOPICA",
+		"providerKey": "SHOPICA",
+		"role": {
+			"roleName": "DEFAULT",
+			"roleDescription": "DEFAULT Role"
+		},
+		"addresses": [
+			{
+				"provinceId": 202,
+				"provinceName": "Ho Chi Minh City",
+				"districtId": 1451,
+				"districtName": "District 9",
+				"wardCode": "20908",
+				"wardName": "Ward Phuoc Long A",
+				"street": "45 Street 7",
+				"fullAddress": "45 Street 7 - Ward Phuoc Long A - District 9 - Ho Chi Minh City"
+			}
+		]
+	}
+]

@@ -1,0 +1,114 @@
+# Docker
+# Build a Docker image
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+ branches:
+  include:
+    - master
+ paths:
+   include:
+     - src/Services/Identity/Identity.API
+     - src/Services/Inventory/Inventory.API
+     - src/Services/Basket/Basket.API
+     - src/Services/Catalog/Catalog.API
+     - src/Services/Notification/Notification.API
+     - src/Services/Ordering/Ordering.API
+     - src/Services/Payment/Payment.API
+     - src/Services/Ratting/Ratting.API
+     - src/Services/Storage/Storage.API
+     - src/APIGateways/Web.Bff.Ocelot
+resources:
+- repo: self
+
+stages:
+- stage: Build
+  displayName: Build images
+  jobs:
+  - job: Build_Identity_Service
+    displayName: Build Identity Service
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker_hub'
+        repository: '123trunghieu/shopica_identity_service'
+        command: 'buildAndPush'
+        Dockerfile: 'src/Services/Identity/Identity.API/Dockerfile'
+        buildContext: './src'
+
+  - job: Build_Inventory_Service
+    displayName: Build Inventory Service
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker_hub'
+        repository: '123trunghieu/shopica_inventory_service'
+        command: 'buildAndPush'
+        Dockerfile: 'src/Services/Inventory/Inventory.API/Dockerfile'
+        buildContext: './src'
+        
+  - job: Build_Basket_Service
+    displayName: Build Basket Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_basket_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/Services/Basket/Basket.API/Dockerfile'
+          buildContext: './src'
+
+  - job: Build_Catalog_Service
+    displayName: Build Catalog Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_catalog_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/Services/Catalog/Catalog.API/Dockerfile'
+          buildContext: './src'
+
+  - job: Build_Notification_Service
+    displayName: Build Notification Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_notification_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/Services/Notification/Notification.API/Dockerfile'
+          buildContext: './src'
+
+  - job: Build_Payment_Service
+    displayName: Build Payment Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_payment_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/Services/Payment/Payment.API/Dockerfile'
+          buildContext: './src'
+
+  - job: Build_Storage_Service
+    displayName: Build Storage Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_storage_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/Services/Storage/Storage.API/Dockerfile'
+          buildContext: './src'
+
+  - job: Build_APIGateway_Service
+    displayName: Build APIGateway Service
+    steps:
+    - task: Docker@2
+      inputs:
+          containerRegistry: 'docker_hub'
+          repository: '123trunghieu/shopica_api_gateway_service'
+          command: 'buildAndPush'
+          Dockerfile: 'src/APIGateways/Web.Bff.Ocelot/Dockerfile'
+          buildContext: './src'

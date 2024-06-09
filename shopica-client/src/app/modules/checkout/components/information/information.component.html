@@ -1,0 +1,108 @@
+<form class="custom-form" nz-form [formGroup]="orderForm" [nzLayout]="'vertical'">
+  <div class="contact-info">
+    <div class="tittle flex jc-space-between al-center">
+      <h3>Shipping information</h3>
+      <a (click)="showAddressList = true">Get from address list</a>
+    </div>
+    <div class="content">
+      <nz-form-item nz-col>
+        <nz-form-label nzRequired nzFor="customerName">Customer Name</nz-form-label>
+        <nz-form-control nzErrorTip="Please input your customer name!">
+          <input nz-input type="text" formControlName="customerName">
+        </nz-form-control>
+      </nz-form-item>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="email">Email</nz-form-label>
+            <nz-form-control nzErrorTip="Please input your email!">
+              <input nz-input type="text" formControlName="email">
+            </nz-form-control>
+          </nz-form-item>
+
+        </div>
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="phone">Phone</nz-form-label>
+            <nz-form-control nzErrorTip="Please input your phone!">
+              <input nz-input type="text" formControlName="phone">
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="province">Province</nz-form-label>
+            <nz-form-control nzErrorTip="Please select your province!">
+              <nz-select nzSize="large" (ngModelChange)="provinceChange($event)" formControlName="province" nzShowSearch
+                nzPlaceHolder="Select a province">
+                <nz-option *ngFor="let item of listProvince" [nzLabel]="item.ProvinceName" [nzValue]="item">
+                </nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="district">District</nz-form-label>
+            <nz-form-control nzErrorTip="Please select your district!">
+              <nz-select nzSize="large" (ngModelChange)="districtChange($event)" formControlName="district" nzShowSearch
+                nzPlaceHolder="Select a district">
+                <nz-option *ngFor="let item of listDistrict" [nzLabel]="item.DistrictName" [nzValue]="item">
+                </nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="ward">Ward</nz-form-label>
+            <nz-form-control nzErrorTip="Please select your ward!">
+              <nz-select nzSize="large" formControlName="ward" nzShowSearch nzPlaceHolder="Select a ward">
+                <nz-option *ngFor="let item of listWard" [nzLabel]="item.WardName" [nzValue]="item">
+                </nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="street">Apartment, Street</nz-form-label>
+            <nz-form-control nzErrorTip="Please input your seller street!">
+              <input nz-input type="text" formControlName="street">
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+      <div nz-row>
+        <div nz-col [nzSm]="24" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-label nzRequired nzFor="note">Notes</nz-form-label>
+            <nz-form-control nzErrorTip="Please input your notes!">
+              <textarea rows="3" nz-input formControlName="notes"></textarea>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row>
+        <div nz-col [nzSm]="12" [nzXs]="24">
+          <nz-form-item>
+            <nz-form-control>
+              <label formControlName="saveAddress" nz-checkbox>Save address for next order</label>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<app-address-list-modal [isVisible]="showAddressList" (closeAddressModalEvent)="showAddressList = false"
+  (selectAddressModalEvent)="selectAddress($event)"></app-address-list-modal>

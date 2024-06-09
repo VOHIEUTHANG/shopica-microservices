@@ -1,0 +1,55 @@
+.banner-holder {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.column {
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.column:hover .background {
+  transform: scale(1.1);
+}
+
+.women-sale .background {
+  background-image: url("assets/images/summer-sale.jpg");
+  background-size: cover;
+  background-position: center center;
+  transition: 2s;
+  transform: scale(1);
+  padding-top: 61.40350877192983%;
+}
+
+.man-sale .background {
+  background-image: url("assets/images/man.jpg");
+  background-size: cover;
+  background-position: center center;
+  transition: 2s;
+  transform: scale(1);
+  padding-top: 61.40350877192983%;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.content h3 {
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+}
+
+.content h4 {
+  font-size: 24px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}

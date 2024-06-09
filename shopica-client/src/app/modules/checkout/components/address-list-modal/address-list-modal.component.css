@@ -1,0 +1,74 @@
+.address-items {
+  padding: 30px 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.address-book-item-wrapper:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.address-book-item:hover {
+  background-color: #8e8e8e;
+  border: 1px solid #8e8e8e;
+  color: #231f20;
+}
+
+.address-book-item {
+  display: block;
+  padding: 24px 36px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s all;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+.add-address-btn {
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+  height: 40px;
+}
+
+.address-book-item .edit-address {
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: 0.2s all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.address-book-item:hover .edit-address {
+  opacity: 1;
+  visibility: visible;
+}
+
+.address-book-item .delete-address {
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  right: 100px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: 0.2s all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.address-book-item:hover .delete-address {
+  opacity: 1;
+  visibility: visible;
+}
+
+.address-book-item .default-address {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}

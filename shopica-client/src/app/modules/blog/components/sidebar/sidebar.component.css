@@ -1,0 +1,93 @@
+.blog-sidebar {
+  margin-bottom: 50px;
+}
+
+.filter-section {
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #222;
+  left: 0;
+  bottom: 15px;
+  position: absolute;
+}
+
+.content {
+  padding-right: 30px;
+}
+
+.content ul li {
+  margin-bottom: 5px;
+  padding: 5px 5px;
+}
+
+.single-post {
+  margin-bottom: 25px;
+}
+
+.post_image {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.post_image img {
+  height: 75px;
+  width: 110px;
+}
+
+.info_title {
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.info_date {
+  font-size: 12px;
+  color: #878787;
+}
+
+.cart-item {
+  margin-bottom: 20px;
+}
+
+.blog-tag ul li {
+  display: inline-block;
+  padding: 0;
+}
+
+.blog-tag ul li a {
+  border: 1px solid #222;
+  border-radius: 20px;
+  color: #222;
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 5px 3px 0;
+  padding: 5px 15px 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.blog-tag ul li a:hover {
+  border-color: #56cfe1;
+  background-color: #56cfe1;
+  color: white;
+}
+
+.blog-tag ul li.active a {
+  border-color: #56cfe1;
+  background-color: #56cfe1;
+  color: white;
+}

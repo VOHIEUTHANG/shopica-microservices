@@ -1,0 +1,21 @@
+<div class="title mt-70">
+  <div class="background"></div>
+  <p class="flex al-center jc-center">CHECKOUT</p>
+</div>
+<div class="container">
+  <div class="checkout mt-70">
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzLg]="14" [nzXs]="24">
+        <app-information></app-information>
+        <app-payment (createOrderEvent)="checkout($event)"></app-payment>
+      </div>
+      <div nz-col [nzLg]="10" [nzXs]="24">
+        <app-product-group [cart]="cart"></app-product-group>
+        <app-promotion [cart]="cart"></app-promotion>
+        <app-checkout-summary></app-checkout-summary>
+      </div>
+    </div>
+    <app-loader [id]="'checkout'" [background]="'#ffffffab'"></app-loader>
+    <!-- <router-outlet></router-outlet> -->
+  </div>
+</div>

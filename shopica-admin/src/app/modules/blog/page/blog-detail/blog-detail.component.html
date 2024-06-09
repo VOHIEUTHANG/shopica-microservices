@@ -1,0 +1,56 @@
+<div class="container">
+  <form nz-form [formGroup]="baseForm">
+    <nz-form-item>
+      <nz-form-label nzSpan="3" nzFor="title" nzRequired>Title</nz-form-label>
+      <nz-form-control>
+        <input nz-input type="text" formControlName="title" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label nzSpan="3" nzRequired nzFor="content">Content</nz-form-label>
+      <nz-form-control>
+        <quill-editor formControlName="content" [styles]="{ height: '400px' }"></quill-editor>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label nzSpan="3" nzRequired>Summary</nz-form-label>
+      <nz-form-control nzErrorTip="Please write summary!">
+        <textarea formControlName="summary" nz-input rows="3" placeholder="Write summary"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+    <div nz-row>
+      <div nz-col [nzSpan]="12">
+        <nz-form-item>
+          <nz-form-label nzSpan="6" nzRequired>Tags</nz-form-label>
+          <div nz-col [nzSpan]="14">
+            <nz-form-control>
+              <nz-select nzMode="tags" nzPlaceHolder="Tag " formControlName="tags">
+                <nz-option *ngFor="let option of tags" [nzLabel]="option" [nzValue]="option"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </div>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzSpan]="12">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="10" nzRequired>Background</nz-form-label>
+          <div nz-col [nzSpan]="14">
+            <nz-upload class="background-uploader" [nzFileType]="contentTypeAccept" [nzBeforeUpload]="beforeUpload"
+              [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 1" [nzRemove]="remove">
+              <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
+            </nz-upload>
+          </div>
+        </nz-form-item>
+      </div>
+    </div>
+
+
+  </form>
+  <div class="btn-submit">
+    <button nz-button [nzLoading]="isLoadingButtonSubmit" [disabled]="baseForm.invalid" (click)="submitForm()"
+      nzType="primary">
+      Save change
+    </button>
+  </div>
+</div>

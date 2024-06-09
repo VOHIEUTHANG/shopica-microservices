@@ -1,0 +1,48 @@
+<div class="table-operations">
+    <button (click)="initialInventory()" class="add-btn" nzType="primary" nz-button>
+        Init Inventory<i nz-icon nzType="plus" nzTheme="outline"></i>
+    </button>
+</div>
+<nz-table #sortTable [nzFrontPagination]="false" [nzTotal]="total" [nzPageSize]="baseParam.pageSize"
+    [nzPageIndex]="baseParam.pageIndex" nzBordered [nzLoading]="isLoading" (nzQueryParams)="onQueryParamsChange($event)"
+    [nzData]="listData" nzTableLayout="fixed">
+    <thead>
+        <tr>
+            <th nzAlign="center" nzWidth="7%" nzColumnKey="id" [nzSortFn]="true">Id</th>
+            <th nzAlign="center" nzColumnKey="documentTypes" [nzFilters]="filterSource" [nzFilterFn]="true">Source</th>
+            <th nzAlign="center">Source No</th>
+            <!-- <th nzAlign="center">Source Line No</th> -->
+            <th nzAlign="center">Product Name
+                <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+                    <i nz-icon nzType="search"></i>
+                </nz-filter-trigger>
+            </th>
+            <th nzAlign="center">Size Name</th>
+            <th nzAlign="center">Color Name</th>
+            <th nzAlign="center">Quantity</th>
+            <th nzAlign="center">Registering Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of sortTable.data; let odd=odd; let even = even" [ngClass]="{ odd: odd, even: even }">
+            <td nzAlign="center">{{ data.id }}</td>
+            <td nzAlign="center">{{ sourceDocument[data.sourceDocument] }}</td>
+            <td nzAlign="center">{{ data.sourceNo }}</td>
+            <!-- <td nzAlign="center">{{ data.sourceLineNo }}</td> -->
+            <td nzAlign="center">{{ data.productName }}</td>
+            <td nzAlign="center">{{ data.sizeName }}</td>
+            <td nzAlign="center">{{ data.colorName }}</td>
+            <td nzAlign="center">{{ data.quantity }}</td>
+            <td nzAlign="center">{{ data.registeringDate | date: "mediumDate" }}</td>
+        </tr>
+    </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <div class="ant-table-filter-dropdown">
+        <div class="search-box">
+            <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+            <button nz-button nzSize="small" (click)="reset()">Reset</button>
+            <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+        </div>
+    </div>
+</nz-dropdown-menu>

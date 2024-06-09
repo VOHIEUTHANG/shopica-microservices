@@ -1,0 +1,125 @@
+<div class="message-icon">
+  <nz-badge [nzCount]="numMessageUnRead">
+    <button class="message-btn" (click)="isShowMessagesFrame = !isShowMessagesFrame" nz-button nzShape="circle"><i
+        nz-icon nzType="message" nzTheme="outline"></i></button>
+  </nz-badge>
+</div>
+
+<div nz-row [class.no-message]="!conversationSelected" [class.show]="isShowMessagesFrame" class="message-frame">
+  <div nz-col *ngIf="conversationSelected" [nzSpan]="13" class="conversation-detail flex fd-column">
+    <div class="header">
+      <div class="avatar mr-5">
+        <img height="30" width="30" [src]="conversationSelected?.conversationImage" alt="avatar">
+      </div>
+      <p class="title">{{conversationSelected?.conversationTitle}}</p>
+    </div>
+    <div #messageContent class="message-content">
+      <nz-spin [ngClass]="{'isLoading':isLoading}" [nzSpinning]="isLoading" nzSimple></nz-spin>
+      <div class="introduce flex fd-column al-center">
+        <div class="avatar ">
+          <img height="50" width="50" [src]="conversationSelected?.conversationImage" alt="avatar">
+        </div>
+        <div class="info">
+          <p class="name">{{conversationSelected?.conversationTitle}}</p>
+          <p class="follow">14k+ follower - 4.5/5 rating</p>
+        </div>
+      </div>
+
+      <div class="messages">
+        <div [ngClass]="{'send':message.sender_id == accountId,'receive':message.sender_id != accountId}"
+          *ngFor="let message of messages" class="message flex jc-flex-end">
+          <div *ngIf="message.sender_id != accountId" class="avatar">
+            <img height="25" width="25" [src]="conversationSelected?.conversationImage" alt="avatar">
+          </div>
+          <div class="attachment-content"></div>
+          <div class="content">
+            <div *ngFor="let attachment of message.attachments">
+              <div *ngIf="attachment.thumbUrl" class="image">
+                <img (click)="previewImage(attachment.thumbUrl)" [src]="attachment.thumbUrl" alt="">
+              </div>
+              <div *ngIf="!attachment.thumbUrl" class="attach flex al-center">
+                <div class="flex jc-center al-center"><i nz-icon nzType="file-text" nzTheme="outline"></i></div>
+                <a target="_blank" [href]="attachment.fileUrl">
+                  <p>{{attachment.name}}</p>
+                </a>
+              </div>
+            </div>
+            <div *ngIf="message.content" class="text">{{message.content}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attachments">
+      <div *ngFor="let file of fileList" class="attachment flex al-center">
+        <div [style.background]="file.originFileObj?.color" class="attachment-type flex al-center jc-center">
+          {{file.originFileObj?.extension}}</div>
+        <div class="attachment-info flex jc-space-between al-center">
+          <div class="attachment-name">
+            <p nz-tooltip [nzTooltipTitle]="file.name +' - '+ file.originFileObj?.newSize">{{file.name +" - "+
+              file.originFileObj?.newSize}}</p>
+            <p>Attached</p>
+          </div>
+        </div>
+        <div (click)="removeAttachment(file.uid)" class="remove-btn"><i nz-icon nzType="close" nzTheme="outline"></i>
+        </div>
+      </div>
+    </div>
+    <div class="message-input flex al-center">
+      <div class="attach-btn flex al-center jc-center">
+        <nz-upload [nzMultiple]="true" [nzBeforeUpload]="beforeUpload" [nzAction]="uploadUrl"
+          (nzChange)="handleChange($event)" [(nzFileList)]="fileList" [nzAccept]="'image/png, image/jpeg'"
+          [nzShowUploadList]="false" nzName="files" [nzHeaders]="{ authorization: 'authorization-text' }">
+          <i nz-icon nz-tooltip nzTooltipTitle="Upload a file">
+            <svg t="1625332625604" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="1207" width="1em" height="1em">
+              <path
+                d="M704 256v490.666667c0 94.293333-76.373333 170.666667-170.666667 170.666666s-170.666667-76.373333-170.666666-170.666666V213.333333a106.666667 106.666667 0 0 1 213.333333 0v448c0 23.466667-19.2 42.666667-42.666667 42.666667s-42.666667-19.2-42.666666-42.666667V256H426.666667v405.333333a106.666667 106.666667 0 0 0 213.333333 0V213.333333c0-94.293333-76.373333-170.666667-170.666667-170.666666S298.666667 119.04 298.666667 213.333333v533.333334c0 129.706667 104.96 234.666667 234.666666 234.666666s234.666667-104.96 234.666667-234.666666V256h-64z"
+                p-id="1208"></path>
+              <path
+                d="M0 0h42.666667v42.666667H0zM0 981.333333h42.666667v42.666667H0zM981.333333 0h42.666667v42.666667h-42.666667zM981.333333 981.333333h42.666667v42.666667h-42.666667z"
+                opacity=".01" p-id="1209"></path>
+            </svg>
+          </i>
+        </nz-upload>
+      </div>
+      <div class="input"><input nz-input (keyup.enter)="sendMessage()" [(ngModel)]="content" /></div>
+      <div [class.can-send]="content || (fileList.length >0 && isLoad)" (click)="sendMessage()"
+        class="send-btn flex al-center jc-center"><i nz-icon nzType="send" nzTheme="outline"></i></div>
+    </div>
+  </div>
+
+  <div nz-col [nzSpan]="conversationSelected ? 11 : 24" class="all-conversations flex fd-column">
+    <div class="header flex jc-space-between al-center">
+      <p class="title"><i nz-icon nzType="message" nzTheme="outline"></i>Messages</p>
+      <div (click)="isShowMessagesFrame = false" class="close-btn"><i nz-icon nzType="close" nzTheme="outline"></i>
+      </div>
+    </div>
+    <div class="conversations custom-scroll-bar">
+      <div class="no-message" *ngIf="!conversationSelected">You don't have any message</div>
+      <div [class.active]="conversationSelected?.id == conversation.id" (click)="openConversation(conversation)"
+        *ngFor="let conversation of conversations" class="conversation-item flex al-center">
+        <div class="avatar mr-10">
+          <img height="40" width="40" [src]="conversation.conversationImage" alt="avatar">
+        </div>
+        <div class="conversation-content flex jc-space-between al-center">
+          <div
+            [class.un-read]="conversation.lastMessage && conversation.lastMessage.sender_id != accountId && !conversation.lastMessage?.isRead"
+            class=" shop-info flex fd-column">
+            <span class="shop-name">{{conversation.conversationTitle}}</span>
+            <span class="last-message">{{conversation.lastMessage?.sender_id == accountId?'You: ':''}}{{
+              (!conversation.lastMessage? '' : conversation.lastMessage?.content ? conversation.lastMessage.content
+              :"sent an attachment")}}</span>
+          </div>
+        </div>
+        <div
+          [class.un-read]="conversation.lastMessage && conversation.lastMessage.sender_id != accountId && !conversation.lastMessage?.isRead"
+          class="message-time">
+          <span>{{conversation.lastMessage ? ( conversation.lastMessage.created_at | date:'shortTime')
+            :(conversation.created_at|date:'shortTime')}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div #audioElement></div>

@@ -1,0 +1,14 @@
+.section.seller-info {
+  border-bottom: none;
+  margin-top: 50px;
+}
+
+.btn-submit {
+  float: right;
+  margin: 20px;
+  margin-right: 80px;
+}
+
+.btn-submit button:first-child {
+  margin-right: 5px;
+}

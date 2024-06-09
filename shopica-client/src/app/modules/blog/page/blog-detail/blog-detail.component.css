@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+}
+
+.blog-detail {
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e8e9eb;
+}
+
+.blog-image img {
+  width: 100%;
+}
+
+.blog-info {
+  padding: 20px 0 30px;
+}
+
+.blog-title {
+  font-size: 24px;
+}
+
+.blog-date {
+  color: #6d6d6d;
+  margin-right: 20px;
+}
+
+.num-comment {
+  color: #6d6d6d;
+}

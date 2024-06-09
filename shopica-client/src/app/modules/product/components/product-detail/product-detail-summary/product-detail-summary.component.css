@@ -1,0 +1,158 @@
+.product-info {
+  padding: 0 10px;
+}
+
+.product-image {
+  padding: 10px 10px 0 10px;
+}
+
+.product-name .name {
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 7px;
+}
+
+.product-name .name:hover {
+  cursor: pointer;
+  color: #56cfe1;
+}
+
+.product-price {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.product-price .price {
+  font-size: 22px;
+  color: #696969;
+  margin-bottom: 0;
+}
+
+.product-description {
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.content {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-top: 128%;
+}
+
+.color {
+  margin-bottom: 20px;
+}
+
+.size {
+  margin-bottom: 30px;
+}
+
+.actions button {
+  margin-left: 10px;
+}
+
+.add-to-wishlist {
+  margin-bottom: 15px;
+}
+
+.add-to-wishlist i {
+  line-height: 0;
+  font-size: 16px;
+}
+
+.add-to-cart-btn {
+  height: 40px;
+  margin-bottom: 15px;
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+}
+
+.trust-img {
+  margin-bottom: 10px;
+}
+
+.shipping-detail,
+.seller {
+  border: 1px solid rgb(218 215 215);
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 120px;
+}
+
+.seller {
+  padding: 15px;
+}
+
+.shipping-detail p {
+  margin-bottom: 0;
+}
+
+.ship-to {
+  margin-bottom: 10px;
+}
+
+.ship-to p,
+.ship-fee p {
+  margin-right: 5px;
+}
+
+.ship-fee .text {
+  color: #878787;
+  margin-right: 5px;
+}
+
+.ship-to .address {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.seller-info {
+  padding: 0 10px 10px 0;
+}
+
+.seller-info .logo {
+  margin-right: 10px;
+}
+
+.seller-info .logo img {
+  border-radius: 50%;
+}
+
+.seller-info .name {
+  font-weight: 600;
+}
+
+.seller-detail .rating,
+.seller-detail .follow {
+  padding: 0 20px;
+}
+
+.border-left {
+  align-self: center;
+  width: 1px;
+  height: 20px;
+  background-color: rgb(218 215 215);
+}
+
+.seller-detail .title {
+  font-weight: 600;
+}
+
+.seller-detail .subtitle {
+  color: #878787;
+  font-size: 12px;
+}
+
+.seller-left {
+  margin-right: 20px;
+}
+
+.inWishlist {
+  color: #e81e63;
+}

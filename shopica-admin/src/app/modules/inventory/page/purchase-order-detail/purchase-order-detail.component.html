@@ -1,0 +1,88 @@
+<div class="card">
+    <div class="table-operations" *ngIf="!viewMode">
+        <button (click)="addPurchaseOrderDetail()" class="add-btn" nzType="primary" nz-button>
+            Add<i nz-icon nzType="plus" nzTheme="outline"></i>
+        </button>
+    </div>
+
+    <nz-table #editRowTable nzBordered [nzData]="purhcaseOrderDetails" [nzShowPagination]="viewMode">
+        <thead>
+            <tr>
+                <th nzWidth="25%">Product</th>
+                <th nzWidth="15%">Size</th>
+                <th nzWidth="15%">Color</th>
+                <th nzWidth="15%">Quantity</th>
+                <th nzWidth="10%">Price</th>
+                <th *ngIf="!viewMode" nzWidth="20%">Action</th>
+                <th *ngIf="viewMode" nzWidth="20%">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of editRowTable.data" class="editable-row">
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.productName }}
+                    </div>
+                    <nz-select [hidden]="editId !== data.id" (ngModelChange)="productChange($event, data)"
+                        [(ngModel)]="data.productId" nzPlaceHolder="Select a sales by product">
+                        <nz-option *ngFor="let product of listProduct" [nzLabel]="product.productName"
+                            [nzValue]="product.id">
+                        </nz-option>
+                    </nz-select>
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.sizeName }}
+                    </div>
+                    <nz-select [hidden]="editId !== data.id" (ngModelChange)="sizeChange($event, data)"
+                        [(ngModel)]="data.sizeId" nzPlaceHolder="Select a size">
+                        <nz-option *ngFor="let size of listSize" [nzLabel]="size.sizeName" [nzValue]="size.id">
+                        </nz-option>
+                    </nz-select>
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.colorName }}
+                    </div>
+                    <nz-select [hidden]="editId !== data.id" (ngModelChange)="colorChange($event , data)"
+                        [(ngModel)]="data.colorId" nzPlaceHolder="Select a color">
+                        <nz-option *ngFor="let color of listColor" [nzLabel]="color.colorName" [nzValue]="color.id">
+                        </nz-option>
+                    </nz-select>
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.quantity }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.quantity" />
+                </td>
+                <td>
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.price }}
+                    </div>
+                    <input [hidden]="editId !== data.id" type="text" nz-input [(ngModel)]="data.price" />
+                </td>
+                <td class="btn-action" *ngIf="!viewMode">
+                    <button nz-button nzType="primary" nzPopconfirmOverlayClassName="delete-confirm-card" nz-popconfirm
+                        nzPopconfirmTitle="Are you sure delete this item?" (nzOnConfirm)="deleteRow(data.id)"
+                        nzPopconfirmPlacement="left" nzDanger>Delete<i nz-icon nzType="delete"
+                            nzTheme="outline"></i></button>
+                    <button nz-button (click)="savePO(data)" nzType="primary">Save<i nz-icon nzType="save"
+                            nzTheme="outline"></i></button>
+                </td>
+                <td *ngIf="viewMode">
+                    <div class="editable-cell" [hidden]="editId === data.id" (click)="startEdit(data.id)">
+                        {{ data.price * data.quantity }}
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+    <div class="btn-submit" *ngIf="!viewMode">
+        <button nz-button [nzLoading]="isLoadingButtonSubmit" (click)="submitForm()"
+            [disabled]="purhcaseOrderDetails.length == 0" nzType="primary">Save
+            change</button>
+    </div>
+
+    <nz-spin [ngClass]="{'isLoading':isLoadingProductEdit}" [nzSpinning]="isLoadingProductEdit" nzSimple></nz-spin>
+</div>

@@ -1,0 +1,45 @@
+<div class="coupon-public">
+  <div class="coupons">
+    <div *ngFor="let promotion of promotionData" [ngClass]="{'active': promotion.code === appliedPromotion?.code }"
+      class="coupon" (click)="applyCouponFromPromotionList(promotion.code)">
+      <div class="coupon-left"></div>
+      <div class="coupon-right">
+        <div class="coupon-title">
+          {{promotion.code}}
+          <span class="coupon-count"><i>(Còn 470)</i></span>
+        </div>
+        <div class="coupon-description"> {{promotion.description}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="coupon-list-btn flex jc-space-between al-center">
+    <button class="checkout-btn" nz-button nzType="primary" nz-col [nzSm]="6" [nzXs]="9">Voucher List</button>
+    <a (click)="removeCurrentPromotion()" *ngIf="appliedPromotion">Remove {{appliedPromotion?.code}}</a>
+  </div>
+</div>
+
+
+<div nz-row class="cart-group-footer">
+  <div nz-col [nzSpan]="24" class="cart-group-order-notes flex al-center">
+    <div class="notes-content">
+      <div class="notes-area">
+        <div class="discount-content">
+          <form nz-form [formGroup]="couponForm" class="promotion-form">
+            <nz-form-item class="flex jc-center" [nzGutter]="12">
+              <nz-form-control [nzSm]="18" [nzXs]="14" [nzErrorTip]="priceErrorTpl">
+                <input class="coupon-input" placeholder="Coupon code" formControlName="couponCode" nz-input type="text">
+                <ng-template #priceErrorTpl let-control>
+                  <ng-container *ngIf="control.hasError('error')">
+                    {{control.errors.error}}
+                  </ng-container>
+                </ng-template>
+              </nz-form-control>
+              <button class="checkout-btn" nz-button nzType="primary" (click)="applyCoupon()" nz-col [nzSm]="6"
+                [nzXs]="9">Apply</button>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

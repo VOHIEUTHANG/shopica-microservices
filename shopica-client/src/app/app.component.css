@@ -1,0 +1,35 @@
+.body {
+  position: relative;
+}
+
+ .product-image a {
+  display: block;
+  width: 70px;
+  margin-right: 15px;
+}
+
+.product-image a img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.product-image a img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 8px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  z-index: 2;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,87 @@
+<div #screen class="order-detail">
+  <app-loader [id]="'order-detail'"></app-loader>
+  <div *ngIf="order" class="header flex jc-space-between al-center">
+    <p class="title">#{{order.id}} <span>Order detail - <strong
+          [ngClass]="orderStatus[order.status]">{{orderStatus[order.status]}}</strong></span>
+    </p>
+    <p class="date">Order date: {{order.createdAt | date:'mediumDate'}}</p>
+  </div>
+  <p><a (click)="downLoadInvoice()">View Invoice</a></p>
+  <div *ngIf="order" class="address">
+    <p class="customer-name">{{order.customerName}}</p>
+    <p>Address: {{order.fullAddress}}</p>
+    <p>Phone: {{order.phone}}</p>
+  </div>
+  <nz-table [nzShowPagination]="false" [nzLoading]="isLoading" #basicTable [nzData]="order?.orderDetails">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th [nzAlign]="'center'">Price</th>
+        <th [nzAlign]="'center'">Quantity</th>
+        <th [nzAlign]="'center'">Total</th>
+        <th [nzAlign]="'center'">Review</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>
+          <div class="flex">
+            <div class="image">
+              <img [src]="data.imageUrl" alt="">
+            </div>
+            <div class="product-name">
+              <p [routerLink]="['/product/detail',data.productId]" class="text-hover">{{data.productName}}</p>
+              <div class="color">Color: <span>{{data.colorName}}</span> </div>
+              <div class="size">Size: <span>{{data.sizeName}}</span></div>
+
+            </div>
+
+          </div>
+        </td>
+        <td [nzAlign]="'center'">{{ data.price | currency}}</td>
+        <td [nzAlign]="'center'">{{ data.quantity}}</td>
+        <td [nzAlign]="'center'">{{ data.quantity * data.price | currency}}</td>
+        <td [nzAlign]="'center'"><button (click)="openReviewModal(data)" [nzType]="'primary'" nz-button><i nz-icon
+              nzType="edit" nzTheme="outline"></i></button></td>
+      </tr>
+    </tbody>
+  </nz-table>
+  <div *ngIf="order" class="footer">
+    <div class="row" nz-row>
+      <div class="title" nz-col [nzSpan]="20">
+        SubTotal:
+      </div>
+      <div class="value" nz-col [nzSpan]="4">
+        {{order.totalPrice | currency}}
+      </div>
+    </div>
+
+    <div class="row" nz-row>
+      <div class="title" nz-col [nzSpan]="20">
+        Shipping:
+      </div>
+      <div class="value" nz-col [nzSpan]="4">
+        {{order.shippingCost | currency}}
+      </div>
+    </div>
+
+    <div *ngIf="order.discount" class="row" nz-row>
+      <div class="title" nz-col [nzSpan]="20">
+        Discount:
+      </div>
+      <div class="value" nz-col [nzSpan]="4">
+        {{order.discount | currency}}
+      </div>
+    </div>
+
+    <div class="row total" nz-row>
+      <div class="title" nz-col [nzSpan]="20">
+        Total:
+      </div>
+      <div class="value" nz-col [nzSpan]="4">
+        {{order.totalPrice + order.shippingCost - order.discount | currency}}
+      </div>
+    </div>
+  </div>
+</div>
+<app-review [(isVisible)]="isOpenReviewModal" [orderDetail]="orderDetail"></app-review>

@@ -1,0 +1,112 @@
+.toolbar-section {
+  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  color: #878787;
+  justify-content: space-between;
+}
+
+.filter p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.filter p i {
+  padding-right: 2px;
+  font-size: 17px;
+}
+
+.view a.view-page {
+  color: #878787;
+  height: 23px;
+  transition: 0.25s;
+  position: relative;
+  margin-right: 10px;
+  display: block;
+  border: 1px solid currentcolor;
+}
+
+.view a.view-page.active {
+  color: #222;
+}
+
+.view a.view-page:hover {
+  color: #222;
+}
+
+.view a.view-page::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 9px;
+  height: 17px;
+  background: currentcolor;
+  transition: 0.3s;
+}
+
+/* view 1 */
+.view a.view-page.view_1 {
+  display: none;
+  width: 16px;
+}
+
+/* view 2 */
+.view a.view-page.view_2 {
+  width: 29px;
+}
+
+.view a.view-page.view_2::before {
+  box-shadow: 13px 0 0 currentcolor;
+}
+
+/* view 3 */
+.view a.view-page.view_3 {
+  width: 42px;
+}
+
+.view a.view-page.view_3::before {
+  box-shadow: 13px 0 0 currentcolor, 26px 0 0 currentcolor;
+}
+
+/* view 4 */
+.view a.view-page.view_4 {
+  width: 55px;
+}
+
+.view a.view-page.view_4::before {
+  box-shadow: 13px 0 0 currentcolor, 26px 0 0 currentcolor,
+    39px 0 0 currentcolor;
+}
+
+/* view 5 */
+.view a.view-page.view_5 {
+  width: 68px;
+}
+
+.view a.view-page.view_5::before {
+  box-shadow: 13px 0 0 currentcolor, 26px 0 0 currentcolor,
+    39px 0 0 currentcolor, 52px 0 0 currentcolor;
+}
+
+.sort-by nz-select {
+  float: right;
+}
+
+@media (max-width: 992px) {
+  .view a.view-page.view_1 {
+    display: block;
+  }
+  .view a.view-page.view_3 {
+    display: none;
+  }
+  .view a.view-page.view_4 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .view {
+    display: none;
+  }
+}

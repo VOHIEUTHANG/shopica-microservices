@@ -1,0 +1,6 @@
+@Web.Bff.Ocelot_HostAddress = http://localhost:5074
+
+GET {{Web.Bff.Ocelot_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

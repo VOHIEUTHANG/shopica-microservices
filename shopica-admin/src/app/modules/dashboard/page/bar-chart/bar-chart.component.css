@@ -1,0 +1,11 @@
+.bar-chart h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bar-chart {
+  height: 500px;
+  margin-top: 60px;
+}

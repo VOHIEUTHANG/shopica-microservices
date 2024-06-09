@@ -1,0 +1,82 @@
+<div class="title mt-70">
+  <div class="background"></div>
+  <p class="flex al-center jc-center">SHOPPING CART</p>
+</div>
+<div class="container">
+  <app-loader [id]="'cart-page'"></app-loader>
+  <div *ngIf="cart">
+    <div *ngIf="cart.cartItems.length == 0" class="cart-empty al-center flex fd-column">
+      <i nz-icon>
+        <svg t="1619944205782" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          p-id="2396" width="1em" height="1em">
+          <path
+            d="M836.404949 896.345622c-32.072463 0-58.014298 25.968441-58.014298 58.014298 0 31.966039 25.942859 58.012252 58.014298 58.012252s58.014298-26.046213 58.014298-58.012252C894.420271 922.314063 868.477412 896.345622 836.404949 896.345622z"
+            p-id="2397"></path>
+          <path
+            d="M379.360586 896.345622c-32.072463 0-58.014298 25.968441-58.014298 58.014298 0 31.966039 25.942859 58.012252 58.014298 58.012252s58.014298-26.046213 58.014298-58.012252C437.374884 922.314063 411.432025 896.345622 379.360586 896.345622z"
+            p-id="2398"></path>
+          <path
+            d="M1012.37166 320.772724 317.993936 320.772724 317.993936 378.787022 954.357362 378.787022 954.357362 571.298548 329.133647 661.362796 182.474426 129.20878 11.626293 129.20878 11.626293 187.223079 138.238946 187.223079 315.865459 831.990918 959.013405 831.990918 959.013405 773.97662 360.179734 773.97662 344.675622 717.738781 1012.357334 621.556185 1012.236584 620.714004 1012.37166 620.714004Z"
+            p-id="2399"></path>
+          <path d="M643.082966 11.627828l58.014298 0 0 127.631866-58.014298 0 0-127.631866Z" p-id="2400"></path>
+          <path d="M398.823185 60.545846l90.247769 90.247769-41.02191 41.02191-90.247769-90.247769 41.02191-41.02191Z"
+            p-id="2401"></path>
+          <path d="M945.35042 60.542931l41.02191 41.02191-90.247769 90.247769-41.02191-41.02191 90.247769-90.247769Z"
+            p-id="2402"></path>
+        </svg>
+      </i>
+      <h1>YOUR CART IS EMPTY.</h1>
+      <p>Before proceed to checkout you must add some products to your shopping cart.
+        <br>
+        You will find a lot of interesting products on our "Shop" page.
+      </p>
+      <button [routerLink]="['/product/collection/all']" class="checkout-btn" nz-button nzType="primary">RETURN TO
+        SHOP</button>
+    </div>
+    <div *ngIf="cart.cartItems.length > 0" class="cart mt-70">
+      <div class="cart-header">
+        <div nz-row class="">
+          <div class="flex al-center" nz-col [nzSpan]="10">PRODUCT</div>
+          <div class="flex al-center jc-center" nz-col [nzSpan]="6">PRICE</div>
+          <div class="flex al-center jc-center" nz-col [nzSpan]="4">QUANTITY</div>
+          <div class="flex al-center jc-flex-end" nz-col [nzSpan]="4">TOTAL</div>
+        </div>
+      </div>
+      <div [class.initial]="initialLoading" class="cart-content-wrapper">
+        <app-loader [background]="'#ffffffab'" [id]="'cart-item'"></app-loader>
+        <div *ngIf="cart" class="cart-content">
+          <div *ngFor="let item of cart.cartItems" class="cart-item">
+            <app-cart-row (isLoading)="loadingEvent($event)" [mode]="'cart'" [cartItem]="item"></app-cart-row>
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="cart" class="cart-footer flex  jc-flex-end">
+        <div>
+          <div class="price flex jc-flex-end">
+            <div class="price_text">Subtotal:</div>
+            <div class="price_value">{{getTotalPrice()| currency}}</div>
+          </div>
+          <div class="policy">
+            <p>Taxes, shipping and discounts codes calculated at checkout</p>
+
+          </div>
+          <div class="flex  al-flex-end fd-column">
+            <button [routerLink]="['/checkout/information']" [disabled]="disableGotoCheckout" class="checkout-btn"
+              nz-button nzType="primary">CHECK
+              OUT</button>
+            <img class="trust-img" src="assets/images/trust_img2_360x.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="recently-view">
+    <app-section-title [title]="'People like you buy'"></app-section-title>
+    <app-product-carousel [listProduct]="listProduct" [carouselOptions]="customOptions"></app-product-carousel>
+  </div>
+</div>

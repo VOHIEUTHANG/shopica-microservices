@@ -1,0 +1,19 @@
+<div class="cart-group">
+  <div class="tittle flex jc-space-between al-center">
+    <h3>Cart</h3>
+  </div>
+
+  <div *ngIf="cart.cartItems" class="cart-group-products">
+    <div class="cart-header">
+      <div nz-row>
+        <div class="flex al-center" nz-col [nzMd]="10" [nzXs]="24">PRODUCT</div>
+        <div class="flex al-center jc-center" nz-col [nzMd]="6" [nzXs]="8">PRICE</div>
+        <div class="flex al-center jc-center" nz-col [nzMd]="4" [nzXs]="8">QUANTITY</div>
+        <div class="flex al-center jc-flex-end" nz-col [nzMd]="4" [nzXs]="8">TOTAL</div>
+      </div>
+    </div>
+    <app-cart-row [mode]="'checkout'" *ngFor="let cartItem of cart.cartItems;last as isLast" [class.lastRow]="isLast"
+      [cartItem]="cartItem">
+    </app-cart-row>
+  </div>
+</div>

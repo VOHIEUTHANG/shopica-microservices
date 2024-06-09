@@ -1,0 +1,14 @@
+<div class="image">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template style="width: 100%;" [dotContent]="'<img  src=' + image.imageUrl +'>'" *ngFor="let image of listImage"
+      carouselSlide>
+      <div class="column">
+        <img [src]="image.imageUrl">
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+
+  <button (click)="enLargeImage()" nz-button nzShape="circle" nz-tooltip [nzTooltipPlacement]="'topLeft'"
+    [nzTooltipTitle]="'Click to enlarge'" class="expand-image-btn flex al-center jc-center"><i nz-icon
+      nzType="fullscreen" nzTheme="outline"></i></button>
+</div>

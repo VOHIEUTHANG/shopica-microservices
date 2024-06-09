@@ -1,0 +1,7 @@
+<p class="title">SIZE: {{sizeSelected.sizeName}}</p>
+<div class="list-size flex">
+  <span (click)="selectSize(size)" [class.selected]="size.id == sizeSelected.id" *ngFor="let size of listSize"
+    class="size">
+    {{size.sizeName}}
+  </span>
+</div>

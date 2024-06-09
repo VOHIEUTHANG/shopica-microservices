@@ -1,0 +1,45 @@
+<nz-modal [nzWidth]="'90%'" [nzBodyStyle]="{'height':'100%','padding':'0'}" [nzStyle]="{'height':'95%'}"
+  [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" nzCentered [nzFooter]="null" [nzMaskClosable]="true"
+  nzWrapClassName="search-modal" nzTitle="">
+  <ng-container *nzModalContent>
+    <div class="search">
+      <form class="search-form" [nzLayout]="'vertical'" nz-form [formGroup]="searchForm">
+        <nz-form-control nzSpan="24">
+          <nz-input-group class="product-name" [nzSuffix]="suffixIconSearch">
+            <input placeholder="Search for products" nz-input formControlName="keyword" />
+          </nz-input-group>
+          <ng-template #suffixIconSearch>
+            <nz-upload [nzAccept]="'image/png, image/jpeg'" [nzBeforeUpload]="beforeUpload" [nzAction]="imgAnalyzer"
+              [nzShowUploadList]="false" [nzHeaders]="{ authorization: 'authorization-text' }"
+              (nzChange)="handleChange($event)">
+              <i nz-icon nz-tooltip nzTooltipTitle="Choose product image want to" nzType="camera" nzTheme="outline"></i>
+            </nz-upload>
+          </ng-template>
+        </nz-form-control>
+      </form>
+      <div *ngIf="avatarUrl" class="image-search flex jc-center">
+        <a>
+          <img [src]="avatarUrl" alt="">
+          <i (click)="removeImageSearch()" nz-icon nzType="close" nzTheme="outline"></i>
+        </a>
+      </div>
+      <div class="search-header">Search Results: </div>
+      <div class="search-content custom-scroll-bar">
+        <app-loader [id]="'search'"></app-loader>
+        <div *ngIf="keyword !== '' && listProduct.length === 0" class="not-found">
+          No products were found matching your selection.
+        </div>
+        <div nz-row>
+          <div *ngFor="let product of listProduct" nz-col [nzXl]="4" [nzMd]="6" [nzSm]="8" [nzXs]="12" class="item">
+            <div (click)="viewDetail(product.id)" class="background-image"
+              [ngStyle]="getBackgroundStyle(product.productImages[0].imageUrl)"></div>
+            <div class="product-info">
+              <p (click)="viewDetail(product.id)" class="product-info_name text-hover">{{product.productName}}</p>
+              <p class="product-info_price">{{ product.price | currency}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal>

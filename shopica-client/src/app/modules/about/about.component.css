@@ -1,0 +1,90 @@
+.about-text {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.about-text h1 {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.social-icons li {
+  padding: 10px 8px;
+  cursor: pointer;
+}
+
+.social-icons i {
+  font-size: 20px;
+}
+
+.members {
+  margin-top: 80px;
+}
+
+.member-2 {
+  margin-top: 80px;
+}
+
+.avatar img {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+  margin-bottom: 20px;
+}
+
+.member-info h2 {
+  font-size: 35px;
+  line-height: 1;
+}
+
+.member-info h3 {
+  font-size: 23px;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.customer-review {
+  margin-top: 80px;
+  font-family: "Raleway", sans-serif;
+}
+
+.customer-review .title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.customer-review .content {
+  margin: 20px 0;
+}
+
+.comment-avatar {
+  margin-bottom: 15px;
+}
+
+.comment-avatar img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  text-align: center;
+}
+
+.comment-content p {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.comment-content h3 {
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}

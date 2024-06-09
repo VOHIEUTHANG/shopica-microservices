@@ -1,0 +1,38 @@
+<div class="comment">
+  <nz-comment nzAuthor="{{ comment.customerName }}" [nzDatetime]="comment.createdAt | date">
+    <nz-avatar nz-comment-avatar nzIcon="user" nzSrc="{{ comment.customerImageUrl }}">
+    </nz-avatar>
+    <nz-comment-content>
+      <nz-rate *ngIf="isProductComment" [ngModel]="comment.rate" nzDisabled></nz-rate>
+      <p *ngIf="!isShowEditInput">
+        {{ comment.content }}
+      </p>
+      <div class="comment-input">
+        <app-comment-input *ngIf="isShowEditInput" (editCommentEvent)="editComment($event)" [comment]="comment">
+        </app-comment-input>
+      </div>
+    </nz-comment-content>
+    <!-- <nz-comment-action>
+      <i class="comment-icon" nz-tooltip nzTitle="Like" nz-icon nzType="like"
+        [nzTheme]="currentLike === 1 ? 'twotone' : 'outline'" (click)="updateLike(comment.id, true)"></i>
+      <span class="count like">{{
+        comment.like > 0 ? comment.like : ""
+        }}</span>
+    </nz-comment-action>
+    <nz-comment-action>
+      <i class="comment-icon" nz-tooltip nzTitle="Dislike" nz-icon nzType="dislike"
+        [nzTheme]="currentLike === -1 ? 'twotone' : 'outline'" (click)="updateLike(comment.id, false)"></i>
+      <span class="count dislike">{{
+        comment.dislike > 0 ? comment.dislike : ""
+        }}</span>
+    </nz-comment-action> -->
+    <nz-comment-action *ngIf="comment.customerId == accountId">
+      <span (click)="showEdit(comment.id, comment.content)">
+        Edit</span>
+    </nz-comment-action>
+
+    <nz-comment-action *ngIf="comment.customerId == accountId">
+      <span (click)="delete(comment.id)"> Remove</span>
+    </nz-comment-action>
+  </nz-comment>
+</div>

@@ -1,0 +1,55 @@
+<nz-drawer [nzWidth]="340" [nzWrapClassName]="'shopping-cart-modal'" [nzClosable]="true" [nzVisible]="isVisible"
+  nzPlacement="right" nzTitle="SHOPPING CART" (nzOnClose)="closeMenu()">
+  <ng-container *nzDrawerContent>
+    <div *ngIf="cart" class="cart">
+      <div *ngIf="cart?.cartItems?.length === 0" class="cart-empty al-center flex fd-column">
+        <i nz-icon>
+          <svg t="1619944205782" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2396" width="1em" height="1em">
+            <path
+              d="M836.404949 896.345622c-32.072463 0-58.014298 25.968441-58.014298 58.014298 0 31.966039 25.942859 58.012252 58.014298 58.012252s58.014298-26.046213 58.014298-58.012252C894.420271 922.314063 868.477412 896.345622 836.404949 896.345622z"
+              p-id="2397"></path>
+            <path
+              d="M379.360586 896.345622c-32.072463 0-58.014298 25.968441-58.014298 58.014298 0 31.966039 25.942859 58.012252 58.014298 58.012252s58.014298-26.046213 58.014298-58.012252C437.374884 922.314063 411.432025 896.345622 379.360586 896.345622z"
+              p-id="2398"></path>
+            <path
+              d="M1012.37166 320.772724 317.993936 320.772724 317.993936 378.787022 954.357362 378.787022 954.357362 571.298548 329.133647 661.362796 182.474426 129.20878 11.626293 129.20878 11.626293 187.223079 138.238946 187.223079 315.865459 831.990918 959.013405 831.990918 959.013405 773.97662 360.179734 773.97662 344.675622 717.738781 1012.357334 621.556185 1012.236584 620.714004 1012.37166 620.714004Z"
+              p-id="2399"></path>
+            <path d="M643.082966 11.627828l58.014298 0 0 127.631866-58.014298 0 0-127.631866Z" p-id="2400"></path>
+            <path d="M398.823185 60.545846l90.247769 90.247769-41.02191 41.02191-90.247769-90.247769 41.02191-41.02191Z"
+              p-id="2401"></path>
+            <path d="M945.35042 60.542931l41.02191 41.02191-90.247769 90.247769-41.02191-41.02191 90.247769-90.247769Z"
+              p-id="2402"></path>
+          </svg>
+        </i>
+        <p>Your cart is empty.</p>
+        <button (click)="returnToShop()" class="checkout-btn" nz-button nzType="primary">RETURN TO
+          SHOP</button>
+      </div>
+      <div *ngIf="cart?.cartItems?.length > 0" class="shopping-cart-content flex fd-column">
+        <div class="cart-items-wrapper">
+          <app-loader [id]="'shoppingCart'" [background]="'#ffffffab'"></app-loader>
+          <div class="cart-items custom-scroll-bar">
+            <app-cart-item (loadingEvent)="loadingEvent($event)" [cartItemOptions]="cartItemOptions"
+              *ngFor="let item of cart?.cartItems" [cartItem]="item">
+            </app-cart-item>
+          </div>
+        </div>
+
+        <div class="cart-footer">
+          <div class="total flex">
+            <p class="title">Subtotal:</p>
+            <p class="price">{{ cart.total | currency}}</p>
+          </div>
+          <div class="action">
+            <button (click)="viewCart()" nzShape="round" nzSize="large" nz-button [nzType]="'default'">VIEW
+              CART</button>
+            <button (click)="viewCheckout()" [disabled]="disableGotoCheckout" nzShape="round" nzSize="large" nz-button
+              class="drawer-form-button " [nzType]="'primary'" nz-button>CHECK OUT</button>
+          </div>
+          <img class="trust-img" src="assets/images/trust_img2_360x.png" alt="">
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</nz-drawer>

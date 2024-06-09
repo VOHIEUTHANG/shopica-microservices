@@ -1,0 +1,10 @@
+<div class="tab-header">
+  <ul class="header-title flex jc-center">
+    <li class="header-item" *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
+      <a>{{tab.title}}</a>
+    </li>
+  </ul>
+</div>
+<div class="tab-content">
+  <ng-content></ng-content>
+</div>

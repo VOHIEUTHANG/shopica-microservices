@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="category-sections custom-scroll-bar">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template [width]="category.categoryName.length*10 + 40" *ngFor="let category of listCategory" carouselSlide>
+        <div (click)="selectCategory(category)" [routerLinkActive]="['active']"
+          [routerLink]="['/product','collection',category.categoryName.toLowerCase()]" class="item text-hover">
+          {{category.categoryName}}</div>
+      </ng-template>
+    </owl-carousel-o>
+
+    <!-- <ul *ngIf="listCategory.length > 0" class="category-content flex jc-center">
+      <li [routerLink]="['/product','collection',category.categoryName.toLowerCase()]"
+        (click)="selectCategory(category)" [routerLinkActive]="['active']" class="text-hover"
+        *ngFor="let category of listCategory">
+        {{category.categoryName}}</li>
+    </ul> -->
+  </div>
+</div>
+<div *ngIf="categorySelected !== undefined">
+  <app-header-page [image]="categorySelected.imageUrl" [pageName]=" categorySelected.categoryName"></app-header-page>
+</div>

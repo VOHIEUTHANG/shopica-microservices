@@ -1,0 +1,116 @@
+.order-detail {
+  position: relative;
+  min-height: 300px;
+  padding: 0 20px;
+}
+
+.image {
+  margin-right: 20px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.header .title {
+  font-size: 23px;
+}
+
+.header .title span {
+  font-size: 20px;
+}
+
+.header .title span .Submitted {
+  color: green;
+}
+
+.header .title span .Pending {
+  color: gray;
+}
+
+.header .title span .Delivering {
+  color: yellow;
+}
+
+.header .title span .Shipped {
+  color: green;
+}
+
+.header .title span .Cancelled {
+  color: red;
+}
+
+.header .date {
+  color: #878787;
+}
+
+.address {
+  margin: 20px 0;
+  width: 40%;
+}
+
+.address p {
+  margin-bottom: 5px;
+}
+
+.address .customer-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.image img {
+  height: 80px;
+}
+
+.product-name p {
+  margin-bottom: 0;
+}
+
+.color,
+.size {
+  color: #999;
+  font-size: 13px;
+}
+
+.review-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  border: 1px solid #bfbbbb;
+  background: #fff;
+  color: #9c9999;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.review-btn:hover {
+  color: white;
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+}
+
+.color span,
+.size span {
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.footer .row .title {
+  text-align: right;
+  color: #878787;
+}
+
+.footer .row .value {
+  text-align: right;
+}
+
+.footer .row {
+  padding: 5px 0;
+}
+
+.footer .row.total .value {
+  font-size: 17px;
+  color: red;
+}

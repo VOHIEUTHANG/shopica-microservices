@@ -1,0 +1,51 @@
+<nz-modal nzClassName="quick-view-modal" [nzWidth]="850" [(nzVisible)]="isVisible" nzCentered [nzFooter]="null"
+  nzTitle="" [nzClosable]="true" (nzOnCancel)="handleCancel()">
+  <ng-container *nzModalContent>
+    <div nz-row class="quick-view">
+      <div nz-col [nzMd]="13" [nzXs]="24" class="product-image">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template *ngFor="let imageStyle of imageStyles" carouselSlide>
+            <div class="content" [ngStyle]="imageStyle">
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      <div nz-col [nzMd]="11" [nzXs]="24" class="product-info">
+        <div class="product-name">
+          <p (click)="viewDetail(product.id)" class="name">{{product.productName}}</p>
+        </div>
+        <div class="product-price flex al-center">
+          <p class="price">{{product.price | currency}}</p>
+          <nz-rate [ngModel]="2" nzDisabled></nz-rate>
+        </div>
+        <div class="product-description">
+          <p>Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for
+            pairing with denim and white kicks for a stylish sporty vibe.</p>
+        </div>
+        <div class="color">
+          <app-select-color [(colorSelected)]="colorSelected" [listColor]="listColor" [size]="'large'"
+            [showTitle]="true"></app-select-color>
+        </div>
+        <div class="size">
+          <app-select-size [listSize]="listSize" [(sizeSelected)]="sizeSelected"></app-select-size>
+        </div>
+        <div class="actions flex al-center">
+          <app-input-quantity [(quantity)]="quantity"></app-input-quantity>
+          <button (click)="addToCart()" [nzLoading]="isAddingToCart" class="add-to-cart-btn" nz-button
+            [nzType]="'primary'" [nzShape]="'round'">ADD TO CART</button>
+          <button nz-tooltip (click)="addToWishList(product.id)"
+            [nzTooltipTitle]="inWishList ?'Browse wishlist' : 'Add to wishlist'" class="add-to-wishlist" nz-button
+            nzSize="large" nzShape="circle"><i [class.inWishlist]="inWishList" nz-icon
+              [nzType]="isChangeWishList ? 'loading' : 'heart'" [nzTheme]="!inWishList ?'outline' :'fill'"></i></button>
+        </div>
+        <img class="trust-img" src="assets/images/trust_img2_360x.png" alt="">
+        <div (click)="viewDetail(product.id)" class="view-detail flex al-center jc-center">
+          <p>View full detail</p>
+          <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+        </div>
+      </div>
+    </div>
+
+
+  </ng-container>
+</nz-modal>

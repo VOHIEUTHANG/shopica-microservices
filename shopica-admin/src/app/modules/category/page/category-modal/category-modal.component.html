@@ -1,0 +1,28 @@
+<nz-modal [(nzVisible)]="isVisible" nzOkText="OK" nzClassName="form-modal" [nzTitle]="modalTitle"
+  [nzOkDisabled]="baseForm.invalid || !isHaveFile" [nzOkLoading]="isLoadingButton" (nzOnCancel)="cancelModal()"
+  (nzOnOk)="submitForm()">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="baseForm">
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="categoryName">Name</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your Category name!">
+          <nz-input-group class="input-group">
+            <input nzSize="large" type="text" nz-input formControlName="categoryName" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6">Image</nz-form-label>
+        <nz-form-control [nzSpan]="14" class="form-upload-image">
+          <nz-upload [nzSpan]="6" [nzFileType]="contentTypeAccept" [nzBeforeUpload]="beforeUpload"
+            [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 1" [nzRemove]="remove">
+            <button class="upload-btn" nz-button><i nz-icon nzType="upload"></i>Click to
+              Upload</button>
+          </nz-upload>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+  </ng-container>
+</nz-modal>

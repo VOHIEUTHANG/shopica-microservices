@@ -1,0 +1,50 @@
+<div class="product-info">
+  <div class="product-name">
+    <p class="name">{{product.productName}}</p>
+  </div>
+  <div class="product-price flex al-center">
+    <p class="price">{{product.price | currency}}</p>
+    <nz-rate [ngModel]="ratting" nzAllowHalf nzDisabled></nz-rate>
+  </div>
+  <div class="product-description">
+    <p>Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing
+      with denim and white kicks for a stylish sporty vibe.</p>
+  </div>
+  <div class="color">
+    <app-select-color [size]="'large'" [showTitle]="true" [(colorSelected)]="colorSelected" [listColor]="listColor">
+    </app-select-color>
+  </div>
+  <div class="size">
+    <app-select-size [listSize]="listSize" [(sizeSelected)]="sizeSelected"></app-select-size>
+  </div>
+
+  <div class="actions flex al-center">
+    <app-input-quantity [(quantity)]="quantity"></app-input-quantity>
+    <button [nzLoading]="isAddingToCart" (click)="addToCart()" class="add-to-cart-btn" nz-button [nzType]="'primary'"
+      [nzShape]="'round'">ADD TO CART</button>
+
+    <button nz-tooltip (click)="addToWishList(product.id)"
+      [nzTooltipTitle]="inWishList ?'Browse wishlist' : 'Add to wishlist'" class="add-to-wishlist" nz-button
+      nzSize="large" nzShape="circle"><i [class.inWishlist]="inWishList" nz-icon
+        [nzType]="isChangeWishList ? 'loading' : 'heart'" [nzTheme]="!inWishList ?'outline' :'fill'"></i></button>
+  </div>
+  <img class="trust-img" src="assets/images/trust_img2_360x.png" alt="">
+
+  <div class="extra-info">
+    <app-ng-tabs>
+      <app-tab-content [active]="true" *ngIf="userAddress" tabTitle="Shipping">
+        <div class="shipping-detail">
+          <div class="ship-to flex">
+            <p class="address">{{userAddress.fullAddress}}</p>
+          </div>
+          <div class="ship-fee flex">
+            <p>{{date | date:'mediumDate'}} </p>
+            <p>-</p>
+            <p class="value">{{shippingFee | currency}}</p>
+          </div>
+        </div>
+      </app-tab-content>
+
+    </app-ng-tabs>
+  </div>
+</div>

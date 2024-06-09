@@ -1,0 +1,32 @@
+<div class="container">
+  <div nz-row class="toolbar-section">
+    <div nz-col [nzXs]="12" [nzSm]="6" class="filter flex text-hover al-center">
+      <p (click)="openFilterDrawer()">
+        <i nz-icon>
+          <svg t="1617682894108" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2991" width="1em" height="1em">
+            <path
+              d="M640 288a64 64 0 1 1 0.032-128.032A64 64 0 0 1 640 288z m123.456-96c-14.304-55.04-64-96-123.456-96s-109.152 40.96-123.456 96H128v64h388.544c14.304 55.04 64 96 123.456 96s109.152-40.96 123.456-96H896v-64H763.456zM640 864a64 64 0 1 1 0.032-128.032A64 64 0 0 1 640 864m0-192c-59.456 0-109.152 40.96-123.456 96H128v64h388.544c14.304 55.04 64 96 123.456 96s109.152-40.96 123.456-96H896v-64H763.456c-14.304-55.04-64-96-123.456-96m-256-96a64 64 0 1 1 0.032-128.032A64 64 0 0 1 384 576m0-192c-59.456 0-109.152 40.96-123.456 96H128v64h132.544c14.304 55.04 64 96 123.456 96s109.152-40.96 123.456-96H896v-64H507.456c-14.304-55.04-64-96-123.456-96"
+              p-id="2992"></path>
+          </svg>
+        </i>
+        Filter
+      </p>
+    </div>
+    <div nz-col [nzSm]="12" class="view flex jc-center al-center">
+      <a (click)="viewProduct(1)" [class.active]="numOnePage === 1" class="view-page view_1"></a>
+      <a (click)="viewProduct(2)" [class.active]="numOnePage === 2" class="view-page view_2"></a>
+      <a (click)="viewProduct(3)" [class.active]="numOnePage === 3" class="view-page view_3"></a>
+      <a (click)="viewProduct(4)" [class.active]="numOnePage === 4" class="view-page view_4"></a>
+    </div>
+
+    <div nz-col [nzXs]="12" [nzSm]="6" class="sort-by">
+      <nz-select [nzDropdownClassName]="'sort-options'" class="select-none-border" [(ngModel)]="selectedSort"
+        (ngModelChange)="sortChange($event)" nzPlaceHolder="Select a sort by">
+        <nz-option *ngFor="let productSortId of productSortIds" [nzLabel]="productSortId"
+          [nzValue]="productSortId"></nz-option>
+      </nz-select>
+    </div>
+  </div>
+
+</div>

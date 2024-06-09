@@ -1,0 +1,125 @@
+<div class="card">
+  <form nz-form [formGroup]="baseForm">
+    <div class="content">
+      <div class="column">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="Type">Type</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please select your type!">
+            <nz-select formControlName="type" (ngModelChange)="promotionTypeChange($event)"
+              nzPlaceHolder="Select a type">
+              <nz-option *ngFor="let promotionType of promotionTypes" [nzLabel]="PromotionTypes[promotionType]"
+                [nzValue]="promotionType"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item class="content-btn-form-item">
+          <nz-form-label nzFor="code" [nzSpan]="6">Code</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your code!">
+            <input nz-input formControlName="code" />
+            <div class="btn-generate-code">
+              <button [disabled]="editMode" (click)="generateCode()" nz-button>Generate
+              </button>
+            </div>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your description!">
+            <input nz-input type="text" formControlName="description">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="salesById">Sales By</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please select your sales by product!">
+            <nz-select (ngModelChange)="salesByChange($event)" formControlName="salesById"
+              nzPlaceHolder="Select a sales by product">
+              <nz-option *ngFor="let product of listProduct" [nzLabel]="product.productName" [nzValue]="product.id">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="salesByQuantity">Sales Quantity</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your sales quantity">
+            <input nz-input type="number" formControlName="salesByQuantity">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="salesByAmount">Sales Amount</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your sales amount">
+            <input nz-input type="number" formControlName="salesByAmount">
+          </nz-form-control>
+        </nz-form-item>
+
+      </div>
+      <div class="column">
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="promotionById">Promotion By</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please select your promotion by product!">
+            <nz-select (ngModelChange)="promotionByChange($event)" formControlName="promotionById"
+              nzPlaceHolder="Select a promotion by product">
+              <nz-option *ngFor="let product of listProduct" [nzLabel]="product.productName" [nzValue]="product.id">
+              </nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="promotionQuantity">Promotion Quantity</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your promotion quantity">
+            <input nz-input type="number" formControlName="promotionQuantity">
+          </nz-form-control>
+        </nz-form-item>
+
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="promotionAmount">Promotion Amount</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your promotion amount">
+            <input nz-input type="number" formControlName="promotionAmount">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="promotionDiscount">Promotion Discount</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your promotion discount">
+            <input nz-input type="number" formControlName="promotionDiscount">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="promotionDiscountLimit">Promotion Limit</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your promotion discount limit">
+            <input nz-input type="number" formControlName="promotionDiscountLimit">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="date">Date</nz-form-label>
+          <nz-form-control [nzSpan]="14" nzErrorTip="Please input your title!">
+            <nz-range-picker formControlName="date"></nz-range-picker>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label [nzSpan]="6" nzFor="active">Active</nz-form-label>
+          <nz-form-control [nzSpan]="14">
+            <label formControlName="active" nz-checkbox></label>
+          </nz-form-control>
+        </nz-form-item>
+
+      </div>
+    </div>
+  </form>
+
+  <div class="btn-submit">
+    <button nz-button [nzLoading]="isLoadingButton" [disabled]="baseForm.invalid" (click)="submitForm()"
+      nzType="primary">Save change</button>
+  </div>
+
+</div>

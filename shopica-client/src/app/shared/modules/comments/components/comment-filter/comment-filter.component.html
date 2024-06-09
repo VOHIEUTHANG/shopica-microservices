@@ -1,0 +1,47 @@
+<div nz-row [nzGutter]="12">
+  <div class="left" nz-col [nzLg]="8">
+    <div class="comment-summary flex al-center">
+      <div class="rating-average">{{ratingAverage}}</div>
+      <div class="total-rating">
+        <nz-rate [ngModel]="ratingAverage" nzDisabled></nz-rate>
+        <p>{{comments.length}} Review</p>
+      </div>
+    </div>
+    <div class="comment-detail">
+      <ul>
+        <li *ngFor="let rating of commentsByRating | keyvalue" class="flex al-center">
+          <div class="rating">
+            <nz-rate [ngModel]="+rating.key" nzDisabled></nz-rate>
+          </div>
+          <div class="progress">
+            <nz-progress [nzStrokeColor]="'gray'" [nzPercent]="rating.value.length / comments.length * 100"
+              [nzShowInfo]="false"></nz-progress>
+          </div>
+          <div class="num-rating">
+            <p>{{rating.value.length}}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div nz-col class="flex al-center right" [nzLg]="16">
+    <span class="label">Filter by:</span>
+    <div [class.active]="filterRatings.indexOf('desc') !== -1 " (click)="filterByRating('desc')"
+      class="filter-element active">
+      <span class="filter-element__check">
+        <i *ngIf="filterRatings.indexOf('desc') !== -1 " nz-icon nzType="check" nzTheme="outline"></i>
+      </span>
+      <span class="filter-element__text">Latest</span>
+    </div>
+
+    <div [class.active]="filterRatings.indexOf(rating.key) !== -1 " (click)="filterByRating(rating.key)"
+      *ngFor="let rating of commentsByRating | keyvalue" class="filter-element ">
+      <span class="filter-element__check">
+        <i *ngIf="filterRatings.indexOf(rating.key) !== -1" nz-icon nzType="check" nzTheme="outline"></i>
+      </span>
+      <span class="filter-element__text">{{rating.key}}
+        <nz-rate [nzCount]="1" [ngModel]="1" nzDisabled></nz-rate>
+      </span>
+    </div>
+  </div>
+</div>

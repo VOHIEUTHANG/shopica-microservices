@@ -1,0 +1,26 @@
+<div class="quantity">
+  <nz-input-group [nzSuffix]="suffixTemplateInfo" [nzPrefix]="prefixTemplateUser">
+    <input type="number" (focusout)="focusOut()" [(ngModel)]="quantity" nz-input />
+  </nz-input-group>
+  <ng-template #prefixTemplateUser>
+    <i class="minus text-hover" (click)="decreaseOne()" nz-icon>
+      <svg t="1617116392871" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="69925">
+        <path
+          d="M900.524293 575.143109 121.429095 575.143109c-74.505901 0-74.505901-179.790806 0-179.790806l779.095197 0C975.028147 395.352303 975.028147 575.143109 900.524293 575.143109z"
+          p-id="69926"></path>
+      </svg>
+    </i>
+  </ng-template>
+  <ng-template #suffixTemplateInfo>
+    <i class="plus text-hover" (click)="increaseOne()" nz-icon>
+      <svg>
+        <path
+          d="M938.666667 426.666667H597.333333V85.333333H426.666667v341.333334H85.333333v170.666666h341.333334v341.333334h170.666666V597.333333h341.333334z"
+          p-id="60641"></path>
+      </svg>
+    </i>
+  </ng-template>
+
+  <p class="quantity-warning" *ngIf="quantity > available">{{available}} product available</p>
+</div>

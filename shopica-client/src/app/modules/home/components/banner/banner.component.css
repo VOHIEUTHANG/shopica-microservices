@@ -1,0 +1,198 @@
+.slide-show {
+  padding-top: 70px;
+}
+
+.content {
+  height: 100%;
+}
+
+nz-carousel {
+  height: 500px;
+}
+
+.content .background {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content.banner-1 .background {
+  background-image: url("assets/images/banners/banner-3.jpg");
+}
+
+.content.banner-3 .background {
+  background-image: url("assets/images/banners/banner-2.jpg");
+}
+
+.content.banner-2 .background {
+  background-image: url("assets/images/banners/banner-1.jpg");
+  transition: 5s;
+  transform: scale(1.2);
+}
+
+.content.banner-2.slick-active .background {
+  transform: scale(1);
+}
+
+.content.right {
+  overflow: hidden;
+}
+
+/* text-section */
+.content .section {
+  transform: translateY(-50%) translateX(-200px);
+  opacity: 0;
+  top: 50%;
+  left: 5%;
+  position: absolute;
+}
+
+.content.right .section {
+  transform: translateY(-50%) translateX(200px);
+  right: 5%;
+  left: auto;
+}
+
+.content.slick-active .section {
+  animation-name: showTextFromLeft;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.content.slick-active.right .section {
+  animation-name: showTextFromRight;
+}
+
+.content .section .time {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  line-height: 1;
+}
+
+.content .section .title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.content .section .btn-detail {
+  color: #ffffff;
+  background-color: #222222;
+  border-color: #222222;
+  font-size: 17px;
+  padding: 6px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.content.right .section .time {
+  text-align: right;
+}
+
+.content.right .section .btn-detail {
+  float: right;
+}
+
+@media (max-width: 1200px) {
+  nz-carousel {
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  nz-carousel {
+    height: 400px;
+  }
+
+  .content .section .time {
+    font-size: 18px;
+  }
+
+  .content .section .title {
+    font-size: 40px;
+  }
+
+  .content .section .btn-detail {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  nz-carousel {
+    height: 330px;
+  }
+
+  .content .section .time {
+    font-size: 15px;
+  }
+
+  .content .section .title {
+    font-size: 30px;
+  }
+
+  .content .section .btn-detail {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  nz-carousel {
+    height: 270px;
+  }
+
+  .content .section .time {
+    font-size: 13px;
+  }
+
+  .content .section .title {
+    font-size: 25px;
+  }
+
+  .content .section .btn-detail {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+}
+
+/* animation */
+@keyframes showTextFromLeft {
+  0% {
+    transform: translateY(-50%) translateX(-200px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-50%) translateX(-150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showTextFromRight {
+  0% {
+    transform: translateY(-50%) translateX(200px);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-50%) translateX(150px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-50%) translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}

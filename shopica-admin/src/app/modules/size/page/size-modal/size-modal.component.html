@@ -1,0 +1,16 @@
+<nz-modal [(nzVisible)]="isVisible" nzOkText="OK" nzClassName="form-modal" [nzTitle]="modalTitle"
+  [nzOkDisabled]="baseForm.invalid" [nzOkLoading]="isLoadingButton" (nzOnCancel)="cancelModal()"
+  (nzOnOk)="submitForm()">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="baseForm">
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="sizeName">Name</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your Size name!">
+          <nz-input-group class="input-group">
+            <input nzSize="large" type="text" nz-input formControlName="sizeName" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </ng-container>
+</nz-modal>

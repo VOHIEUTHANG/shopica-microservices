@@ -1,0 +1,38 @@
+name: Frontend Continuous Integration
+on:
+  push:
+    branches:
+      - master
+
+env:
+  AWS_S3_REGION: "ap-southeast-1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Setup Node Js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependency
+        run: npm ci
+
+      - name: Run Build
+        run: npm run build-prod
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Upload to S3
+        run: |
+          aws s3 sync dist/SHOPPICA-ANGULAR-CLIENT-WEB s3://${{ secrets.AWS_S3_BUCKET }}/ --region  ${{ env.AWS_S3_REGION }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -1,0 +1,25 @@
+.btn-generate-code button {
+  padding: 4px 8px;
+}
+
+.card .content {
+  display: flex;
+}
+
+.card .column {
+  width: 50%;
+}
+
+.promotion-detail-actions {
+  margin-bottom: 20px;
+}
+
+.btn-submit {
+  float: right;
+  margin: 20px;
+  margin-right: 0;
+}
+
+.card {
+  padding-top: 15px;
+}

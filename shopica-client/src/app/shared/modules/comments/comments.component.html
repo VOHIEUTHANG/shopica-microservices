@@ -1,0 +1,18 @@
+<div #target class="blog-comments">
+  <div *ngIf="isAuthenticated && !isProductComment" class="leave-comment">
+    <div class="comment-group flex al-center">
+      <img [src]="customerImage">
+      <app-comment-input (addNewCommentEvent)="addNewComment($event)"></app-comment-input>
+    </div>
+  </div>
+  <div *ngIf="isProductComment && showComments.length >0" class="comment-filter">
+    <app-comment-filter (filterRatingEvent)="filterByRating($event)" [comments]="comments"></app-comment-filter>
+  </div>
+  <div *ngFor="let comment of showComments">
+    <app-comment (deleteCommentEvent)="deleteComment($event)" [comment]="comment"></app-comment>
+  </div>
+  <div class="pagination flex jc-center">
+    <nz-pagination [nzHideOnSinglePage]="true" [nzPageIndex]="pageIndex" [nzPageSize]="pageSize"
+      [nzTotal]="currentData.length" (nzPageIndexChange)="onQueryPageIndexChange($event)"></nz-pagination>
+  </div>
+</div>

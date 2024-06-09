@@ -1,0 +1,7 @@
+<owl-carousel-o [options]="carouselOptions">
+  <ng-template *ngFor="let product of listProduct" carouselSlide>
+    <div class="column">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </ng-template>
+</owl-carousel-o>

@@ -1,0 +1,31 @@
+<nz-modal [nzWidth]="605" [(nzVisible)]="isVisible" (nzOnCancel)="handleCancel()" nzCentered [nzFooter]="null"
+  [nzMaskClosable]="true" nzTitle="">
+  <ng-container *nzModalContent>
+    <div *ngIf="orderDetail" class="product flex">
+      <div class="image">
+        <img height="30" [src]="orderDetail.image" alt="">
+      </div>
+      <div class="info">
+        <p [routerLink]="['/product/detail',orderDetail.productId]" class="text-hover">{{orderDetail.productName}}</p>
+        <div class="color">Color: <span>{{orderDetail.colorName}}</span> </div>
+        <div class="size">Size: <span>{{orderDetail.sizeName}}</span></div>
+      </div>
+    </div>
+    <form nz-form [formGroup]="reviewForm">
+      <nz-form-item>
+        <nz-form-control>
+          <nz-rate class="review-rating flex jc-center" [ngModel]="0"
+            [nzTooltips]="['Terrible','Poor','Average','Very Good','Excellent']" formControlName="rate"></nz-rate>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <textarea rows="6" nz-input formControlName="content"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+
+      <button (click)="sendReview()" nz-button [nzLoading]="isLoading" class="review-btn" [nzType]="'primary'">Send
+        Review</button>
+    </form>
+  </ng-container>
+</nz-modal>

@@ -1,0 +1,37 @@
+<div class="blog-sidebar">
+  <div class="filter-section">
+    <div class="title">Recent Post</div>
+    <div class="content">
+      <div *ngFor="let blog of listBlog" class="single-post flex">
+        <div class="post_image">
+          <img (click)="viewItem(blog.id)" [src]="blog.backgroundUrl" alt="" />
+        </div>
+        <div class="post_info">
+          <div (click)="viewItem(blog.id)" class="info_title text-hover">{{ blog.title }}</div>
+          <div class="info_date">{{ blog.createdAt | date: "mediumDate" }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="title">Best Sellers</div>
+    <div class="content">
+      <div *ngFor="let item of bestSellerProducts" class="cart-item">
+        <app-cart-item [cartItemOptions]="cartItemOptions" [cartItem]="item">
+        </app-cart-item>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-section">
+    <div class="title">Blog Tags</div>
+    <div class="content blog-tag">
+      <ul>
+        <li [class.active]="currentTags.indexOf(item.toLowerCase()) !== -1" *ngFor="let item of tags">
+          <a (click)="filterChange(item)">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

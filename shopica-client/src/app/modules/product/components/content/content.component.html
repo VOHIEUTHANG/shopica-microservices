@@ -1,0 +1,10 @@
+<div class="product-section">
+  <app-loader [id]="'product'"></app-loader>
+  <div class="container">
+    <div nz-row class="product-list">
+      <div *ngFor="let product of listProduct" nz-col class="product-item column" [nzSpan]="productCol">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+  </div>
+</div>

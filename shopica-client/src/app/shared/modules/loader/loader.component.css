@@ -1,0 +1,21 @@
+.preload {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.preload.flex-start{
+  padding-top: 150px;
+  align-items: flex-start;
+}
+
+.sk-chase {
+  width: 40px;
+  height: 40px;
+}

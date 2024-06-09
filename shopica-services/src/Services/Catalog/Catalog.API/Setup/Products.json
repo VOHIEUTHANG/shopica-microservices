@@ -1,0 +1,2421 @@
+[
+  {
+    "id": 1,
+    "productName": "Nike Air Max 90 LV8",
+    "price": 150.00,
+    "tags": [
+      "trending",
+      "new_arrival",
+      "shoes",
+      "nike"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      },
+      {
+        "colorId": 6,
+        "colorName": "Light Red",
+        "colorCode": "#ee0e0e"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:22:08.453Z/air-max-90-lv8-shoes-5KhTdP (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:22:08.452Z/air-max-90-lv8-shoes-5KhTdP (5).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:22:08.453Z/air-max-90-lv8-shoes-5KhTdP (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:22:08.452Z/air-max-90-lv8-shoes-5KhTdP (4).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:22:08.453Z/air-max-90-lv8-shoes-5KhTdP (1).png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "productName": "Nike Air Max 90",
+    "price": 100.00,
+    "tags": [
+      "trending",
+      "shoes",
+      "nike"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 9,
+        "sizeName": "37"
+      },
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:23:22.846Z/air-max-90-shoes-K0mczj (7).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:23:22.846Z/air-max-90-shoes-K0mczj (8).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:23:22.846Z/air-max-90-shoes-K0mczj (6).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:23:22.845Z/air-max-90-shoes-K0mczj (10).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:23:22.845Z/air-max-90-shoes-K0mczj (9).png"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "productName": "Nike Air Max 90 Futura",
+    "price": 150.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:24:40.645Z/air-max-90-futura-shoes-SLTPS0 (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:24:40.646Z/air-max-90-futura-shoes-SLTPS0 (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:24:40.647Z/air-max-90-futura-shoes-SLTPS0.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:24:40.647Z/air-force-1-07-shoes-WrLlWX (3).png"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "productName": "Nike Air Max Furyosa NRG",
+    "price": 199.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:26:18.479Z/air-max-furyosa-nrg-shoes-jKWgZB.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:26:18.479Z/air-max-furyosa-nrg-shoes-jKWgZB (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:26:18.479Z/air-max-furyosa-nrg-shoes-jKWgZB (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:26:18.478Z/air-max-furyosa-nrg-shoes-jKWgZB (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-06T13:26:18.479Z/air-max-furyosa-nrg-shoes-jKWgZB.jfif"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "productName": "Jordan Rise Cap",
+    "price": 1.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 6,
+    "categoryName": "Hats",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:04:29.441Z/jordan-rise-cap-adjustable-hat-2fsSH0 (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:04:29.443Z/jordan-rise-cap-adjustable-hat-2fsSH0.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:04:29.447Z/jordan-rise-cap-adjustable-hat-2fsSH0.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:04:29.445Z/jordan-rise-cap-adjustable-hat-2fsSH0 (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "productName": "Nike Club",
+    "price": 29.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 6,
+    "categoryName": "Hats",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:05:22.610Z/club-unstructured-jdi-cap-ldh198 (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:05:22.613Z/club-unstructured-jdi-cap-ldh198.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:05:22.611Z/club-unstructured-jdi-cap-ldh198 (1).png"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "productName": "Jordan Flight MVP",
+    "price": 79.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 5,
+    "categoryName": "Trousers",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      },
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:06:04.875Z/jordan-flight-mvp-fleece-trousers-Zn4jvk.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:06:04.873Z/jordan-flight-mvp-fleece-trousers-Zn4jvk (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:06:04.867Z/jordan-flight-mvp-fleece-trousers-Zn4jvk (2).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:06:04.871Z/jordan-flight-mvp-fleece-trousers-Zn4jvk.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:06:04.869Z/jordan-flight-mvp-fleece-trousers-Zn4jvk (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "productName": "Men's Fleece Trousers",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 5,
+    "categoryName": "Trousers",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:07:39.417Z/nocta-fleece-trousers-HdGDS7.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:07:39.411Z/nocta-fleece-trousers-HdGDS7 (4).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:07:39.416Z/nocta-fleece-trousers-HdGDS7 (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:07:39.413Z/nocta-fleece-trousers-HdGDS7 (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:07:39.414Z/nocta-fleece-trousers-HdGDS7 (2).png"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "productName": "Nike AeroSwift",
+    "price": 89.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 5,
+    "categoryName": "Trousers",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:08:39.723Z/aeroswift-dri-fit-adv-running-trousers-DXFdkK.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:08:39.720Z/aeroswift-dri-fit-adv-running-trousers-DXFdkK (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:08:39.722Z/aeroswift-dri-fit-adv-running-trousers-DXFdkK (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:08:39.717Z/aeroswift-dri-fit-adv-running-trousers-DXFdkK (4).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:08:39.718Z/aeroswift-dri-fit-adv-running-trousers-DXFdkK (3).png"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "productName": "Nike Solo Swoosh",
+    "price": 79.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 4,
+    "categoryName": "Hoodies",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:10:46.029Z/acg-fleece-pullover-hoodie-z1r0QM.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:10:46.027Z/acg-fleece-pullover-hoodie-z1r0QM (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:10:46.026Z/acg-fleece-pullover-hoodie-z1r0QM (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:10:46.024Z/acg-fleece-pullover-hoodie-z1r0QM.jfif"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "productName": "Nike Solo Swoosh",
+    "price": 89.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 4,
+    "categoryName": "Hoodies",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      },
+      {
+        "colorId": 6,
+        "colorName": "Light Red",
+        "colorCode": "#ee0e0e"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:11:34.752Z/solo-swoosh-fleece-crew-rl6Zs6 (3).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:11:34.756Z/solo-swoosh-fleece-crew-rl6Zs6.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:11:34.753Z/solo-swoosh-fleece-crew-rl6Zs6 (2).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:11:34.755Z/solo-swoosh-fleece-crew-rl6Zs6 (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "productName": "Jordan Flight MVP 85",
+    "price": 49.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 3,
+    "categoryName": "T-shirt",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:12:23.093Z/jordan-flight-mvp-85-t-shirt-hdS3DZ (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:12:23.096Z/jordan-flight-mvp-85-t-shirt-hdS3DZ.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:12:23.094Z/jordan-flight-mvp-85-t-shirt-hdS3DZ.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:12:23.091Z/jordan-flight-mvp-85-t-shirt-hdS3DZ (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "productName": "Men's T-Shirt",
+    "price": 39.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 3,
+    "categoryName": "T-shirt",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      },
+      {
+        "colorId": 6,
+        "colorName": "Light Red",
+        "colorCode": "#ee0e0e"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:13:19.622Z/jordan-flight-essentials-t-shirt-86ts7P (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:13:19.624Z/jordan-flight-essentials-t-shirt-86ts7P.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:13:19.621Z/jordan-flight-essentials-t-shirt-86ts7P.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:13:19.620Z/jordan-flight-essentials-t-shirt-86ts7P (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:13:19.618Z/jordan-flight-essentials-t-shirt-86ts7P (2).jfif"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "productName": "Nike Challenger",
+    "price": 49.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 2,
+    "categoryName": "Short",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:14:24.743Z/challenger-dri-fit-18cm-unlined-shorts-PSmllP (4).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:14:24.747Z/challenger-dri-fit-18cm-unlined-shorts-PSmllP (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:14:24.750Z/challenger-dri-fit-18cm-unlined-shorts-PSmllP.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:14:24.749Z/challenger-dri-fit-18cm-unlined-shorts-PSmllP (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:14:24.745Z/challenger-dri-fit-18cm-unlined-shorts-PSmllP (3).png"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "productName": "Jordan Dri-FIT Sport",
+    "price": 39.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 2,
+    "categoryName": "Short",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.355Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.357Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.366Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.368Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.364Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ (2).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.359Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-10T09:15:29.362Z/jordan-dri-fit-sport-woven-shorts-SS5zTZ (3).jfif"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "productName": "Nike Dri-FIT Victory",
+    "price": 25.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 7,
+    "categoryName": "Golf",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:09:15.693Z/dri-fit-victory-long-sleeve-golf-polo-5PWkdQ.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:09:15.692Z/dri-fit-victory-long-sleeve-golf-polo-5PWkdQ.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:09:15.692Z/dri-fit-victory-long-sleeve-golf-polo-5PWkdQ (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:09:15.691Z/dri-fit-victory-long-sleeve-golf-polo-5PWkdQ (2).jfif"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "productName": "Nike Dri-FIT Ace",
+    "price": 19.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 7,
+    "categoryName": "Golf",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:13:13.734Z/dri-fit-ace-swoosh-visor-Qr323h.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:13:13.733Z/dri-fit-ace-swoosh-visor-Qr323h (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:13:13.732Z/dri-fit-ace-swoosh-visor-Qr323h (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:13:13.733Z/dri-fit-ace-swoosh-visor-Qr323h.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:13:13.733Z/dri-fit-ace-swoosh-visor-Qr323h (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "productName": "Convertible Changing Bag (Maternity) (25L)",
+    "price": 159.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 8,
+    "categoryName": "Bag ",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.773Z/convertible-changing-bag-q362kf (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.772Z/convertible-changing-bag-q362kf (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.771Z/convertible-changing-bag-q362kf (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.774Z/convertible-changing-bag-q362kf.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.773Z/convertible-changing-bag-q362kf.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:15:10.773Z/convertible-changing-bag-q362kf (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "productName": "Nike Heritage",
+    "price": 19.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 8,
+    "categoryName": "Bag ",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 7,
+        "colorName": "Green",
+        "colorCode": "#52d577"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.484Z/heritage-hip-pack-tbtqLx (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.484Z/heritage-hip-pack-tbtqLx (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.485Z/heritage-hip-pack-tbtqLx (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.485Z/heritage-hip-pack-tbtqLx.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.485Z/heritage-hip-pack-tbtqLx.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.484Z/heritage-hip-pack-tbtqLx (2).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:18:40.483Z/heritage-hip-pack-tbtqLx (3).jfif"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "productName": "Nike Premium Duffel Bag",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 8,
+    "categoryName": "Bag ",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:20:04.532Z/elemental-duffel-bag-RJg4gH (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:20:04.531Z/elemental-duffel-bag-RJg4gH (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:20:04.532Z/elemental-duffel-bag-RJg4gH.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:20:04.532Z/elemental-duffel-bag-RJg4gH.jfif"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "productName": "Nike Offcourt",
+    "price": 29.00,
+    "tags": [
+      "sales",
+      "trending",
+      "new_arrival"
+    ],
+    "categoryId": 9,
+    "categoryName": "Sandals",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.188Z/offcourt-slides-ZBxx9j (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.187Z/offcourt-slides-ZBxx9j (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.189Z/offcourt-slides-ZBxx9j.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.188Z/offcourt-slides-ZBxx9j.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.188Z/offcourt-slides-ZBxx9j (1).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:25:13.188Z/offcourt-slides-ZBxx9j (2).png"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "productName": "Jordan Jumpman",
+    "price": 25.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 9,
+    "categoryName": "Sandals",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 7,
+        "sizeName": "35"
+      },
+      {
+        "sizeId": 9,
+        "sizeName": "37"
+      },
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:26:39.840Z/jordan-jumpman-slides-2C5ffD (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:26:39.841Z/jordan-jumpman-slides-2C5ffD (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:26:39.841Z/jordan-jumpman-slides-2C5ffD (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:26:39.841Z/jordan-jumpman-slides-2C5ffD.png"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "productName": "Nike Offcourt",
+    "price": 29.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 9,
+    "categoryName": "Sandals",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 9,
+        "sizeName": "37"
+      },
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.844Z/vista-sandals-1rGmxQ.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.843Z/vista-sandals-1rGmxQ (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.844Z/vista-sandals-1rGmxQ (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.844Z/vista-sandals-1rGmxQ.jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.842Z/vista-sandals-1rGmxQ (2).jfif"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:28:38.843Z/vista-sandals-1rGmxQ (1).jfif"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "productName": "Nike Everyday Essential",
+    "price": 10.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 10,
+    "categoryName": "Socks ",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:31:36.192Z/everyday-essential-ankle-socks-8zdqfW (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:31:36.192Z/everyday-essential-ankle-socks-8zdqfW (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:31:36.193Z/everyday-plus-cushioned-crew-socks-LVHkVW.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:31:36.191Z/everyday-essential-ankle-socks-8zdqfW (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:31:36.193Z/everyday-essential-ankle-socks-8zdqfW.png"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "productName": "Nike Everyday Plus",
+    "price": 9.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 10,
+    "categoryName": "Socks ",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.437Z/everyday-plus-cushioned-crew-socks-LVHkVW (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.438Z/everyday-plus-cushioned-crew-socks-LVHkVW (2).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.437Z/everyday-plus-cushioned-crew-socks-LVHkVW (4).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.438Z/everyday-plus-cushioned-crew-socks-LVHkVW (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.436Z/everyday-plus-cushioned-crew-socks-LVHkVW (5).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:32:45.435Z/everyday-plus-cushioned-crew-socks-LVHkVW (6).png"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "productName": "X_PLRBOOST SHOES",
+    "price": 299.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:36.784Z/X_PLRBOOST_Shoes_Purple_ID9443_01_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:36.783Z/X_PLRBOOST_Shoes_Black_HP3141_04_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:36.782Z/X_PLRBOOST_Shoes_Black_HP3141_02_standard_hover.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:36.783Z/X_PLRBOOST_Shoes_Purple_ID9443_04_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:40.955Z/X_PLRBOOST_Shoes_White_ID9441_01_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:38:40.956Z/X_PLRBOOST_Shoes_White_ID9441_04_standard.jpg"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "productName": "SAMBA OG SHOES",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:41:52.217Z/Samba_OG_Shoes_White_B75806_02_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:41:52.218Z/Samba_OG_Shoes_White_B75806_06_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:41:52.218Z/Samba_OG_Shoes_White_B75806_04_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:41:52.217Z/Samba_OG_Shoes_White_B75806_010_hover_standard-_1_.jpg"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "productName": "PREDATOR ACCURACY.3 LOW TURF BOOTS",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 11,
+    "categoryName": "Football",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:46:35.583Z/Predator_Accuracy.3_Low_Turf_Boots_Blue_GZ0002_03_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:46:35.583Z/Predator_Accuracy.3_Low_Turf_Boots_Blue_GZ0002_02_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:46:35.582Z/Predator_Accuracy.3_Low_Turf_Boots_Blue_GZ0002_42_detail (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:46:35.584Z/Predator_Accuracy.3_Low_Turf_Boots_Blue_GZ0002_42_detail.png"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "productName": "X CRAZYFAST.3 FIRM GROUND BOOTS",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 11,
+    "categoryName": "Football",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 7,
+        "colorName": "Green",
+        "colorCode": "#52d577"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:48:19.393Z/X_Crazyfast.3_Firm_Ground_Boots_White_HQ4534_01_standard_hover.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:48:19.393Z/X_Crazyfast.3_Firm_Ground_Boots_White_HQ4534_02_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:48:19.394Z/X_Crazyfast.3_Firm_Ground_Boots_White_HQ4534_05_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:48:19.393Z/X_Crazyfast.3_Firm_Ground_Boots_White_HQ4534_22_model.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:48:19.394Z/X_Crazyfast.3_Firm_Ground_Boots_White_HQ4534_04_standard.jpg"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "productName": "ADICOLOR CLASSICS 3-STRIPES PANTS",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 5,
+    "categoryName": "Trousers",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:53:42.497Z/Adicolor_Classics_3-Stripes_Pants_Black_GN3458_01_laydown.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:53:42.498Z/Adicolor_Classics_3-Stripes_Pants_Black_GN3458_42_detail.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-11T15:53:42.498Z/Adicolor_Classics_3-Stripes_Pants_Black_GN3458_41_detail.jpg"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "productName": "FORUM LOW CL SHOES",
+    "price": 109.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:29.588Z/Forum_Low_CL_Shoes_White_IG3777_02_standard_hover.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:29.587Z/Forum_Low_CL_Shoes_White_IG3777_01_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:29.589Z/Forum_Low_CL_Shoes_White_IG3777_09_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:29.589Z/Forum_Low_CL_Shoes_White_IG3777_41_detail.png"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "productName": "ADILETTE SLIDES",
+    "price": 59.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 9,
+    "categoryName": "Sandals",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:56.695Z/Adilette_Slides_Beige_IF6872_02_standard_hover.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:56.695Z/Adilette_Slides_Beige_IF6872_01_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:54:56.696Z/Adilette_Slides_Beige_IF6872_03_standard.png"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "productName": "ZX 2K BOOST 2.0 SHOES",
+    "price": 99.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:59:17.364Z/ZX_2K_Boost_2.0_Shoes_Purple_GZ7861_02_standard_hover.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:59:17.352Z/ZX_2K_Boost_2.0_Shoes_Purple_GZ7861_01_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:59:17.365Z/ZX_2K_Boost_2.0_Shoes_Purple_GZ7861_03_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T09:59:17.367Z/ZX_2K_Boost_2.0_Shoes_Purple_GZ7861_04_standard.png"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "productName": "Miracle Air Relaxed Pants",
+    "price": 19.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 5,
+    "categoryName": "Trousers",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:07:09.524Z/goods_471024_sub18.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:07:09.524Z/vngoods_471024_sub23.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:07:09.523Z/goods_471024_sub13.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:07:09.523Z/goods_471024_sub17.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:09:59.002Z/vngoods_69_471024.png"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "productName": "AIRism Cotton Long Sleeve Crew Neck T-Shirt",
+    "price": 10.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 3,
+    "categoryName": "T-shirt",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 4,
+        "colorName": "Yellow",
+        "colorCode": "#fff63d"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:14:28.340Z/vngoods_30_465193.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:14:28.341Z/goods_465193_sub13.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:14:28.341Z/vngoods_465193_sub7.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:14:28.341Z/goods_465193_sub14.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:14:28.342Z/goods_465193_sub17.png"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "productName": "Ultra Stretch Jeans",
+    "price": 29.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 12,
+    "categoryName": "Jean",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:23:34.518Z/vngoods_65_468971.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:23:34.519Z/goods_468971_sub14.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:23:34.519Z/goods_468971_sub17.png"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "productName": "Ultra Stretch Jeans",
+    "price": 29.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 12,
+    "categoryName": "Jean",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:24:23.421Z/vngoods_63_468970.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:24:23.421Z/vngoods_468970_sub8.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:24:23.421Z/goods_468970_sub14.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:24:23.422Z/goods_468970_sub19.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:24:23.422Z/goods_468970_sub18.png"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "productName": "Ultra Stretch Jeans",
+    "price": 19.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 12,
+    "categoryName": "Jean",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 2,
+        "colorName": "Gray",
+        "colorCode": "#939393"
+      },
+      {
+        "colorId": 3,
+        "colorName": "Blue",
+        "colorCode": "#6588f4"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:30:30.019Z/vngoods_463970_sub1.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:30:30.018Z/vngoods_06_463970.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:30:30.019Z/goods_463970_sub13.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:30:30.019Z/goods_463970_sub14.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:30:30.020Z/goods_463970_sub17.png"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "productName": "Ultra Stretch Jeans",
+    "price": 9.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 10,
+    "categoryName": "Socks ",
+    "brandId": 1,
+    "brandName": "Uniqlo",
+    "productSizes": [
+      {
+        "sizeId": 2,
+        "sizeName": "S"
+      },
+      {
+        "sizeId": 3,
+        "sizeName": "M"
+      },
+      {
+        "sizeId": 4,
+        "sizeName": "XL"
+      },
+      {
+        "sizeId": 5,
+        "sizeName": "2XL"
+      },
+      {
+        "sizeId": 6,
+        "sizeName": "3XL"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 1,
+        "colorName": "Black",
+        "colorCode": "#1c1b1b"
+      },
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:33:46.793Z/goods_30_467420.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-03-12T10:33:46.794Z/goods_09_467420.png"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "productName": "SUPERCOURT SHOES",
+    "price": 115.00,
+    "tags": [
+      "sales",
+      "trending",
+      "new_arrival",
+      "nike",
+      "shoes"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-21T06:14:54.685Z/Supercourt_Shoes_White_FU9728_06_standard_1.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-21T06:14:54.681Z/Supercourt_Shoes_White_FU9728_01_standard_1.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-21T06:14:54.684Z/Supercourt_Shoes_White_FU9728_05_standard_1.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-21T06:14:54.686Z/Supercourt_Shoes_White_FU9728_04_standard.jpg"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-21T06:14:54.689Z/Supercourt_Shoes_White_FU9728_09_standard.jpg"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "productName": "NMD_G1 SHOES",
+    "price": 149.00,
+    "tags": [
+      "sales",
+      "trending",
+      "new_arrival"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 3,
+    "brandName": "Adidas",
+    "productSizes": [
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      },
+      {
+        "sizeId": 11,
+        "sizeName": "39"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 5,
+        "colorName": "White",
+        "colorCode": "#ebe7e7"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T13:57:47.086Z/NMD_G1_Shoes_White_IF3455_04_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T13:57:47.096Z/NMD_G1_Shoes_White_IF3455_01_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T13:57:47.092Z/NMD_G1_Shoes_White_IF3455_03_standard.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T13:57:47.094Z/NMD_G1_Shoes_White_IF3455_02_standard_hover.png"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "productName": "Nike Superfly 9 Elite Mercurial Dream Speed",
+    "price": 379.00,
+    "tags": [
+      "sales",
+      "trending"
+    ],
+    "categoryId": 1,
+    "categoryName": "Shoes",
+    "brandId": 2,
+    "brandName": "Nike",
+    "productSizes": [
+      {
+        "sizeId": 10,
+        "sizeName": "38"
+      },
+      {
+        "sizeId": 12,
+        "sizeName": "40"
+      },
+      {
+        "sizeId": 13,
+        "sizeName": "41"
+      },
+      {
+        "sizeId": 14,
+        "sizeName": "42"
+      }
+    ],
+    "productColors": [
+      {
+        "colorId": 7,
+        "colorName": "Green",
+        "colorCode": "#52d577"
+      }
+    ],
+    "productImages": [
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T14:17:53.803Z/superfly-9-elite-mercurial-dream-speed-fg-high-top-football-boot-0hlF4x (3).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T14:17:53.807Z/superfly-9-elite-mercurial-dream-speed-fg-high-top-football-boot-0hlF4x (1).png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T14:17:53.809Z/superfly-9-elite-mercurial-dream-speed-fg-high-top-football-boot-0hlF4x.png"
+      },
+      {
+        "imageUrl": "https://shopica-storage.s3.ap-southeast-1.amazonaws.com/shopica-files/product-images/2024-04-29T14:17:53.805Z/superfly-9-elite-mercurial-dream-speed-fg-high-top-football-boot-0hlF4x (2).png"
+      }
+    ]
+  }
+]

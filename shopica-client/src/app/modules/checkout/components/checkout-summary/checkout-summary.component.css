@@ -1,0 +1,49 @@
+.cart-price,
+.cart-shipping-address {
+  margin-bottom: 20px;
+  padding: 17px 0;
+}
+
+.cart-price-sub-price {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-price-total-price {
+  padding-top: 17px;
+}
+
+.cart-price-sub-price span,
+.cart-price-total-price span {
+  line-height: 20px;
+}
+
+.cart-price-sub-price .price_value {
+  font-size: 15px;
+}
+
+.cart-price-total-price .price_value {
+  font-size: 20px;
+}
+
+.cart-shipping-address .heading {
+  margin-bottom: 15px;
+}
+
+.cart-shipping-address .info {
+  margin-bottom: 8px;
+}
+
+.name {
+  margin-right: 10px;
+}
+
+.name::after {
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: rgb(224, 224, 224);
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}

@@ -1,0 +1,11 @@
+.pie-chart h2 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pie-chart {
+  height: 250px;
+  margin-top: 60px;
+}

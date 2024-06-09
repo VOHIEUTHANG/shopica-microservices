@@ -1,0 +1,19 @@
+.comment-input {
+  background: #f0f2f5;
+  border: none;
+  box-shadow: none;
+  height: 35px;
+  border-radius: 18px !important;
+}
+
+.comment-input.adding {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.adding-comment {
+  font-size: 20px;
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

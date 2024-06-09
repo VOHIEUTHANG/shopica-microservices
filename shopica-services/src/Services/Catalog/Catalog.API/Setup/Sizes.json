@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "sizeName": "XS"
+  },
+  {
+    "id": 2,
+    "sizeName": "S"
+  },
+  {
+    "id": 3,
+    "sizeName": "M"
+  },
+  {
+    "id": 4,
+    "sizeName": "XL"
+  },
+  {
+    "id": 5,
+    "sizeName": "2XL"
+  },
+  {
+    "id": 6,
+    "sizeName": "3XL"
+  },
+  {
+    "id": 7,
+    "sizeName": "35"
+  },
+  {
+    "id": 8,
+    "sizeName": "36"
+  },
+  {
+    "id": 9,
+    "sizeName": "37"
+  },
+  {
+    "id": 10,
+    "sizeName": "38"
+  },
+  {
+    "id": 11,
+    "sizeName": "39"
+  },
+  {
+    "id": 12,
+    "sizeName": "40"
+  },
+  {
+    "id": 13,
+    "sizeName": "41"
+  },
+  {
+    "id": 14,
+    "sizeName": "42"
+  },
+  {
+    "id": 15,
+    "sizeName": "43"
+  },
+  {
+    "id": 16,
+    "sizeName": "44"
+  },
+  {
+    "id": 17,
+    "sizeName": "45"
+  }
+]

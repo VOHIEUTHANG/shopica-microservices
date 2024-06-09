@@ -1,0 +1,36 @@
+<div class="product-card">
+  <div class="product-image">
+    <span class="labels">
+      <span class="new flex al-center jc-center" *ngIf="product.isNew && product.discount == 0">New</span>
+      <span class="discount flex al-center jc-center" *ngIf="product.discount > 0">-{{product.discount}}%</span>
+    </span>
+    <div [routerLink]="'/product/detail/' + product.id" class="background-image" [ngStyle]="getBackgroundStyle()">
+    </div>
+    <div class="hover-btn flex fd-column">
+      <button (click)="openQuickView(product)">
+        <span>Quick View</span>
+        <i nz-icon nzType="eye" nzTheme="outline"></i>
+      </button>
+      <button (click)="openQuickShop(product)">
+        <span>Quick Shop</span>
+        <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
+      </button>
+    </div>
+    <div class="add-wishlist">
+      <i (click)="addToWishList(product.id)" *ngIf="!inWishList && !isChangeWishList" class="text-hover" nz-tooltip
+        nzTooltipPlacement="right" nzTooltipTitle="Add to wishlist" nz-icon nzType="heart" nzTheme="outline"></i>
+      <i class="loading" *ngIf="isChangeWishList" nz-icon nzType="loading" nzTheme="outline"></i>
+      <i [class.liked]="inWishList" *ngIf="inWishList && !isChangeWishList" (click)="removeWishList(product.id)"
+        nz-tooltip nzTooltipPlacement="right" nzTooltipTitle="Remove wishlist" nz-icon nzType="heart"
+        nzTheme="fill"></i>
+    </div>
+    <div class="list-size">
+      <span>{{sizes}}</span>
+    </div>
+  </div>
+  <div class="product-info">
+    <p [routerLink]="'/product/detail/'+ product.id" class="product-name text-hover">{{product.productName}}</p>
+    <span class="product-price">{{product.price |currency}}</span>
+    <app-select-color [showTitle]="false" [listColor]="listColor" [(colorSelected)]="colorSelected"></app-select-color>
+  </div>
+</div>

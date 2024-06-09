@@ -1,0 +1,44 @@
+<nz-table #sortTable [nzFrontPagination]="false" [nzTotal]="total" [nzPageSize]="baseParam.pageSize"
+  [nzPageIndex]="baseParam.pageIndex" nzBordered [nzLoading]="isLoading" (nzQueryParams)="onQueryParamsChange($event)"
+  [nzData]="listData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzAlign="center" nzWidth="7%" nzColumnKey="id" [nzSortFn]="true">Id</th>
+      <th nzAlign="center" nzCustomFilter nzCustomFilter>Customer
+        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
+          <span nz-icon nzType="search"></span>
+        </nz-filter-trigger>
+      </th>
+      <th nzAlign="center" nzColumnKey="status" [nzFilters]="filterStatus" [nzFilterFn]="true">State</th>
+      <th nzAlign="center">Total</th>
+      <th nzAlign="center">Discount</th>
+      <th nzAlign="center">Shipping</th>
+      <th nzAlign="center">Order Date</th>
+      <th nzAlign="center" nzWidth="12%">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of sortTable.data; let odd=odd; let even = even" [ngClass]="{ odd: odd, even: even }">
+      <td nzAlign="center">{{ data.id }}</td>
+      <td nzAlign="center">{{ data.customerName }}</td>
+      <td nzAlign="center">{{ orderStatus[data.status] }}</td>
+      <td nzAlign="center">{{ data.totalPrice |currency }}</td>
+      <td nzAlign="center">{{ data.discount | currency }}</td>
+      <td nzAlign="center">{{ data.shippingCost | currency }}</td>
+      <td nzAlign="center">{{ data.createdAt | date: "mediumDate" }}</td>
+      <td nzAlign="center" class="btn-action">
+        <button nz-button (click)="viewOrder(data.id)" nzType="primary">View<i nz-icon nzType="eye"
+            nzTheme="outline"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

@@ -1,0 +1,12 @@
+.content {
+  margin: 60px 0;
+}
+
+.title p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  height: 40px;
+}

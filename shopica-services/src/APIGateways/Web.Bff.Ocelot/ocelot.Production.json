@@ -1,0 +1,728 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/carts/{customerId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Basket",
+      "UpstreamPathTemplate": "/api/carts/{customerId}",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/carts/add-to-cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Basket",
+      "UpstreamPathTemplate": "/api/carts/add-to-cart",
+      "UpstreamhttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/carts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Basket",
+      "UpstreamPathTemplate": "/api/carts",
+      "UpstreamhttpMethod": [ "Delete", "Patch" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/carts/empty-cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Basket",
+      "UpstreamPathTemplate": "/api/carts/empty-cart",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlists",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Wishlist",
+      "UpstreamPathTemplate": "/api/wishlists",
+      "UpstreamhttpMethod": [ "Delete", "Post", "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Promotion",
+      "UpstreamPathTemplate": "/api/promotions",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/promotions/{promotionCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Promotion",
+      "UpstreamPathTemplate": "/api/promotions/{promotionCode}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/promotions/get-valid-promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "PromotionValid",
+      "UpstreamPathTemplate": "/api/promotions/get-valid-promotions",
+      "UpstreamhttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/promotions/apply-promotion",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Promotion",
+      "UpstreamPathTemplate": "/api/promotions/apply-promotion",
+      "UpstreamhttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/promotions/unapply-promotion",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Promotion",
+      "UpstreamPathTemplate": "/api/promotions/unapply-promotion",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "DEFAULT"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/brands",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/brands",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/brands/{brandId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/brands/{brandId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/categories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/categories",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/categories/{categoryId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/categories/{categoryId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/sizes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/sizes",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/sizes/{sizeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/sizes/{sizeId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/colors",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/colors",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/colors/{colorId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/colors/{colorId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/productimages",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Product",
+      "UpstreamPathTemplate": "/api/productimages",
+      "UpstreamhttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/productimages/{productImageId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Product",
+      "UpstreamPathTemplate": "/api/productimages/{productImageId}",
+      "UpstreamhttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/get-by-ids",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "Key": "Product",
+      "UpstreamPathTemplate": "/api/products/get-by-ids",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/products",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/{productId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "catalog.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/products/{productId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/orders",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ],
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders/{orderId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/orders/{orderId}",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/addresses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/addresses",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/addresses/{addressId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/addresses/{addressId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/addresses/get-default",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ordering.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/addresses/get-default",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/paymentmethods",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/paymentmethods",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/paymentmethods/{paymentMethodId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/paymentmethods/{paymentMethodId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      },
+      "RouteClaimsRequirement": {
+        "roleName": "SUPER"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/payments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payments",
+      "UpstreamhttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/payments/{paymentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payment.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/payments/{paymentId}",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/awss3/get-presigned-url",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "storage.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/awss3/get-presigned-url",
+      "UpstreamhttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/awss3",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "storage.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/awss3",
+      "UpstreamhttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/notifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/notifications",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/mail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/mail",
+      "UpstreamhttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/mail/contact",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/mail/contact",
+      "UpstreamhttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/notifications/{notificationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/notifications/{notificationId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/notifications/update-read-notification",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/notifications/update-read-notification",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/notifications/{catchAll}",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notification.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamhttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ],
+      "UpstreamPathTemplate": "/notifications/{catchAll}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/comments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ratting.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/comments",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/comments/{commentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ratting.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/comments/{commentId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/blogs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ratting.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/blogs",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/blogs/{blogId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ratting.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/blogs/{blogId}",
+      "UpstreamhttpMethod": [ "Get", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/blogs/get-tags",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ratting.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/blogs/get-tags",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/inventory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "inventory.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/inventory/get-available-quantity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "inventory.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/get-available-quantity",
+      "UpstreamhttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/purchaseorders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "inventory.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/purchaseorders",
+      "UpstreamhttpMethod": [ "Get", "Post", "Patch" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/purchaseorders/{purchaseOrderId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "inventory.api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/purchaseorders/{purchaseOrderId}",
+      "UpstreamhttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5003"
+  }
+}

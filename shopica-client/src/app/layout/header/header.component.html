@@ -1,0 +1,114 @@
+<div class="navbar" [ngClass]="{'show-fixed':isScrollUp}">
+  <div class="container">
+    <div nz-row class="header">
+      <div nz-col [nzXl]="0" [nzLg]="0" [nzMd]="6" [nzSm]="6" [nzXs]="6">
+        <div class="push-menu flex al-center">
+          <i class="text-hover" (click)="openMenu()" [nzRotate]="180" nz-icon>
+            <svg>
+              <path
+                d="M127.9 168.9h768v46h-768z m-0.7 640.2h768v46h-768z m280.9-313.6h488.7v46H408.1z m-90.5-149.2L130.1 522.6l187.5 176.3V346.3z m-46 246.2l-74.3-69.9 74.3-69.9v139.8z"
+                p-id="23275" data-spm-anchor-id="a313x.7781069.0.i27" class="selected"></path>
+            </svg>
+          </i>
+        </div>
+      </div>
+      <div nz-col [nzXl]="6" [nzLg]="6" [nzMd]="12" [nzSm]="12" [nzXs]="12">
+        <div class="logo flex al-center">
+          <img [routerLink]="['/home']" height="70" src="assets/images/logo.PNG" alt="">
+        </div>
+      </div>
+      <div nz-col [nzXl]="12" [nzLg]="12" [nzMd]="0" [nzSm]="0" [nzXs]="0" class="navigation-options">
+        <ul class="flex jc-center">
+          <li class="text-hover flex al-center" [routerLinkActive]="['active']" [routerLink]="['/home']">Home</li>
+          <li class="text-hover flex al-center" [routerLinkActive]="['active']" [routerLink]="['/about']">About</li>
+          <li class="text-hover flex al-center" [routerLinkActive]="['active']" [routerLink]="['/product']">
+            Product</li>
+          <li class="text-hover flex al-center" [routerLinkActive]="['active']" [routerLink]="['/blog']">Blog</li>
+          <li class="text-hover flex al-center" [routerLinkActive]="['active']" [routerLink]="['/contact']">Contact</li>
+        </ul>
+      </div>
+      <div nz-col nzSpan="6" class="icon-btns">
+        <ul class="flex jc-flex-end">
+          <li class="text-hover flex al-center" (click)="isShowSearchModal = true">
+            <i nz-icon class="search">
+              <svg>
+                <path
+                  d="M984.177778 927.288889l-227.555556-233.244445c62.577778-73.955556 96.711111-164.977778 96.711111-267.377777C853.333333 193.422222 665.6 0 426.666667 0 193.422222 0 0 193.422222 0 426.666667S193.422222 853.333333 426.666667 853.333333c102.4 0 199.111111-39.822222 273.066666-102.4l227.555556 233.244445c5.688889 5.688889 17.066667 11.377778 28.444444 11.377778s17.066667-5.688889 28.444445-11.377778c17.066667-17.066667 17.066667-39.822222 0-56.888889zM79.644444 426.666667c0-193.422222 159.288889-347.022222 347.022223-347.022223 193.422222 0 347.022222 153.6 347.022222 347.022223s-153.6 347.022222-347.022222 347.022222-347.022222-153.6-347.022223-347.022222z"
+                  p-id="8830"></path>
+              </svg>
+            </i>
+          </li>
+          <li nz-dropdown [nzDisabled]="!isLogged" [nzOverlayStyle]="{'width':'170px'}" [nzDropdownMenu]="menu"
+            nzPlacement="bottom" class="text-hover flex al-center" (click)="openLogin()">
+            <i class="user" nz-icon>
+              <svg t="1617112133350" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="52371">
+                <path
+                  d="M714.599 647.247c-23.752-6.598-44.207-11.876-60.702-17.155a25.733 25.733 0 0 1-15.836-18.475 71.92 71.92 0 0 1 28.372-59.382c49.487-49.486 131.962-270.523 69.94-418.32A219.718 219.718 0 0 0 511.379 1.291a219.718 219.718 0 0 0-225.658 131.962c-61.362 147.798 20.454 368.835 69.94 418.32a71.92 71.92 0 0 1 28.372 59.383 25.733 25.733 0 0 1-15.835 18.475c-15.836 5.28-36.95 11.217-60.703 17.815-115.467 31.671-290.977 79.838-290.977 211.8V1024h989.717V859.047c0-131.962-175.509-180.129-291.636-211.799z m225.656 310.771H82.501v-98.971c0-82.477 145.818-122.065 242.81-147.798 25.073-6.598 47.506-12.536 65.98-19.134a91.713 91.713 0 0 0 58.724-65.982 128.003 128.003 0 0 0-46.186-120.745c-34.97-33.65-106.89-225.656-57.404-345.74a157.695 157.695 0 0 1 164.953-92.374 157.035 157.035 0 0 1 164.953 92.373c49.486 120.085-21.774 312.09-56.085 346.401a128.003 128.003 0 0 0-46.186 120.744 91.713 91.713 0 0 0 58.723 65.982c17.155 5.938 39.589 11.876 65.98 18.474 96.993 26.393 242.811 65.981 242.811 147.799z"
+                  p-id="52372"></path>
+              </svg>
+            </i>
+            <nz-dropdown-menu #menu>
+              <ul class="user-option" nz-menu>
+                <li [routerLink]="['/account']" nz-menu-item>Account detail</li>
+                <li [routerLink]="['/account/order-history']" nz-menu-item>Order history</li>
+                <li [routerLink]="['/account/change-password']" nz-menu-item>Change password</li>
+                <li (click)="logout()" nz-menu-item>Logout</li>
+              </ul>
+            </nz-dropdown-menu>
+          </li>
+          <li (click)="openWishList()" class="text-hover flex al-center">
+            <nz-badge nzShowZero [nzCount]="wishlistIds.length">
+              <i class="wishlist" nz-icon>
+                <svg height="1em" width="1.3em">
+                  <path
+                    d="M591.592727 108.776727a315.904 315.904 0 0 1 445.021091 0 311.482182 311.482182 0 0 1 1.768727 440.459637l-1.768727 1.768727-445.114182 441.623273-12.427636-12.334546-6.935273 6.842182L127.069091 545.512727a311.482182 311.482182 0 0 1-1.768727-440.506182l1.768727-1.722181a315.904 315.904 0 0 1 444.974545 0l12.567273 12.474181 7.074909-6.981818z m5.12 804.398546l-17.594182 17.780363-12.241454-12.288 17.687273-17.547636 12.194909 12.101818z m390.749091-411.741091l1.349818-1.396364a241.664 241.664 0 0 0-1.396363-341.736727 246.085818 246.085818 0 0 0-346.624 0L584.610909 214.109091l-61.719273-61.253818a246.085818 246.085818 0 0 0-346.670545 0l-1.349818 1.349818a241.664 241.664 0 0 0 1.396363 341.736727l395.915637 392.843637 6.935272-6.842182 12.427637 12.334545 395.962182-392.843636z"
+                    p-id="12228"></path>
+                </svg>
+              </i>
+            </nz-badge>
+          </li>
+          <li class="text-hover flex al-center" (click)="openShoppingCartDrawer()">
+            <nz-badge nzShowZero [nzCount]="numCartItems">
+              <i nz-icon class="shopping-cart">
+                <svg width="1.4em" height="1em">
+                  <path
+                    d="M1215.969483 176.317881H154.71894l116.573245 543.988132 827.385219-43.543735L1215.969483 176.317881z m-85.548079 67.807788l-86.151629 367.582093L325.476026 649.54151 238.605563 244.125669h891.815841z"
+                    p-id="19673"></path>
+                  <path
+                    d="M158.713219 1.356291a33.907285 33.907285 0 0 1 32.774781 25.22702l0.359417 1.491921 37.955815 174.961589a33.907285 33.907285 0 0 1-65.936106 15.800795l-0.339073-1.424106L131.370384 69.170861H34.348079A33.907285 33.907285 0 0 1 0.474702 36.735152L0.440795 35.263576A33.907285 33.907285 0 0 1 32.876503 1.390199L34.348079 1.356291h124.36514zM291.84 651.657325a33.907285 33.907285 0 0 1 39.501987 25.281271l0.311947 1.437669 19.978172 101.484503h699.48694a33.907285 33.907285 0 0 1 33.880159 32.44249l0.027126 1.471576a33.907285 33.907285 0 0 1-32.435708 33.873378l-1.471577 0.033907H323.746755a33.907285 33.907285 0 0 1-32.944318-25.884821l-0.32551-1.471576-25.362649-128.847682a33.907285 33.907285 0 0 1 26.718941-39.820715z"
+                    p-id="19674"></path>
+                  <path
+                    d="M447.576159 949.403974m-67.81457 0a67.81457 67.81457 0 1 0 135.629139 0 67.81457 67.81457 0 1 0-135.629139 0Z"
+                    p-id="19675"></path>
+                  <path
+                    d="M922.278146 949.403974m-67.81457 0a67.81457 67.81457 0 1 0 135.629139 0 67.81457 67.81457 0 1 0-135.629139 0Z"
+                    p-id="19676"></path>
+                </svg>
+              </i>
+            </nz-badge>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- menu -->
+<app-menu-drawer></app-menu-drawer>
+<!-- login -->
+<app-login-drawer (openRegisterDrawerEvent)="openRegister()" (openResetPasswordDrawerEvent)="openResetPassword()">
+</app-login-drawer>
+<!-- register -->
+<app-register-drawer (closeRegisterDrawerEvent)="isShowRegisterDrawer = false" (openLoginDrawerEvent)="openLogin()"
+  [isOpenRegisterDrawer]="isShowRegisterDrawer">
+</app-register-drawer>
+<!-- reset password -->
+<app-reset-password-drawer (closeResetPasswordDrawerEvent)="isShowResetPasswordDrawer = false"
+  [isOpenResetPasswordDrawer]="isShowResetPasswordDrawer" (openLoginDrawerEvent)="openLogin()">
+</app-reset-password-drawer>
+<!-- shopping cart -->
+<app-shopping-cart-drawer></app-shopping-cart-drawer>
+<!-- search -->
+<app-search-modal [isVisible]="isShowSearchModal" (closeSearchModalEvent)="isShowSearchModal = false">
+</app-search-modal>

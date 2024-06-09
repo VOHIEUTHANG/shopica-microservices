@@ -1,0 +1,33 @@
+.image {
+  margin-left: 100px;
+  position: relative;
+}
+
+.expand-image-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 13px;
+  z-index: 2;
+  min-width: 38px;
+  width: 38px;
+  border: none;
+  height: 38px;
+  background-color: #000d1d;
+}
+
+.expand-image-btn:hover {
+  background-color: #56cfe1;
+}
+
+.expand-image-btn i {
+  color: white;
+  font-size: 18px;
+  line-height: 0;
+}
+
+@media (max-width: 992px) {
+  .image {
+    margin-bottom: 136px;
+    margin-left: 0;
+  }
+}

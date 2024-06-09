@@ -1,0 +1,54 @@
+p {
+  margin-bottom: 0;
+}
+
+.left,
+.right {
+  margin: 15px 0;
+}
+
+.comment-summary {
+  margin-bottom: 20px;
+}
+
+.rating-average {
+  font-size: 30px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.total-rating p {
+  color: #878787;
+}
+
+.progress {
+  width: 200px;
+  margin: 0 10px;
+}
+
+.filter-element {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  color: rgb(120, 120, 120);
+  background: rgb(238, 238, 238);
+  margin: 0px 12px 12px 0px;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.filter-element.active {
+  background: rgb(230, 238, 247);
+  color: rgb(13, 92, 182);
+}
+
+.label {
+  margin: 0px 12px 12px 0px;
+}
+
+.filter-element__check {
+  margin-right: 5px;
+}

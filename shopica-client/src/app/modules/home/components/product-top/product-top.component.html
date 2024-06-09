@@ -1,0 +1,15 @@
+<div class="our-products">
+  <app-section-title [title]="'OUR PRODUCTS'" [subTitle]="'Top sale in this week'"></app-section-title>
+
+  <app-ng-tabs>
+    <app-tab-content tabTitle="New Arrival">
+      <app-product-carousel [listProduct]="newArrivalProduct" [carouselOptions]="customOptions"></app-product-carousel>
+    </app-tab-content>
+    <app-tab-content tabTitle="Trending">
+      <app-product-carousel [listProduct]="trendingProduct" [carouselOptions]="customOptions"></app-product-carousel>
+    </app-tab-content>
+    <app-tab-content tabTitle="Sales">
+      <app-product-carousel [listProduct]="salesProduct" [carouselOptions]="customOptions"></app-product-carousel>
+    </app-tab-content>
+  </app-ng-tabs>
+</div>

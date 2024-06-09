@@ -1,0 +1,53 @@
+.payment-method {
+  display: block;
+  /* height: 32px; */
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+
+.paypal-component {
+  padding-left: 20px;
+  width: 30%;
+}
+
+.tittle h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.image {
+  height: 80px;
+}
+
+.footer {
+  margin: 20px 0 80px;
+}
+
+.next-step {
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+  height: 40px;
+}
+
+.prev-step {
+  margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .paypal-component {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .paypal-component {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .paypal-component {
+    width: 60%;
+  }
+}

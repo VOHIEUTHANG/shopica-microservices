@@ -1,0 +1,29 @@
+<div class="order-history mb-30">
+  <div class="title ">
+    <p><strong> Order History :</strong></p>
+  </div>
+  <div class="table-content">
+    <nz-table [nzPageSize]="4" [nzLoading]="isLoading" #basicTable [nzData]=" orders">
+      <thead>
+        <tr>
+          <th [nzAlign]="'center'">Id</th>
+          <th [nzAlign]="'center'">Order Date</th>
+          <th [nzAlign]="'center'">Total</th>
+          <th [nzAlign]="'center'">Discount</th>
+          <th [nzAlign]="'center'">Shipping</th>
+          <th [nzAlign]="'center'">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr [routerLink]="['/account/order-detail',data.id]" *ngFor="let data of basicTable.data">
+          <td [nzAlign]="'center'"> <a>{{ data.id }}</a> </td>
+          <td [nzAlign]="'center'">{{ data.createdAt | date:'mediumDate'}}</td>
+          <td [nzAlign]="'center'">{{ data.totalPrice| currency}}</td>
+          <td [nzAlign]="'center'">{{ data.discount | currency}}</td>
+          <td [nzAlign]="'center'">{{ data.shippingCost | currency}}</td>
+          <td [nzAlign]="'center'">{{ orderStatus[data.status] }}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

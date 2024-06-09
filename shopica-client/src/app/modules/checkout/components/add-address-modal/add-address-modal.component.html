@@ -1,0 +1,74 @@
+<nz-modal [(nzVisible)]="isVisible" nzOkText="OK" nzClassName="form-modal" [nzTitle]="modalTitle"
+  [nzOkDisabled]="baseForm.invalid" nzCentered [nzOkLoading]="isLoadingButton" (nzOnCancel)="cancelModal()"
+  (nzOnOk)="submitForm()">
+  <ng-container *nzModalContent>
+    <form nz-form [formGroup]="baseForm">
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="customerName">Name</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your name!">
+          <input nz-input type="text" formControlName="customerName">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="email">Email</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your email!">
+          <input nz-input type="text" formControlName="email">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="phone">Phone</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your phone!">
+          <input nz-input type="text" formControlName="phone">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="province">Province</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please select your province!">
+          <nz-select (ngModelChange)="provinceChange($event)" formControlName="province" nzShowSearch
+            nzPlaceHolder="Select a province">
+            <nz-option *ngFor="let item of listProvince" [nzLabel]="item.ProvinceName" [nzValue]="item">
+            </nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label nzRequired [nzSpan]="6" nzFor="district">District</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please select your district!">
+          <nz-select (ngModelChange)="districtChange($event)" formControlName="district" nzShowSearch
+            nzPlaceHolder="Select a district">
+            <nz-option *ngFor="let item of listDistrict" [nzLabel]="item.DistrictName" [nzValue]="item">
+            </nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired nzFor="ward">Ward</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please select your ward!">
+          <nz-select formControlName="ward" nzShowSearch nzPlaceHolder="Select a ward">
+            <nz-option *ngFor="let item of listWard" [nzLabel]="item.WardName" [nzValue]="item">
+            </nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzRequired nzFor="street">Street</nz-form-label>
+        <nz-form-control [nzSpan]="14" nzErrorTip="Please input your street!">
+          <input nz-input type="text" formControlName="street">
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="default">Default</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <label formControlName="default" nz-checkbox></label>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </ng-container>
+</nz-modal>

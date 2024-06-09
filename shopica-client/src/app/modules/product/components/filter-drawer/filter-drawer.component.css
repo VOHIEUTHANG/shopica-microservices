@@ -1,0 +1,135 @@
+.filter {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.filter-section {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px;
+}
+
+.title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #222;
+  left: 0;
+  bottom: 15px;
+  position: absolute;
+}
+
+.filter-section .content {
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.filter-section .content .color {
+  padding: 5px 0 5px 0;
+  margin-bottom: 5px;
+}
+
+.color .color-border {
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+.color:hover .color-border {
+  border-color: #9e9999;
+}
+
+.color .color-border span {
+  position: relative;
+}
+
+.color .color-border span i {
+  position: absolute;
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.color.active .color-border span i {
+  color: #ffffff;
+}
+
+.color:hover p {
+  color: #56cfe1;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.color.active p {
+  color: #56cfe1;
+}
+
+.color.active .color-border {
+  border-color: #9e9999;
+}
+
+.color .color-border span {
+  width: 26px;
+  display: block;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.color p {
+  margin-bottom: 0;
+  transition: 0.3s;
+}
+
+/* item */
+.content .item {
+  margin-bottom: 12px;
+}
+
+.content .item:hover {
+  cursor: pointer;
+}
+
+.content .item:hover .checkbox-icon {
+  background-color: #56cfe1;
+  border: 1px solid #56cfe1;
+}
+
+.content .item:hover p {
+  color: #56cfe1;
+}
+
+.content .item p {
+  color: black;
+  transition: 0.5s;
+  margin-bottom: 0;
+}
+
+.content .item .checkbox-icon {
+  background-color: white;
+  border: 1px solid #d4d6d8;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+
+.content .item.active .checkbox-icon {
+  background-color: #56cfe1;
+  border: 1px solid #56cfe1;
+}
+
+.content .item.active p {
+  color: #56cfe1;
+}

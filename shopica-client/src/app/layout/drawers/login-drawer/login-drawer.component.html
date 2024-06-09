@@ -1,0 +1,60 @@
+<nz-drawer [nzWidth]="340" [nzClosable]="true" [nzVisible]="isVisible" nzPlacement="right" nzTitle="LOGIN"
+  (nzOnClose)="closeMenu()">
+
+  <ng-container *nzDrawerContent>
+    <div class="drawer-form">
+      <form [nzLayout]="'vertical'" nz-form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <!-- username -->
+        <nz-form-item>
+          <nz-form-label nzSpan="10" nzRequired nzFor="username">Username:</nz-form-label>
+          <nz-form-control nzSpan="24" nzErrorTip="The input is not valid User!">
+            <input nz-input formControlName="username" />
+          </nz-form-control>
+        </nz-form-item>
+        <!-- password -->
+        <nz-form-item>
+          <nz-form-label nzSpan="10" nzFor="password" nzRequired>Password</nz-form-label>
+          <nz-form-control nzSpan="24" nzErrorTip="Please input your password!">
+            <input nz-input type="password" formControlName="password" />
+          </nz-form-control>
+        </nz-form-item>
+        <!-- form error -->
+        <div class="form-error" *ngIf="loginForm.errors">
+          <p>{{loginForm.errors.error}}</p>
+        </div>
+        <!-- submit button -->
+        <button nzShape="round" [nzLoading]="isLoading" nz-button class="drawer-form-button login-form-margin"
+          [nzType]="'primary'">LOG IN</button>
+      </form>
+
+      <div class="social-login flex al-center fd-column">
+
+
+        <p>or Sign Up using</p>
+        <div class="btns flex">
+          <asl-google-signin-button type='icon' shape="circle" size='large' theme="outline">
+          </asl-google-signin-button>
+
+
+          <button (click)="loginWithFacebook()" class="facebook-login-btn" nzShape="circle" nzSize="large" nz-button
+            [nzType]="'primary'">
+            <i nz-icon>
+              <svg t="1618583206579" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="1500" width="1em" height="1em">
+                <path
+                  d="M710.355 6.617v175.34c-52.46 4.726-128.788-13.942-153.6 18.59-4.49 43.323-5.75 86.882-3.86 130.363a1516.308 1516.308 0 0 0 161.32 3.702 6950.518 6950.518 0 0 1-18.669 182.43H552.423V1024H339.116V517.12h-97.753a1754.348 1754.348 0 0 1-4.332-182.35h98.304C310.522 68.53 427.889-27.413 710.355 6.616z"
+                  p-id="1501"></path>
+              </svg>
+            </i>
+          </button>
+        </div>
+
+      </div>
+      <div class="options">
+        <p>New customer? <a (click)="openRegisterDrawer()">Create your account</a></p>
+        <p>Lost password? <a (click)="openResetPasswordDrawer()">Reset password</a></p>
+      </div>
+
+    </div>
+  </ng-container>
+</nz-drawer>

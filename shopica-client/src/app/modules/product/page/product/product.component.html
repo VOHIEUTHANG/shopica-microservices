@@ -1,0 +1,29 @@
+<div class="products-page">
+  <div #target></div>
+  <app-categories></app-categories>
+  <app-toolbars (changeNumberProductEvent)="changeNumProduct($event)" (openFilterDrawerEvent)="openFilterDrawer()">
+  </app-toolbars>
+  <app-filter-drawer (closeFilterEvent)="closeFilterDrawer()" [isShowFilter]="isShowFilter"></app-filter-drawer>
+  <div class="container">
+    <div class="filter-result flex">
+      <div class="num-product">
+        <a *ngIf="loaded">{{total}}</a> Product Found
+      </div>
+      <a *ngIf="countFilter > 1" (click)="clearAllFilter()" class="color-filter clear-filter">Clear All
+        Filter</a>
+      <a *ngIf="selectedColor" (click)="clearColor()" class="color-filter clear-filter">Color {{selectedColor}}</a>
+      <a *ngIf="selectedSize" (click)="clearSize()" class="size-filter clear-filter">Size {{selectedSize}}</a>
+      <a *ngIf="selectedBrand" (click)="clearBrand()" class="brand-filter clear-filter">Brand {{selectedBrand}}</a>
+      <a *ngIf="selectedPrice" (click)="clearPrice()" class="price-filter clear-filter">Price {{selectedPrice}}</a>
+    </div>
+  </div>
+
+  <app-content [listProduct]="listProduct" [productCol]="productCol"></app-content>
+  <div class="product-footer">
+    <div class="pagination flex jc-center">
+      <nz-pagination [nzHideOnSinglePage]="true" [nzPageIndex]="baseParams.pageIndex + 1"
+        [nzPageSize]="baseParams.pageSize" (nzPageIndexChange)="changePageIndex($event)" [nzTotal]="total">
+      </nz-pagination>
+    </div>
+  </div>
+</div>

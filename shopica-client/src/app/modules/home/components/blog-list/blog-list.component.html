@@ -1,0 +1,14 @@
+<div class="list-blog">
+  <app-section-title [title]="'LATE FROM BLOG'" [subTitle]="'
+  The freshest and most exciting news'"></app-section-title>
+  <div class="content">
+
+    <owl-carousel-o [options]="customOptions">
+      <ng-template *ngFor="let blog of listBlog" carouselSlide>
+        <div class="column">
+          <app-blog-card [blog]="blog"></app-blog-card>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

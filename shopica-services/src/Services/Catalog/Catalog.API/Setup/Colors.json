@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "colorCode": "#1c1b1b",
+    "colorName": "Black"
+  },
+  {
+    "id": 2,
+    "colorCode": "#939393",
+    "colorName": "Gray"
+  },
+  {
+    "id": 3,
+    "colorCode": "#6588f4",
+    "colorName": "Blue"
+  },
+  {
+    "id": 4,
+    "colorCode": "#fff63d",
+    "colorName": "Yellow"
+  },
+  {
+    "id": 5,
+    "colorCode": "#ebe7e7",
+    "colorName": "White"
+  },
+  {
+    "id": 6,
+    "colorCode": "#ee0e0e",
+    "colorName": "Light Red"
+  },
+  {
+    "id": 7,
+    "colorCode": "#52d577",
+    "colorName": "Green"
+  },
+  {
+    "id": 8,
+    "colorCode": "#d9c7bb",
+    "colorName": "Brown"
+  },
+  {
+    "id": 9,
+    "colorCode": "#cde2ff",
+    "colorName": "Light Blue"
+  }
+]

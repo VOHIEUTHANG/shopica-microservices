@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="body">
+  <router-outlet></router-outlet>
+  <app-loader></app-loader>
+</div>
+<app-footer></app-footer>
+<app-scroll-to-top></app-scroll-to-top>
+<app-quick-shop></app-quick-shop>
+<app-quick-view></app-quick-view>
+<ng-template let-product="data">
+  <div class="product-item flex">
+    <div class="product-image">
+      <a (click)="viewProductDetail(product.productId)"><img src={{product.imageUrl}} alt=""></a>
+    </div>
+    <div class="product-info">
+      <div class="info">
+        <div (click)="viewProductDetail(product.productId)" class="product-name text-hover">{{product.productName}}
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

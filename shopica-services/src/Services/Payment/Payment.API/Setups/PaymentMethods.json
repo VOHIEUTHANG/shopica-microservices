@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "active": true,
+    "name": "COD",
+    "description": "Pay with cash",
+    "imageUrl": "https://www.coolmate.me/images/COD.svg"
+  },
+  {
+    "id": 2,
+    "active": true,
+    "name": "MOMO",
+    "description": "Pay with Momo",
+    "imageUrl": "https://www.coolmate.me/images/momo-icon.png"
+  },
+  {
+    "id": 3,
+    "active": true,
+    "name": "VNPAY",
+    "description": "Pay with VNPay",
+    "imageUrl": "https://www.coolmate.me/images/vnpay.png"
+  }
+]

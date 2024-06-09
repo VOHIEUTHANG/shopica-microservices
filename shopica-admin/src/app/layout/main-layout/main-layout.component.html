@@ -1,0 +1,157 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar" nzCollapsible="true" nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a [routerLink]="['/admin']">
+        <img src="assets/images/logo2.svg" alt="logo">
+        <h1>Shopica Seller Center</h1>
+      </a>
+    </div>
+    <ul class="main-menu" nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li [nzSelected]="isHomePage" [routerLink]="['/admin']" nz-menu-item>
+        <i nz-icon nzType="bar-chart"></i>
+        <span>Dashboard</span>
+      </li>
+
+      <li nzMatchRouter [routerLink]="['/admin/order']" nz-menu-item>
+        <i nz-icon nzType="ordered-list"></i>
+        <span>Order</span>
+      </li>
+
+      <li nzMatchRouter [routerLink]="['/admin/product']" nz-menu-item>
+        <i nz-icon nzType="shopping-cart"></i>
+        <span>Product</span>
+      </li>
+
+      <li nzMatchRouter [routerLink]="['/admin/promotion']" nz-menu-item>
+        <i nz-icon nzType="gift"></i>
+        <span>Promotion</span>
+      </li>
+
+      <li nzMatchRouter [routerLink]="['/admin/blog']" nz-menu-item>
+        <i nz-icon nzType="read"></i>
+        <span>Blog</span>
+      </li>
+
+      <li nz-submenu nzTitle="Catalog" nzIcon="shopping">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/category']">Category</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/size']">Size</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/color']">Color</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/brand']">Brand</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzTitle="Payment" nzIcon="transaction">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/payment/transaction']">Transaction</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/payment/method']">Method</a>
+          </li>
+        </ul>
+      </li>
+
+      <li nz-submenu nzTitle="Inventory" nzIcon="bank">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/inventory/purchase-orders']">Purchase Order</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="['/admin/inventory/warehouse-entries']">Warehouse Entry</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <div>
+      <nz-header>
+        <div class="app-header">
+          <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+          </span>
+          <div class="seller-info">
+            <span class="notify">
+              <nz-badge [nzCount]="numUnRead">
+                <button (click)="updateReadNotification()" nz-popconfirm nzPopconfirmOverlayClassName="notify-card"
+                  [nzPopconfirmTitle]="notify" nzPopconfirmPlacement="bottom" nz-button nzType="default"
+                  nzShape="circle"><i nz-icon nzType="bell" nzTheme="outline"></i></button>
+              </nz-badge>
+            </span>
+            <!-- notify template -->
+            <ng-template #notify>
+              <div class="notify-header">
+                Notifications
+              </div>
+              <div class="notify-content" *ngIf="listNotify.length > 0;else noNotify">
+                <div *ngFor="let item of listNotify" [routerLink]="['/admin/order/detail',item.sourceDocumentId]"
+                  class="notify-item">
+                  <div class="notify-icon">
+                    <i nz-icon nzType="info-circle" style="font-size: 30px; color: #08c;" nzTheme="outline"></i>
+                  </div>
+                  <div class="notify-message">
+                    <h5>{{item.content}}</h5>
+                    <p>{{item.createdAt | date: "medium" }}</p>
+                  </div>
+                </div>
+              </div>
+              <div [routerLink]="['/admin/order']" class="notify-footer">
+                View all
+              </div>
+            </ng-template>
+
+            <!-- no notify template -->
+            <ng-template #noNotify>
+              <div class="notFound">
+                <img src="https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg" alt="not found">
+                <div>You have viewed all notifications.</div>
+              </div>
+            </ng-template>
+
+            <span nz-dropdown [nzDropdownMenu]="menu">
+              <img [src]="userImage" width="34" height="34">
+              {{ username}}
+              <i nz-icon nzType="down"></i>
+            </span>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul class="seller-feature" nz-menu>
+                <li nz-menu-item [routerLink]="['/admin/profile/change-password']">Change password
+                </li>
+                <li nz-menu-item [routerLink]="['/admin/profile/user-info']">User Information
+                </li>
+                <li nz-menu-item (click)="logout()">Logout</li>
+              </ul>
+            </nz-dropdown-menu>
+
+          </div>
+        </div>
+
+      </nz-header>
+    </div>
+    <nz-layout class="inner-layout">
+      <nz-breadcrumb [nzAutoGenerate]="true">
+      </nz-breadcrumb>
+      <nz-content>
+        <div class="inner-content">
+          <div class="container">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </nz-content>
+      <nz-footer>Ant Design ©2023 Implement By Angular</nz-footer>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
+<app-message></app-message>
+<div #audioElement></div>

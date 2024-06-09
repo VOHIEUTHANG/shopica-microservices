@@ -1,0 +1,3 @@
+<input [class.adding]="isLoading" class="comment-input" type="text" nz-input n placeholder="Write a comment..."
+  [(ngModel)]="content" (keyup.enter)="commentChange()" />
+<i *ngIf="isLoading" class="adding-comment" nz-icon nzType="loading"></i>

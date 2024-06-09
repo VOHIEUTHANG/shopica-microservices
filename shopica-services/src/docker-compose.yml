@@ -1,0 +1,129 @@
+version: '3.4'
+
+services:
+  storage.api:
+    image: ${DOCKER_REGISTRY-}storageapi
+    build:
+      context: .
+      dockerfile: Services/Storage/Storage.API/Dockerfile
+    depends_on:
+        - rabbitmq
+        - logstash
+
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Services/Catalog/Catalog.API/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+      - logstash
+
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identityapi
+    build:
+      context: .
+      dockerfile: Services/Identity/Identity.API/Dockerfile
+    depends_on:
+      - sqldata
+      - logstash
+
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Order/Order.API/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+      - logstash
+ 
+  payment.api:
+    image: ${DOCKER_REGISTRY-}paymentapi
+    build:
+      context: .
+      dockerfile: Services/Payment/Payment.API/Dockerfile
+    depends_on:
+      - sqldata
+      - logstash
+ 
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
+    depends_on:
+      - sqldata
+      - basketdata
+      - rabbitmq
+      - logstash
+
+  notification.api:
+    image: ${DOCKER_REGISTRY-}notification
+    build:
+      context: .
+      dockerfile: Services/Notification/Notification.API/Dockerfile
+    depends_on:
+      - messagedata
+      - rabbitmq
+      - logstash
+
+  ratting.api:
+    image: ${DOCKER_REGISTRY-}ratting
+    build:
+      context: .
+      dockerfile: Services/Ratting/Ratting.API/Dockerfile
+    depends_on:
+      - sqldata
+      - logstash
+
+  inventory.api:
+    image: ${DOCKER_REGISTRY-}inventory
+    build:
+      context: .
+      dockerfile: Services/Inventory/Inventory.API/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+      - logstash
+ 
+  web.bff.ocelot:
+    image: ${DOCKER_REGISTRY-}webbffocelot
+    build:
+      context: .
+      dockerfile: APIGateways/Web.Bff.Ocelot/Dockerfile
+    depends_on:
+        - storage.api
+        - catalog.api
+        - identity.api
+        - ordering.api
+        - basket.api
+        - payment.api
+        - notification.api
+        - inventory.api
+
+  sqldata:
+    image: 123trunghieu/mssql-2022-full-text:latest
+
+  messagedata:
+    image: mongodb/mongodb-community-server
+
+  basketdata:
+    image: redis/redis-stack:latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  elasticsearch01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.4
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.13.4
+    depends_on:
+      - elasticsearch01
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.13.4
+    depends_on:
+      - elasticsearch01

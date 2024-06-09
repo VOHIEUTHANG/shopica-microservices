@@ -1,0 +1,59 @@
+.products-page {
+  margin-top: 70px;
+}
+
+.product-footer {
+  margin: 40px 0 60px 0;
+  border-top: 1px solid #ddd;
+}
+
+.pagination {
+  padding: 40px 0 40px 0;
+}
+
+.num-product {
+  padding-right: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.clear-filter {
+  position: relative;
+  color: black;
+  margin-left: 15px;
+  padding: 0 15px;
+  border-right: 1px solid #ddd;
+}
+
+.brand-filter {
+  border-right: none;
+}
+
+.clear-filter::after,
+.clear-filter::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  margin-top: -1px;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    width 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.clear-filter::after {
+  transform: rotate(-45deg);
+}
+
+.clear-filter:hover {
+  color: #56cfe1;
+}
+
+.clear-filter:hover:after,
+.clear-filter:hover::before {
+  transform: rotate(0);
+}

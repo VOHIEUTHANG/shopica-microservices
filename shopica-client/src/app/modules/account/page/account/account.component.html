@@ -1,0 +1,13 @@
+<div class="account-page mt-70">
+  <app-header-page [pageName]="'ACCOUNT'" [image]="'assets/images/blogs/background-2.jpg'"></app-header-page>
+  <div class="container">
+    <div class="content" [nzGutter]="24" nz-row>
+      <div nz-col [nzMd]="7" [nzXs]="24" class="side-bar flex jc-center">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div nz-col [nzMd]="17" [nzXs]="24">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

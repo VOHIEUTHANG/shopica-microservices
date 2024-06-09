@@ -1,0 +1,48 @@
+.quick-shop-modal .cart-item {
+  border: none;
+  background-color: white;
+}
+
+.product-info {
+  padding: 20px 20px 20px 0;
+}
+
+app-select-color {
+  margin-bottom: 20px;
+}
+
+app-select-size {
+  margin-bottom: 30px;
+}
+
+app-input-quantity {
+  margin-bottom: 5px;
+}
+
+.add-to-cart-btn {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #56cfe1;
+  border-color: hsl(188, 70%, 61%);
+}
+
+.view-detail p {
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 0;
+}
+
+.view-detail i {
+  transition: 0.3s;
+  transform: translateX(2px);
+}
+
+.view-detail:hover i {
+  transform: translateX(7px);
+}
+
+.view-detail:hover {
+  color: #56cfe1;
+  cursor: pointer;
+}

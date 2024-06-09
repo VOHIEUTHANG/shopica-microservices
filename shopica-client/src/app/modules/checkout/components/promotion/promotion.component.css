@@ -1,0 +1,135 @@
+.cart-group-order-notes .notes-content {
+  width: 100%;
+}
+
+.discount-content {
+  padding: 15px 0;
+}
+
+.cart-group-order-fee {
+  border-left: 1px solid rgb(244, 244, 244);
+}
+
+.cart-price-voucher,
+.cart-price-shipping,
+.cart-price-discount {
+  padding: 13px 20px;
+}
+
+.cart-price-voucher p {
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 15px;
+  color: #00000073;
+}
+
+.cart-price-voucher p i {
+  font-size: 17px;
+  margin-right: 3px;
+}
+
+.cart-price-shipping,
+.cart-price-discount {
+  border-top: 1px solid rgb(244, 244, 244);
+}
+
+.price_text {
+  color: #00000073;
+}
+
+.price_value {
+  font-size: 15px;
+}
+
+/* popover */
+
+input.coupon-input {
+  line-height: 26px;
+}
+
+.checkout-btn {
+  height: 36px;
+  border-radius: 4px;
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+}
+
+.coupon-public {
+  margin-top: calc(1.5rem - 10px);
+  padding-top: 15px;
+}
+
+.coupon-public .coupons {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.coupon-public .coupons .coupon:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.coupon-public .coupons .coupon {
+  display: flex;
+  border: 1px solid rgba(36, 36, 36, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 300px;
+  align-items: center;
+}
+
+.coupon-public .coupons .coupon-left {
+  flex: 1;
+  border-right: 2px dashed rgba(102, 102, 102, 0.7607843137);
+  min-width: 20px;
+  max-width: 20px;
+  height: 100%;
+  position: relative;
+}
+
+.coupon-public .coupons .coupon.active {
+  background-color: #56cfe1;
+  border: 2px solid #56cfe1;
+  color: white;
+}
+
+.coupon-public .coupons .coupon-left:before {
+  content: "";
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: white;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  border-top: 1px solid rgba(36, 36, 36, 0.3);
+  border-right: 1px solid rgba(36, 36, 36, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 100em;
+}
+
+.coupon-public .coupons .coupon.active .coupon-left {
+  border-right: 2px dashed white;
+}
+
+.coupon-public .coupons .coupon.active .coupon-left:before {
+  left: -10%;
+  border-top: 1px solid #56cfe1;
+  border-right: 1px solid #56cfe1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid rgba(0, 0, 0, 0);
+}
+
+.coupon-public .coupons .coupon-right {
+  flex: 2;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  position: relative;
+}
+
+.coupon-public .coupon-list-btn {
+  padding-top: 15px;
+}

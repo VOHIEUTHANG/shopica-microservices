@@ -1,0 +1,38 @@
+<nz-table #sortTable nzBordered [nzFrontPagination]="false" [nzTotal]="total" [nzPageSize]="baseParam.pageSize"
+  nzBordered [nzPageIndex]="baseParam.pageIndex" [nzLoading]="isLoading" (nzQueryParams)="onQueryParamsChange($event)"
+  [nzData]="listData" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzAlign="center" nzColumnKey="id" [nzSortFn]="true">Id</th>
+      <th nzAlign="center">Customer</th>
+      <th nzAlign="center">Amount</th>
+      <th nzAlign="center">Method</th>
+      <th nzAlign="center">Payment Status</th>
+      <th nzAlign="center">Payment Date</th>
+      <!-- <th nzAlign="center">Action</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of sortTable.data; let odd=odd; let even = even" [ngClass]="{ odd: odd, even: even }">
+      <td nzAlign="center">{{ data.id }}</td>
+      <td nzAlign="center">{{ data.customerId }}</td>
+      <td nzAlign="center">{{ data.amount |currency }}</td>
+      <td nzAlign="center">{{ data.methodName }}</td>
+      <td nzAlign="center">{{ paymentStatus[data.paymentStatus] }}</td>
+      <td nzAlign="center">{{ data.paymentDate | date: "mediumDate" }}</td>
+      <!-- <td nzAlign="center" class="btn-action">
+        <button nz-button (click)="viewOrder(data.id)" nzType="primary">View<i nz-icon nzType="eye"
+            nzTheme="outline"></i></button>
+      </td> -->
+    </tr>
+  </tbody>
+</nz-table>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+      <button nz-button nzSize="small" (click)="reset()">Reset</button>
+      <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

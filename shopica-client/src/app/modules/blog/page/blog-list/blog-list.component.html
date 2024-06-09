@@ -1,0 +1,25 @@
+<div #target class="blog-page mt-70">
+  <app-header-page [image]="'assets/images/blogs/blog-background.jpg'" [pageName]="'ALL BLOGS'"></app-header-page>
+  <div class="container">
+    <div class="content" nz-row>
+      <div nz-col [nzLg]="6" [nzSm]="18" [nzXs]="24">
+        <app-sidebar></app-sidebar>
+      </div>
+      <div nz-col [nzLg]="18" [nzXs]="24">
+        <div class="blog-list" nz-row [nzGutter]="24">
+          <app-loader [flexStart]="true" [id]="'filter-blog'"></app-loader>
+          <div class="item" *ngFor="let blog of listBlog" nz-col [nzMd]="12" [nzXs]="24">
+            <app-blog-card [blog]="blog" (click)="viewDetail(blog.id)"></app-blog-card>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="pagination flex jc-center">
+            <nz-pagination [nzHideOnSinglePage]="true" [nzPageIndex]="baseParams.pageIndex"
+              [nzPageSize]="baseParams.pageSize" [nzTotal]="total"
+              (nzPageIndexChange)="onQueryPageIndexChange($event)"></nz-pagination>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

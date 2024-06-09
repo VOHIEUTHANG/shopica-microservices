@@ -1,0 +1,24 @@
+<div nz-row class="cart-row" [ngStyle]="{'padding': (mode === 'cart') ? '30px 0': '15px 0'}">
+  <!-- <div *ngIf="item.quantity > item.available" class="background"></div> -->
+  <div nz-col class="product" [nzMd]="10" [nzXs]="24">
+    <app-cart-item (loadingEvent)="loadingEvent($event)" [cartItemOptions]="cartItemOptions" [cartItem]="cartItem">
+    </app-cart-item>
+  </div>
+
+  <div class="price jc-center al-center flex" nz-col [nzMd]="6" [nzXs]="8">
+    <span>{{cartItem.unitPrice |currency}}</span>
+  </div>
+
+  <div class="quantity jc-center al-center flex fd-column" nz-col [nzMd]="4" [nzXs]="8">
+    <span *ngIf="mode === 'checkout'">x{{cartItem.quantity }}</span>
+    <app-input-quantity [available]="cartItem.available" *ngIf="mode === 'cart'"
+      (quantityChange)="changeQuantity($event)" [quantity]="cartItem.quantity">
+    </app-input-quantity>
+
+  </div>
+
+  <div class="total jc-flex-end al-center flex" nz-col [nzMd]="4" [nzXs]="8">
+    <span>{{cartItem.quantity*cartItem.unitPrice |currency}}</span>
+    <span class="item-disable" *ngIf="cartItem.quantity > cartItem.available">X</span>
+  </div>
+</div>

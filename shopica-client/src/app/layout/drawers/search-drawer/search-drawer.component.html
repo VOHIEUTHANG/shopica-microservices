@@ -1,0 +1,44 @@
+<nz-drawer [nzWidth]="340" [nzClosable]="true" [nzVisible]="isOpenSearchDrawer" nzPlacement="right" nzTitle="SEARCH OUR SITE" (nzOnClose)="closeMenu()" [nzWrapClassName]="''">
+    <ng-container *nzDrawerContent>
+        <div class="search-drawer">
+            <form class="search-form" [nzLayout]="'vertical'" nz-form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control nzSpan="24">
+                        <nz-select class="select-round" [nzSize]="'large'" nzAllowClear nzPlaceHolder="Select a category" formControlName="categoryId">
+                            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+                            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+                            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+                        </nz-select>
+                    </nz-form-control>
+                </nz-form-item>
+
+                <!-- product name -->
+                <nz-form-control nzSpan="24">
+                    <nz-input-group class="product-name" [nzSuffix]="suffixIconSearch">
+                        <input placeholder="Search for products" nz-input formControlName="productName" />
+                    </nz-input-group>
+                    <ng-template #suffixIconSearch>
+                        <i nz-icon nzType="search"></i>
+                    </ng-template>
+                </nz-form-control>
+            </form>
+            <div class="title">Search Results:</div>
+            <div class="search-results">
+
+                <div class="contents custom-scroll-bar">
+                    <div *ngFor="let item of listCartItem" class="cart-item">
+                        <app-cart-item [cartItemOptions]="cartItemOptions" (deleteItemEvent)="deleteItem($event)" [item]="item">
+                        </app-cart-item>
+                    </div>
+
+                    <div class="view-all flex al-center">
+                        <p>View All(111)</p>
+                        <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </ng-container>
+</nz-drawer>

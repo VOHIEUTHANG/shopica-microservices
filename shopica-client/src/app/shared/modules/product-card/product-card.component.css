@@ -1,0 +1,257 @@
+.background-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 127.571%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transition: 2.5s;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.product-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image:hover {
+  cursor: pointer;
+}
+
+.product-image:hover .list-size,
+.product-image:hover .hover-btn,
+.product-image:hover .background-image::before {
+  opacity: 1;
+}
+
+.product-image:hover .background-image {
+  transform: scale(1.1);
+}
+
+.hover-btn {
+  position: absolute;
+  top: 40%;
+  width: 60%;
+  padding: 0 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.product-image:hover .hover-btn {
+  top: 50%;
+}
+
+.hover-btn button {
+  background-color: #fff;
+  color: #222;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  margin: 5px 0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+  transition: opacity 0.15s, transform 0.25s;
+}
+
+.hover-btn button span {
+  display: block;
+  padding: 8px 34px;
+  visibility: visible;
+  transition: opacity 0.15s, transform 0.25s;
+}
+
+.hover-btn button:hover {
+  cursor: pointer;
+  background-color: #222;
+  color: #fff;
+}
+
+.hover-btn button:hover span {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hover-btn button:hover i {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-btn button i {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s, transform 0.25s;
+}
+
+.list-size {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.add-wishlist {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+
+.add-wishlist i {
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.add-wishlist i.loading {
+  opacity: 1;
+}
+
+.product-image:hover .add-wishlist i {
+  opacity: 1;
+}
+
+.add-wishlist .liked {
+  opacity: 1;
+  color: #f33b3b;
+}
+
+.product-info {
+  margin-top: 15px;
+}
+
+.product-name {
+  color: black;
+  margin-bottom: 0;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #696969;
+}
+
+.labels {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 4;
+}
+
+.labels .new,
+.labels .discount {
+  height: 60px;
+  width: 60px;
+  font-size: 14px;
+  border-radius: 50%;
+  background: #109533;
+  color: white;
+}
+
+.labels .discount {
+  background: #ff4e00;
+}
+
+@media (max-width: 1200px) {
+  .hover-btn {
+    width: auto;
+    top: auto;
+    left: auto;
+    right: 12px;
+    bottom: 9px;
+    transform: none;
+    opacity: 1;
+    background: white;
+    border-radius: 35px;
+    padding: 0;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+  }
+
+  .product-image:hover .hover-btn {
+    top: auto;
+  }
+
+  .hover-btn button {
+    padding: 18px;
+    border-radius: 40px;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .hover-btn button span {
+    display: none;
+  }
+
+  .hover-btn button:hover {
+    cursor: pointer;
+    background-color: #222;
+  }
+
+  .hover-btn button:hover i {
+    color: white;
+  }
+
+  .hover-btn button i {
+    color: black;
+    transform: none;
+    opacity: 1;
+    font-size: 16px;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 992px) {
+  .content {
+    position: relative;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .column {
+    padding: 5px 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hover-btn button {
+    padding: 13px;
+  }
+
+  .hover-btn button i {
+    font-size: 14px;
+  }
+}

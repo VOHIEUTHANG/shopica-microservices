@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="product-detail-page">
+    <app-loader [id]="'productDetail'"></app-loader>
+    <div *ngIf="product" class="product-detail" [nzGutter]="24" nz-row>
+      <div class="product-detail-image" nz-col [nzLg]="12" [nzMd]="10">
+        <app-product-detail-image [listImage]="product.productImages"></app-product-detail-image>
+      </div>
+      <div class="product-detail-summary" nz-col [nzLg]="12" [nzMd]="14">
+        <app-product-detail-summary [product]="product" [ratting]="ratingAverage"></app-product-detail-summary>
+      </div>
+    </div>
+
+    <div *ngIf="product" class="description">
+      <app-ng-tabs>
+        <app-tab-content tabTitle="Description">
+          <app-description [description]="product.description"></app-description>
+        </app-tab-content>
+        <app-tab-content tabTitle="Warranty">
+          <app-warranty-shipping></app-warranty-shipping>
+        </app-tab-content>
+
+        <app-tab-content tabTitle="Review">
+          <app-comments [comments]="comments"></app-comments>
+        </app-tab-content>
+      </app-ng-tabs>
+    </div>
+
+    <div *ngIf="product" class="recently-view">
+      <app-section-title [title]="'Recently viewed products'"></app-section-title>
+      <app-product-carousel [listProduct]="listProduct" [carouselOptions]="customOptions"></app-product-carousel>
+    </div>
+  </div>
+
+</div>

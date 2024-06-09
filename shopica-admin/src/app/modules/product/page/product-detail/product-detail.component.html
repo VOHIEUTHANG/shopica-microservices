@@ -1,0 +1,102 @@
+<div class="card">
+
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="18">
+      <p>You can create product with import excel: <a target="_blank"
+          href="https://drive.google.com/file/d/1yPRKV0JVhKOEe1YeYt4bSjY7GChizRtX/view?usp=sharing">Template</a></p>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <nz-upload nzAction="{{backEndUrl}}">
+        <button nz-button><i nz-icon nzType="upload"></i>Upload</button>
+      </nz-upload>
+    </div>
+  </div>
+  <form nz-form [formGroup]="productForm">
+    <div class="base-info section">
+      <h4>Basic Information:</h4>
+      <div class="content">
+        <div class="column">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="6" nzFor="productName" nzRequired>Product Name</nz-form-label>
+            <nz-form-control [nzSpan]="14" nzErrorTip="Please input your product name!">
+              <input nz-input type="text" formControlName="productName">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label [nzSpan]="6" nzFor="productName" nzRequired>Category</nz-form-label>
+            <nz-form-control [nzSpan]="14" nzErrorTip="Please input your category name!">
+              <nz-select [nzLoading]="isLoadingCategoryInSelect" formControlName="categoryId" nzShowSearch nzAllowClear
+                nzPlaceHolder="Select a category">
+                <nz-option *ngFor="let item of listCategory" [nzLabel]="item.categoryName" [nzValue]="item.id">
+                </nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="colorIds" [nzSpan]="6" nzRequired>Color</nz-form-label>
+            <nz-form-control [nzSpan]="14" [nzErrorTip]="priceErrorTpl">
+              <nz-select nzMode="tags" nzPlaceHolder="Select Color" formControlName="colorIds">
+                <nz-option *ngFor="let color of listColor" [nzLabel]="color.colorName" [nzValue]="color.id"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label nzSpan="6" nzRequired>Tags</nz-form-label>
+            <div nz-col [nzSpan]="14">
+              <nz-form-control>
+                <nz-select nzMode="tags" nzPlaceHolder="Tag " formControlName="tags">
+                  <nz-option *ngFor="let option of tags" [nzLabel]="option" [nzValue]="option"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </div>
+          </nz-form-item>
+        </div>
+
+        <div class="column">
+          <nz-form-item>
+            <nz-form-label [nzSpan]="6" nzFor="price" nzRequired>Price</nz-form-label>
+            <nz-form-control [nzSpan]="14" [nzErrorTip]="priceErrorTpl">
+              <input nz-input type="number" formControlName="price">
+              <ng-template #priceErrorTpl let-control>
+                <ng-container *ngIf="control.hasError('required')">
+                  Please input your price!
+                </ng-container>
+                <ng-container *ngIf="control.hasError('min')">
+                  The min value is 0
+                </ng-container>
+              </ng-template>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label [nzSpan]="6" nzFor="price" nzRequired>Brand</nz-form-label>
+            <nz-form-control [nzSpan]="14" nzErrorTip="Please input your price!">
+              <nz-select [nzLoading]="isLoadingBrandInSelect" formControlName="brandId" nzShowSearch nzAllowClear
+                nzPlaceHolder="Select a brand">
+                <nz-option *ngFor="let item of listBrand" [nzLabel]="item.brandName" [nzValue]="item.id">
+                </nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="sizeIds" [nzSpan]="6" nzRequired>Size</nz-form-label>
+            <nz-form-control [nzSpan]="14" [nzErrorTip]="priceErrorTpl">
+              <nz-select nzMode="tags" nzPlaceHolder="Select Size" formControlName="sizeIds">
+                <nz-option *ngFor="let size of listSize" [nzLabel]="size.sizeName" [nzValue]="size.id"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <app-product-image [(listImage)]="listImage"></app-product-image>
+
+  <div class="btn-submit">
+    <button nz-button [nzLoading]="isLoadingButtonSubmit" [disabled]="productForm.invalid" (click)="submitForm()"
+      nzType="primary">Save change</button>
+  </div>
+
+  <nz-spin [ngClass]="{'isLoading':isLoadingProductEdit}" [nzSpinning]="isLoadingProductEdit" nzSimple></nz-spin>
+</div>

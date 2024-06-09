@@ -1,0 +1,39 @@
+<nz-modal [nzWidth]="'40%'" [(nzVisible)]="isVisible" [nzBodyStyle]="{'height':'calc(100% - 56px)','padding':'0'}"
+  [nzStyle]="{'height':'90%'}" (nzOnCancel)="handleCancel()" nzCentered [nzFooter]="null" [nzMaskClosable]="true"
+  nzWrapClassName="address-list-modal" nzTitle="Address List">
+  <ng-container *nzModalContent>
+    <div class="address-items">
+      <div class="content">
+        <div *ngFor="let address of addressList" class="address-book-item-wrapper" (click)="selectAddress(address)">
+          <div class="address-book-item editing">
+            <span *ngIf="address.default" class="default-address">
+              ★
+            </span>
+            <div class="address-text">
+              {{address.fullAddress}}
+            </div>
+            <div class="info-text">
+              {{address.customerName}}, {{address.phone}}
+            </div>
+            <div class="action-btn">
+              <button nz-button nzType="primary" class="edit-address"
+                (click)="editAddress(address);$event.stopPropagation()">
+                Edit<i nz-icon nzType="edit" nzTheme="outline"></i>
+              </button>
+              <button nz-button class="delete-address" nzType="primary" nzDanger
+                (click)="deleteAddress(address.id);$event.stopPropagation()">Delete<i nz-icon nzType="delete"
+                  nzTheme="outline"></i></button>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex jc-center"> <button (click)="showModal()" class="add-address-btn" nz-button
+            nzType="primary">Add
+            Address</button></div>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal>
+<app-add-address-modal [address]="selectedData" [modalTitle]="modalTitle" [isEditMode]="isEditMode"
+  [isVisible]="showAddAddressModal" (cancelEvent)="closeModal()" (insertSuccessEvent)="insertAddressSuccess($event)"
+  (updateSuccessEvent)="updateAddressSuccess($event)"></app-add-address-modal>

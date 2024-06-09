@@ -1,0 +1,42 @@
+<div class="account-page mt-70">
+  <app-header-page [pageName]="'LOGIN'" [image]="'assets/images/blogs/background-2.jpg'"></app-header-page>
+  <div class="container">
+    <div class=" jc-center" nz-row>
+      <div nz-col class="content" [nzSpan]="12">
+        <div class="title">
+          <p>Enter username and password!</p>
+        </div>
+        <form [nzLayout]="'vertical'" nz-form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+          <!-- username -->
+          <nz-form-item>
+            <nz-form-label nzSpan="24" nzRequired nzFor="username">Username:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid username!">
+              <input nz-input type="text" formControlName="username" />
+            </nz-form-control>
+          </nz-form-item>
+
+          <!-- password -->
+          <nz-form-item>
+            <nz-form-label nzSpan="24" nzRequired nzFor="password">Password:</nz-form-label>
+            <nz-form-control nzSpan="24" nzErrorTip="The input is not valid Password!">
+              <input nz-input type="password" formControlName="password" />
+
+            </nz-form-control>
+          </nz-form-item>
+          <!-- form error -->
+          <div class="form-error" *ngIf="loginForm.errors">
+            <p>{{loginForm.errors.error}}</p>
+          </div>
+          <!-- submit button -->
+
+          <div class="flex jc-center">
+            <button nzShape="round" [disabled]="loginForm.invalid" [nzLoading]="isLoading" nz-button class="custom-btn"
+              [nzType]="'primary'">LOGIN</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

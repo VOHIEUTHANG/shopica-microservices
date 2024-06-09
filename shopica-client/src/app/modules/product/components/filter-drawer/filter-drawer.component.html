@@ -1,0 +1,97 @@
+<nz-drawer [nzClosable]="true" [nzWidth]="300" [nzVisible]="isShowFilter" nzPlacement="left" nzTitle="FILTER"
+  (nzOnClose)="closeMenu()" [nzWrapClassName]="'filter-drawer'">
+  <ng-container *nzDrawerContent>
+    <div class="filter custom-scroll-bar">
+
+      <!-- brand filter -->
+      <div class="filter-section">
+        <div class="title">
+          By Brand
+        </div>
+        <div class="content custom-scroll-bar">
+          <ul>
+            <li (click)="selectBrand(brand)"
+              [class.active]="selectedBrand.indexOf(brand.brandName.toLowerCase()) !== -1"
+              *ngFor="let brand of listBrand" class="brand item flex al-center">
+              <i class="checkbox-icon" nz-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                </svg>
+              </i>
+              <p>{{brand.brandName}}</p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- color filter -->
+      <div class="filter-section">
+        <div class="title">
+          By Color
+        </div>
+        <div class="content custom-scroll-bar">
+          <ul>
+            <li (click)="selectColor(color)"
+              [class.active]="selectedColor.indexOf(color.colorName.toLowerCase()) !== -1" class="color flex al-center"
+              *ngFor="let color of listColor">
+              <div class="color-border">
+                <span [ngStyle]="{'background-color':color.colorCode}">
+                  <i class="checkbox-icon" nz-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 24 24">
+                      <path d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                    </svg>
+                  </i>
+                </span>
+              </div>
+              <p>{{color.colorName}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- price filter -->
+      <div class="filter-section">
+        <div class="title">
+          By Price
+        </div>
+        <div class="content custom-scroll-bar">
+          <ul>
+            <li [class.active]="selectedPrice.indexOf(price.priceUrl.toLowerCase()) !== -1"
+              *ngFor="let price of listPrice" (click)="selectPrice(price)" class="price item flex al-center">
+              <i class="checkbox-icon" nz-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                </svg>
+              </i>
+              <p>{{price.priceName}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- size filter -->
+      <div class="filter-section">
+        <div class="title">
+          By Size
+        </div>
+        <div class="content custom-scroll-bar">
+          <ul>
+            <li (click)="selectSize(size)" [class.active]="selectedSize.indexOf(size.sizeName.toLowerCase()) !== -1"
+              *ngFor="let size of listSize" class="size item flex al-center">
+              <i class="checkbox-icon" nz-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+                  <path fill="#ffffff" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                </svg>
+              </i>
+              <p>{{size.sizeName}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </ng-container>
+</nz-drawer>

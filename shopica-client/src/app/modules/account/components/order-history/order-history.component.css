@@ -1,0 +1,26 @@
+.title {
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.title p {
+  margin-bottom: 0;
+}
+
+.order-error {
+  border: 2px solid;
+  padding: 14px 25px 14px 20px;
+  color: #af7d27;
+  border-color: #e0b252;
+}
+
+.order-error p {
+  margin-bottom: 0;
+}
+
+.order-error p i {
+  font-size: 18px;
+  margin-right: 5px;
+}
